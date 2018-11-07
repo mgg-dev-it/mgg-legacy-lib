@@ -58,7 +58,7 @@ import javax.swing.filechooser.*;
  *
  *     JFileChooser chooser = new JFileChooser();
  *     ExampleFileFilter filter = new ExampleFileFilter(
- *                   new String{"gif", "jpg"}, "JPEG & GIF Images")
+ *                   new String{"gif", "jpg"}, "JPEG &amp; GIF Images")
  *     chooser.addChoosableFileFilter(filter);
  *     chooser.showOpenDialog(this);
  *
@@ -89,6 +89,8 @@ public class ExampleFileFilter extends FileFilter {
      * Creates a file filter that accepts files with the given extension.
      * Example: new ExampleFileFilter("jpg");
      *
+     * @param extension extension
+     * 
      * @see #addExtension
      */
     public ExampleFileFilter(String extension) {
@@ -102,6 +104,9 @@ public class ExampleFileFilter extends FileFilter {
      * Note that the "." before the extension is not needed. If
      * provided, it will be ignored.
      *
+     * @param extension extension
+     * @param description description
+     * 
      * @see #addExtension
      */
     public ExampleFileFilter(String extension, String description) {
@@ -117,6 +122,8 @@ public class ExampleFileFilter extends FileFilter {
      * Note that the "." before the extension is not needed adn
      * will be ignored.
      *
+     * @param filters filters
+     * 
      * @see #addExtension
      */
     public ExampleFileFilter(String[] filters) {
@@ -129,6 +136,9 @@ public class ExampleFileFilter extends FileFilter {
      *
      * Note that the "." before the extension is not needed and will be ignored.
      *
+     * @param filters filters
+     * @param description description
+     * 
      * @see #addExtension
      */
     public ExampleFileFilter(String[] filters, String description) {
@@ -147,7 +157,7 @@ public class ExampleFileFilter extends FileFilter {
      * Files that begin with "." are ignored.
      *
      * @see #getExtension
-     * @see FileFilter#accepts
+     * @see FileFilter#accept
      */
     public boolean accept(File f) {
 	if(f != null) {
@@ -165,6 +175,9 @@ public class ExampleFileFilter extends FileFilter {
     /**
      * Return the extension portion of the file's name .
      *
+     * @return String
+     * 
+     * @param f f
      * @see #getExtension
      * @see FileFilter#accept
      */
@@ -190,6 +203,8 @@ public class ExampleFileFilter extends FileFilter {
      *   filter.addExtension("tif");
      *
      * Note that the "." before the extension is not needed and will be ignored.
+     * 
+     * @param extension extension
      */
     public void addExtension(String extension) {
 	if(filters == null) {
@@ -233,6 +248,8 @@ public class ExampleFileFilter extends FileFilter {
      * Sets the human readable description of this filter. For
      * example: filter.setDescription("Gif and JPG Images");
      *
+     * @param description description
+     * 
      * @see setDescription
      * @see setExtensionListInDescription
      * @see isExtensionListInDescription
@@ -249,6 +266,8 @@ public class ExampleFileFilter extends FileFilter {
      * Only relevent if a description was provided in the constructor
      * or using setDescription();
      *
+     * @param b b
+     * 
      * @see getDescription
      * @see setDescription
      * @see isExtensionListInDescription
@@ -264,7 +283,9 @@ public class ExampleFileFilter extends FileFilter {
      *
      * Only relevent if a description was provided in the constructor
      * or using setDescription();
-     *
+     * 
+     * @return boolean
+     * 
      * @see getDescription
      * @see setDescription
      * @see setExtensionListInDescription

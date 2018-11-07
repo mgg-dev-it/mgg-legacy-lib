@@ -39,13 +39,13 @@ public class FormatDialog extends JDialog implements ActionListener, KeyListener
         sXMLConfig += "<!-- Comment -->";
         sXMLConfig += "<app name='app' major='0' minor='0' revision='0' width='800' height='600'>";
         sXMLConfig += "    <language>";
-        sXMLConfig += "        <languageitem key='FormatDialog Form·tum'>";
-        sXMLConfig += "            <translation lang='hu'>Form·tum</translation>";
+        sXMLConfig += "        <languageitem key='FormatDialog Form√°tum'>";
+        sXMLConfig += "            <translation lang='hu'>Form√°tum</translation>";
         sXMLConfig += "            <translation lang='en'>Format</translation>";
         sXMLConfig += "            <translation lang='de'>Format</translation>";
         sXMLConfig += "        </languageitem>";
-        sXMLConfig += "        <languageitem key='FormatDialog D·tum'>";
-        sXMLConfig += "            <translation lang='hu'>D·tum</translation>";
+        sXMLConfig += "        <languageitem key='FormatDialog D√°tum'>";
+        sXMLConfig += "            <translation lang='hu'>D√°tum</translation>";
         sXMLConfig += "            <translation lang='en'>Date</translation>";
         sXMLConfig += "            <translation lang='de'>Datum</translation>";
         sXMLConfig += "        </languageitem>";
@@ -54,28 +54,28 @@ public class FormatDialog extends JDialog implements ActionListener, KeyListener
         sXMLConfig += "            <translation lang='en'>Yes</translation>";
         sXMLConfig += "            <translation lang='de'>Ja</translation>";
         sXMLConfig += "        </languageitem>";
-        sXMLConfig += "        <languageitem key='FormatDialog MentÈs'>";
-        sXMLConfig += "            <translation lang='hu'>MentÈs</translation>";
+        sXMLConfig += "        <languageitem key='FormatDialog MentÔøΩs'>";
+        sXMLConfig += "            <translation lang='hu'>Ment√©s</translation>";
         sXMLConfig += "            <translation lang='en'>Save</translation>";
         sXMLConfig += "            <translation lang='de'>Speichern</translation>";
         sXMLConfig += "        </languageitem>";
         sXMLConfig += "        <languageitem key='FormatDialog Nem'>";
-        sXMLConfig += "            <translation lang='hu'>MÈgsem</translation>";
+        sXMLConfig += "            <translation lang='hu'>M√©gsem</translation>";
         sXMLConfig += "            <translation lang='en'>Cancel</translation>";
         sXMLConfig += "            <translation lang='de'>Abbrechen</translation>";
         sXMLConfig += "        </languageitem>";
-        sXMLConfig += "        <languageitem key='FormatDialog D·tum sorrend'>";
-        sXMLConfig += "            <translation lang='hu'>D·tum sorrend</translation>";
+        sXMLConfig += "        <languageitem key='FormatDialog D√°tum sorrend'>";
+        sXMLConfig += "            <translation lang='hu'>D√°tum sorrend</translation>";
         sXMLConfig += "            <translation lang='en'>Date order</translation>";
         sXMLConfig += "            <translation lang='de'>Datum Ordnung</translation>";
         sXMLConfig += "        </languageitem>";
-        sXMLConfig += "        <languageitem key='FormatDialog …v'>";
-        sXMLConfig += "            <translation lang='hu'>…v</translation>";
+        sXMLConfig += "        <languageitem key='FormatDialog √âv'>";
+        sXMLConfig += "            <translation lang='hu'>√âv</translation>";
         sXMLConfig += "            <translation lang='en'>Year</translation>";
         sXMLConfig += "            <translation lang='de'>Jahr</translation>";
         sXMLConfig += "        </languageitem>";
-        sXMLConfig += "        <languageitem key='FormatDialog HÛnap'>";
-        sXMLConfig += "            <translation lang='hu'>HÛnap</translation>";
+        sXMLConfig += "        <languageitem key='FormatDialog H√≥nap'>";
+        sXMLConfig += "            <translation lang='hu'>H√≥nap</translation>";
         sXMLConfig += "            <translation lang='en'>Month</translation>";
         sXMLConfig += "            <translation lang='de'>Monat</translation>";
         sXMLConfig += "        </languageitem>";
@@ -84,19 +84,20 @@ public class FormatDialog extends JDialog implements ActionListener, KeyListener
         sXMLConfig += "            <translation lang='en'>Day</translation>";
         sXMLConfig += "            <translation lang='de'>Tag</translation>";
         sXMLConfig += "        </languageitem>";
-        sXMLConfig += "        <languageitem key='FormatDialog D·tum elv·lasztÛ'>";
-        sXMLConfig += "            <translation lang='hu'>D·tum elv·lasztÛ</translation>";
+        sXMLConfig += "        <languageitem key='FormatDialog D√°tum elv√°laszt√≥'>";
+        sXMLConfig += "            <translation lang='hu'>D√°tum elv√°laszt√≥</translation>";
         sXMLConfig += "            <translation lang='en'>Date separator</translation>";
         sXMLConfig += "            <translation lang='de'>Datum Separator</translation>";
         sXMLConfig += "        </languageitem>";
-        sXMLConfig += "        <languageitem key='FormatDialog Tizedes elv·lasztÛ'>";
-        sXMLConfig += "            <translation lang='hu'>Tizedes elv·lasztÛ</translation>";
+        sXMLConfig += "        <languageitem key='FormatDialog Tizedes elv√°laszt√≥'>";
+        sXMLConfig += "            <translation lang='hu'>Tizedes elv√°laszt√≥</translation>";
         sXMLConfig += "            <translation lang='en'>Decimal separator</translation>";
         sXMLConfig += "            <translation lang='de'>Decimal Separator</translation>";
         sXMLConfig += "        </languageitem>";
         sXMLConfig += "    </language>";
         sXMLConfig += "</app>";
-        swingAppInterface.addLanguageXML(sXMLConfig, "ISO-8859-2");
+//        swingAppInterface.addLanguageXML(sXMLConfig, "ISO-8859-2");
+        swingAppInterface.addLanguageXML(sXMLConfig, "UTF-8");
 
         setModal(true);
         mainPane = new CommonPanel();
@@ -106,13 +107,13 @@ public class FormatDialog extends JDialog implements ActionListener, KeyListener
         mlfDatePartOrder = new MagComboBoxField(swingAppInterface);
         mlfDatePartOrder.addKeyListener(this);
         String sDatePartOrderLookup = "";
-        sDatePartOrderLookup += "yyyy-MM-dd|" + swingAppInterface.getLanguageString("FormatDialog …v") + " " + swingAppInterface.getLanguageString("FormatDialog HÛnap") + " " + swingAppInterface.getLanguageString("FormatDialog Nap");
+        sDatePartOrderLookup += "yyyy-MM-dd|" + swingAppInterface.getLanguageString("FormatDialog √âv") + " " + swingAppInterface.getLanguageString("FormatDialog HÔøΩnap") + " " + swingAppInterface.getLanguageString("FormatDialog Nap");
         sDatePartOrderLookup += "@";
-        sDatePartOrderLookup += "dd-MM-yyyy|" + swingAppInterface.getLanguageString("FormatDialog Nap") + " " + swingAppInterface.getLanguageString("FormatDialog HÛnap") + " " + swingAppInterface.getLanguageString("FormatDialog …v");
+        sDatePartOrderLookup += "dd-MM-yyyy|" + swingAppInterface.getLanguageString("FormatDialog Nap") + " " + swingAppInterface.getLanguageString("FormatDialog HÔøΩnap") + " " + swingAppInterface.getLanguageString("FormatDialog ÔøΩv");
         sDatePartOrderLookup += "@";
-        sDatePartOrderLookup += "MM-dd-yyyy|" + swingAppInterface.getLanguageString("FormatDialog HÛnap") + " " + swingAppInterface.getLanguageString("FormatDialog Nap") + " " + swingAppInterface.getLanguageString("FormatDialog …v");
+        sDatePartOrderLookup += "MM-dd-yyyy|" + swingAppInterface.getLanguageString("FormatDialog H√≥nap") + " " + swingAppInterface.getLanguageString("FormatDialog Nap") + " " + swingAppInterface.getLanguageString("FormatDialog ÔøΩv");
         mlfDatePartOrder.fillLookup(sDatePartOrderLookup);
-        mainPane.addToCurrentRow(AppUtils.createLabelWithColon(swingAppInterface.getLanguageString("FormatDialog D·tum")), 1, 1, 0.0, 0.0, GridBagConstraints.NONE, GridBagConstraints.WEST);
+        mainPane.addToCurrentRow(AppUtils.createLabelWithColon(swingAppInterface.getLanguageString("FormatDialog D√°tum")), 1, 1, 0.0, 0.0, GridBagConstraints.NONE, GridBagConstraints.WEST);
         mainPane.addToCurrentRow(mlfDatePartOrder, 2, 1, 0.0, 0.0, GridBagConstraints.BOTH);
         mainPane.addToCurrentRow(new JLabel(""), GridBagConstraints.REMAINDER, 1, 0.0, 1.0, GridBagConstraints.BOTH);
         mainPane.nextRow();
@@ -121,7 +122,7 @@ public class FormatDialog extends JDialog implements ActionListener, KeyListener
         mlfDateSeparator = new MagComboBoxField(swingAppInterface);
         mlfDateSeparator.addKeyListener(this);
         mlfDateSeparator.fillLookup("/|/@-|-@.|.");
-        mainPane.addToCurrentRow(AppUtils.createLabelWithColon(swingAppInterface.getLanguageString("FormatDialog D·tum elv·lasztÛ")), 1, 1, 0.0, 0.0, GridBagConstraints.NONE, GridBagConstraints.WEST);
+        mainPane.addToCurrentRow(AppUtils.createLabelWithColon(swingAppInterface.getLanguageString("FormatDialog D√°tum elv√°laszt√≥")), 1, 1, 0.0, 0.0, GridBagConstraints.NONE, GridBagConstraints.WEST);
         mainPane.addToCurrentRow(mlfDateSeparator, 2, 1, 0.0, 0.0, GridBagConstraints.BOTH);
         mainPane.addToCurrentRow(new JLabel(""), GridBagConstraints.REMAINDER, 1, 0.0, 1.0, GridBagConstraints.BOTH);
         mainPane.nextRow();
@@ -129,14 +130,14 @@ public class FormatDialog extends JDialog implements ActionListener, KeyListener
         mlfDecimalSeparator = new MagComboBoxField(swingAppInterface);
         mlfDecimalSeparator.addKeyListener(this);
         mlfDecimalSeparator.fillLookup(".|.@,|,");
-        mainPane.addToCurrentRow(AppUtils.createLabelWithColon(swingAppInterface.getLanguageString("FormatDialog Tizedes elv·lasztÛ")), 1, 1, 0.0, 0.0, GridBagConstraints.NONE, GridBagConstraints.WEST);
+        mainPane.addToCurrentRow(AppUtils.createLabelWithColon(swingAppInterface.getLanguageString("FormatDialog Tizedes elv√°laszt√≥")), 1, 1, 0.0, 0.0, GridBagConstraints.NONE, GridBagConstraints.WEST);
         mainPane.addToCurrentRow(mlfDecimalSeparator, 2, 1, 0.0, 0.0, GridBagConstraints.BOTH);
         mainPane.addToCurrentRow(new JLabel(""), GridBagConstraints.REMAINDER, 1, 0.0, 1.0, GridBagConstraints.BOTH);
         mainPane.nextRow();
 
         mainPane.addToCurrentRow(new JLabel(""), 1, 1, 0.0, 0.0, GridBagConstraints.NONE);
-        mainPane.addToCurrentRow(jButtonYes = AppUtils.createButton(swingAppInterface.getLanguageString("FormatDialog MentÈs"), ACTION_YES, this), 1, 1, 0.0, 0.0, GridBagConstraints.NONE, GridBagConstraints.CENTER);
-        AppUtils.setButtonCaptionAndMnemonic(jButtonYes, swingAppInterface.getLanguageString("FormatDialog MentÈs"));
+        mainPane.addToCurrentRow(jButtonYes = AppUtils.createButton(swingAppInterface.getLanguageString("FormatDialog Ment√©s"), ACTION_YES, this), 1, 1, 0.0, 0.0, GridBagConstraints.NONE, GridBagConstraints.CENTER);
+        AppUtils.setButtonCaptionAndMnemonic(jButtonYes, swingAppInterface.getLanguageString("FormatDialog Ment√©s"));
         mainPane.addToCurrentRow(jButtonNo = AppUtils.createButton(swingAppInterface.getLanguageString("FormatDialog Nem"), ACTION_NO, this), 1, 1, 0.0, 0.0, GridBagConstraints.NONE, GridBagConstraints.CENTER);
         AppUtils.setButtonCaptionAndMnemonic(jButtonNo, swingAppInterface.getLanguageString("FormatDialog Nem"));
         mainPane.addToCurrentRow(new JLabel(""), GridBagConstraints.REMAINDER, 1, 0.0, 1.0, GridBagConstraints.BOTH);
@@ -146,7 +147,7 @@ public class FormatDialog extends JDialog implements ActionListener, KeyListener
     }
 
     public int showFormatDialog(JFrame f) {
-        setTitle(swingAppInterface.getLanguageString("FormatDialog Form·tum"));
+        setTitle(swingAppInterface.getLanguageString("FormatDialog Form√°tum"));
 
         String sDatePattern = formatInterface.getDatePattern();
         String sDateOrder = StringUtils.filter(sDatePattern, "yMd");

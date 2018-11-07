@@ -369,9 +369,9 @@ public class MagTextField extends JTextField implements MagFieldInterface {
                     }
                     setText(sTimeSheetValue);
                 } else {
-                    //setText(swingAppInterface.getDecimalFormat().format(value)); //a formatt·lt sz·mban lÈvı szÛkˆz invalid karakter (beep) hib·t okozott
+                    //setText(swingAppInterface.getDecimalFormat().format(value)); //a formatt√°lt sz√°mban l√©v≈ë sz√≥k√∂z invalid karakter (beep) hib√°t okozott
                     //System.out.println(value.toString());
-                    setText(swingAppInterface.getDecimalFormat().format(value).replace(" ", "")); //a formatt·lt sz·mban lÈvı szÛkˆz invalid karakter (beep) hib·t okozott
+                    setText(swingAppInterface.getDecimalFormat().format(value).replace(" ", "")); //a formatt√°lt sz√°mban l√©v≈ë sz√≥k√∂z invalid karakter (beep) hib√°t okozott
                     //setText(value.toString());
                 }
             } else {
@@ -394,13 +394,13 @@ public class MagTextField extends JTextField implements MagFieldInterface {
             }
             setDocument(new NumberDocument(this, swingAppInterface, iMaxLength, iDecimals, ""));
             if (value != null) {
-                //setText(swingAppInterface.getDecimalFormat(iDecimals).format(value)); //a formatt·lt sz·mban lÈvı szÛkˆz invalid karakter (beep) hib·t okozott
+                //setText(swingAppInterface.getDecimalFormat(iDecimals).format(value)); //a formatt√°lt sz√°mban l√©v≈ë sz√≥k√∂z invalid karakter (beep) hib√°t okozott
                 String sTmp = swingAppInterface.getDecimalFormat(iDecimals).format(value).replace(" ", "");
                 if (sTmp.endsWith(".")) {
                     sTmp = sTmp.substring(0, sTmp.length() - 1);
                 }
-                setText(sTmp); //a formatt·lt sz·mban lÈvı szÛkˆz invalid karakter (beep) hib·t okozott, Ès a vÈgÈn lÈvı tizedespont is
-                //setText(swingAppInterface.getDecimalFormat(iDecimals).format(value).replace(" ", "")); //a formatt·lt sz·mban lÈvı szÛkˆz invalid karakter (beep) hib·t okozott
+                setText(sTmp); //a formatt√°lt sz√°mban l√©v≈ë sz√≥k√∂z invalid karakter (beep) hib√°t okozott, √©s a v√©g√©n l√©v≈ë tizedespont is
+                //setText(swingAppInterface.getDecimalFormat(iDecimals).format(value).replace(" ", "")); //a formatt√°lt sz√°mban l√©v≈ë sz√≥k√∂z invalid karakter (beep) hib√°t okozott
                 //setText(value.toString());
             }
             color();
@@ -861,7 +861,7 @@ public class MagTextField extends JTextField implements MagFieldInterface {
             }
             return (new java.sql.Time(d.getTime()).compareTo((java.sql.Time) oOriginValue) != 0);
         }
-        if (c.equals(java.sql.Timestamp.class)) { //tˆrt m·sodperceket nem ellenırzi!!!
+        if (c.equals(java.sql.Timestamp.class)) { //tÔøΩrt mÔøΩsodperceket nem ellenÔøΩrzi!!!
             String sOrigin = swingAppInterface.getDateTimeFormat().format(oOriginValue);
             return (!sOrigin.equals(getText()));
         }

@@ -91,11 +91,11 @@ public class Record
             }
             catch (TableDefinitionException te)
             {
-                vFields.setElementAt(new String(""), i); //@todo ez jó így???
+                vFields.setElementAt(new String(""), i); //@todo ez jÃ³ Ã­gy???
             }
             catch (SQLException sqle)
             {
-                vFields.setElementAt(new String(""), i); //@todo ez jó így???
+                vFields.setElementAt(new String(""), i); //@todo ez jÃ³ Ã­gy???
             }
         }
     }

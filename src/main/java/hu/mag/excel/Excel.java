@@ -60,9 +60,9 @@ public class Excel implements PropertyChangeListener {
             if (iProgress < 2) {
                 progressDisplay.setVisible(false);
                 if (iProgress == 0) {
-                    AppUtils.messageBox(parentComponent, "Excel export sikeresen befejezõdött. (" + sFile + ")");
+                    AppUtils.messageBox(parentComponent, "Excel export sikeresen befejezÅ‘dÃ¶tt. (" + sFile + ")");
                 } else {
-                    AppUtils.messageBox(parentComponent, "Excel export nem sikerült. (" + sFile + ")");
+                    AppUtils.messageBox(parentComponent, "Excel export nem sikerÃ¼lt. (" + sFile + ")");
                 }
             } else {
                 progressDisplay.setValue(iCurrentRow);
@@ -120,7 +120,7 @@ public class Excel implements PropertyChangeListener {
     }
 
     public void exportToExcelWithFileDialog(AppInterface appInterface, MagTable magTable) {
-        File f = AppUtils.chooseFileToCreateStrict(parentComponent, appInterface, "Excel fájlok", sDir, "", "xlsx", "xls");
+        File f = AppUtils.chooseFileToCreateStrict(parentComponent, appInterface, "Excel fÃ¡jlok", sDir, "", "xlsx", "xls");
         if (f == null) {
             return;
         }
@@ -139,7 +139,7 @@ public class Excel implements PropertyChangeListener {
     }
 
 //    public void exportToExcelWithFileDialog2(AppInterface appInterface, MagTable magTable) {
-//        File f = AppUtils.chooseFileToCreateStrict(parentComponent, appInterface, "Excel fájlok", sDir, "xlsx", "xls");
+//        File f = AppUtils.chooseFileToCreateStrict(parentComponent, appInterface, "Excel fÃ¡jlok", sDir, "xlsx", "xls");
 //        if (f == null) {
 //            return;
 //        }

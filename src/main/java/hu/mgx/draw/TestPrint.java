@@ -40,10 +40,10 @@ public class TestPrint implements Printable
         vds = new VirtualDrawSurface((int) new PageFormat().getImageableWidth(), (int) new PageFormat().getImageableHeight(), new Font("Arial", Font.ITALIC, 10));
         //vds.drawRectangle(1, 1, iWidth-100, iHeight-100);
         vds.drawLine(0, 15, iWidth, 15);
-        vds.drawString("fejlÈc", 0, 0, iWidth, 10, DrawAlign.CENTER, DrawAlign.TOP, false);
+        vds.drawString("fejl√©c", 0, 0, iWidth, 10, DrawAlign.CENTER, DrawAlign.TOP, false);
 
         vds.drawLine(0, iHeight - 15, iWidth, iHeight - 15);
-        vds.drawString("l·blÈc", 0, iHeight - 10, iWidth, 10, DrawAlign.CENTER, DrawAlign.BOTTOM, false);
+        vds.drawString("l√°bl√©c", 0, iHeight - 10, iWidth, 10, DrawAlign.CENTER, DrawAlign.BOTTOM, false);
         //vds.drawRectangle(0, 0, iWidth, iHeight);
         //vds.drawString("drawRectangle", 0, 0, iWidth, iHeight);
         vds.drawString("center", 10, 100, 100, 50, DrawAlign.CENTER, DrawAlign.MIDDLE, true);

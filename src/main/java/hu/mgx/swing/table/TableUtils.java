@@ -39,7 +39,7 @@ public abstract class TableUtils {
         if (bWithHeader) {
             for (int i = 0; i < jTable.getColumnCount(); i++) {
                 sCellValue = jTable.getColumnModel().getColumn(i).getHeaderValue().toString();
-                sCellValue = "X" + sCellValue + "X"; // a fejlécben nagyobb a margó. ezt szimuláljuk a két betû hozzáadásával
+                sCellValue = "X" + sCellValue + "X"; // a fejlÃ©cben nagyobb a margÃ³. ezt szimulÃ¡ljuk a kÃ©t betÅ± hozzÃ¡adÃ¡sÃ¡val
                 //System.out.println(sCellValue);
                 if (fm.stringWidth(sCellValue) > vColumnWidth.elementAt(i).intValue()) {
                     vColumnWidth.setElementAt(new Integer(fm.stringWidth(sCellValue)), i);

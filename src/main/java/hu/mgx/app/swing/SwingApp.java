@@ -70,7 +70,7 @@ public class SwingApp extends JFrame implements InternalFrameListener, ActionLis
     private ArrayList<Integer> alPlaces = null;
     private ArrayList<ArrayList<JInternalFrame>> alalJInternalFrames = null;
 
-//    private String sPrintPreviewTitle = "Nyomtat·si elıkÈp";
+//    private String sPrintPreviewTitle = "Nyomtat√°si el≈ëk√©p";
     private ErrorBox errorBox = null;
     private Dimension dimScreen;
     private Connection connection = null;
@@ -89,8 +89,8 @@ public class SwingApp extends JFrame implements InternalFrameListener, ActionLis
 //    private String sName = "";
 //    private String sValue = "";
 //    private Properties saveproperties;
-    //--- kÈpzett paramÈterek ---
-    //--- saj·t v·ltozÛk ---
+    //--- k√©pzett param√©terek ---
+    //--- saj√°t v√°ltoz√≥k ---
     private Toolkit toolkit = null;
     private PrintWriter logWriter = null;
     private String sLogFilename = null;
@@ -237,8 +237,8 @@ public class SwingApp extends JFrame implements InternalFrameListener, ActionLis
     }
 
     public boolean appExitQuestion() {
-        String sTitle = getOldLanguageString(DefaultLanguageConstants.STRING_EXIT, "KilÈpÈs");
-        String sQuestion = getOldLanguageString(DefaultLanguageConstants.STRING_APP_EXIT_QUESTION, "Bez·rja az alkalmaz·st?");
+        String sTitle = getOldLanguageString(DefaultLanguageConstants.STRING_EXIT, "Kil√©p√©s");
+        String sQuestion = getOldLanguageString(DefaultLanguageConstants.STRING_APP_EXIT_QUESTION, "Bez√°rja az alkalmaz√°st?");
         YesNoDialog yesNoDialog = new YesNoDialog(this, languageHandlerInterface);
         return (yesNoDialog.showDialog(this, sTitle, sQuestion, YesNoDialog.NO) == YesNoDialog.YES);
     }
@@ -318,7 +318,7 @@ public class SwingApp extends JFrame implements InternalFrameListener, ActionLis
 //            ++iElements;
 //        }
 //        progressDisplay = new ProgressDisplay(jFrame, 0, iElements + 1);
-//        progressDisplay.showDialog(jFrame, "KilÈpÈs", "ElıkÈszÌtÈs");
+//        progressDisplay.showDialog(jFrame, "Kil√©p√©s", "El≈ëk√©sz√≠t√©s");
 //        //addToDesktopPane(progressDisplay);
 //        PreparedStatement preparedStatement;
 //        try
@@ -337,7 +337,7 @@ public class SwingApp extends JFrame implements InternalFrameListener, ActionLis
 //        //        progressDisplay.validate();
 //
 //        elements = properties.propertyNames();
-//        progressDisplay.setMessage("Felhaszn·lÛi be·llÌt·sok mentÈse");
+//        progressDisplay.setMessage("Felhaszn√°l√≥i be√°ll√≠t√°sok ment√©se");
 //        timer = new javax.swing.Timer(10, new ActionListener()
 //                              {
 //
@@ -485,7 +485,7 @@ public class SwingApp extends JFrame implements InternalFrameListener, ActionLis
                 return (null);
             }
         }
-        //@todo a m·r nem haszn·lt helyeket tˆltse fel a program, k¸lˆnben a vÈgÈn minden form a kÈpernyı alj·n lesz!!!
+        //@todo a m√°r nem haszn√°lt helyeket t√∂ltse fel a program, k√ºl√∂nben a v√©g√©n minden form a k√©perny≈ë alj√°n lesz!!!
         if (internalFrames.length == 0) {
             iPlace = 0;
         }
@@ -754,7 +754,7 @@ public class SwingApp extends JFrame implements InternalFrameListener, ActionLis
     public void setWindowMenu(JMenu m, ActionListener l) {
         windowMenu = m;
         actionListenerForWindowMenu = l;
-        iWindowMenuItemCount = 0; //windowMenu.getItemCount(); //@@@todo 1-tıl induljon ... !!!
+        iWindowMenuItemCount = 0; //windowMenu.getItemCount(); //@@@todo 1-t≈ël induljon ... !!!
     }
 
     public void loadProperties() {
@@ -1201,7 +1201,7 @@ public class SwingApp extends JFrame implements InternalFrameListener, ActionLis
         });
 
         toolkit = Toolkit.getDefaultToolkit();
-        //ezt is xml-bıl kellene:
+        //ezt is xml-b≈ël kellene:
 //        if (!appParameters.getLogFileName().equals(""))
 //        {
 //        try {
@@ -1426,19 +1426,19 @@ public class SwingApp extends JFrame implements InternalFrameListener, ActionLis
                 addMenuSeparator(commonMenu); //MaG 2016.10.13.
             }
         }
-        iWindowMenuItemCount = 0; // windowMenu.getItemCount(); //MAG 2014.07.22. setWindowMenu(...) t˙l kor·n hÌvja meg
+        iWindowMenuItemCount = 0; // windowMenu.getItemCount(); //MAG 2014.07.22. setWindowMenu(...) tÔøΩl kor√°n h√≠vja meg
         if (this.sDateTimeVersion.equals(DEVELOPER_VERSION)) {
             String sXMLDeveloper = "<?xml version='1.0' encoding='ISO-8859-2'?>";
             sXMLDeveloper += "<!-- Comment -->";
             sXMLDeveloper += "<app name='swingapp' major='0' minor='0' revision='0' width='800' height='600'>";
             sXMLDeveloper += "    <language>";
             sXMLDeveloper += "        <languageitem key='mnuDeveloper'>";
-            sXMLDeveloper += "            <translation lang='hu'>_Fejlesztı</translation>";
+            sXMLDeveloper += "            <translation lang='hu'>_Fejleszt≈ë</translation>";
             sXMLDeveloper += "            <translation lang='en'>_Developer</translation>";
             sXMLDeveloper += "            <translation lang='de'>_Entwickler</translation>";
             sXMLDeveloper += "        </languageitem>";
             sXMLDeveloper += "        <languageitem key='mnuDeveloperScreenshot'>";
-            sXMLDeveloper += "            <translation lang='hu'>KÈpernyımentÈs</translation>";
+            sXMLDeveloper += "            <translation lang='hu'>K√©perny≈ëment√©s</translation>";
             sXMLDeveloper += "            <translation lang='en'>Screenshot</translation>";
             sXMLDeveloper += "            <translation lang='de'>Bildschirmfoto</translation>";
             sXMLDeveloper += "        </languageitem>";
@@ -1450,7 +1450,8 @@ public class SwingApp extends JFrame implements InternalFrameListener, ActionLis
             sXMLDeveloper += "    </language>";
             sXMLDeveloper += "</app>";
             DefaultXMLHandler xmlHandler = new DefaultXMLHandler(appInterface);
-            this.addLanguageXML(sXMLDeveloper, "ISO-8859-2", xmlHandler);
+//            this.addLanguageXML(sXMLDeveloper, "ISO-8859-2", xmlHandler);
+            this.addLanguageXML(sXMLDeveloper, "UTF-8", xmlHandler);
             commonMenu = this.addMenu("mnuDeveloper", "mnuDeveloper");
             hmMenus.put("mnuDeveloper", commonMenu);
             CommonMenuItem commonMenuItem = this.addMenuItem("mnuDeveloperScreenshot", commonMenu, this, "mnuDeveloperScreenshot");
@@ -1704,7 +1705,7 @@ public class SwingApp extends JFrame implements InternalFrameListener, ActionLis
             this.jToolBar = new JToolBar();
             this.jToolBar.setFloatable(false);
             this.jToolBar.setBorder(BorderFactory.createMatteBorder(1, 0, 0, 0, this.jToolBar.getBackground().darker())); //2011.05.13.
-            //this.jToolBar.setMargin(new Insets(10, 10, 10, 10)); nem hat·sos
+            //this.jToolBar.setMargin(new Insets(10, 10, 10, 10)); nem hat√°sos
             getContentPane().add(this.jToolBar, java.awt.BorderLayout.NORTH);
         }
     }
@@ -1978,10 +1979,10 @@ public class SwingApp extends JFrame implements InternalFrameListener, ActionLis
 //        sbToolTipText.append("<tr><td>Architecture:</td><td>").append(System.getProperty("os.arch")).append("</td></tr>");
 //        sbToolTipText.append("<tr><td>Name:</td><td>").append(System.getProperty("os.name")).append("</td></tr>");
 //        sbToolTipText.append("<tr><td>Version:</td><td>").append(System.getProperty("os.version")).append("</td></tr>");
-//        sbToolTipText.append("<tr><th colspan=2>Memory</th></tr>"); //MemÛria
+//        sbToolTipText.append("<tr><th colspan=2>Memory</th></tr>"); //Mem√≥ria
 //        sbToolTipText.append("<tr><td>Free:</td><td align=right>").append(memoryFormat.format(lFreeMemory)).append(" Byte</td></tr>"); //Szabad
-//        sbToolTipText.append("<tr><td>Total:</td><td align=right>").append(memoryFormat.format(lTotalMemory)).append(" Byte</td></tr>"); //÷sszes
-//        sbToolTipText.append("<tr><td>Maximum:</td><td align=right>").append(memoryFormat.format(lMaxMemory)).append(" Byte</td></tr>"); //Maxim·lis
+//        sbToolTipText.append("<tr><td>Total:</td><td align=right>").append(memoryFormat.format(lTotalMemory)).append(" Byte</td></tr>"); //√ñsszes
+//        sbToolTipText.append("<tr><td>Maximum:</td><td align=right>").append(memoryFormat.format(lMaxMemory)).append(" Byte</td></tr>"); //Maxim√°lis
 //        sbToolTipText.append("</table>");
 //        sbToolTipText.append("</html>");
         jLabelMemory.setToolTipText(sbToolTipText.toString());
@@ -2028,16 +2029,16 @@ public class SwingApp extends JFrame implements InternalFrameListener, ActionLis
         sbToolTipText.append("<tr><td>Version:</td><td>");
         sbToolTipText.append(System.getProperty("os.version"));
         sbToolTipText.append("</td></tr>");
-        sbToolTipText.append("<tr><th colspan=2>Memory</th></tr>"); //MemÛria
+        sbToolTipText.append("<tr><th colspan=2>Memory</th></tr>"); //Mem√≥ria
         sbToolTipText.append("<tr><td>Free:</td><td align=right>");
         sbToolTipText.append(memoryFormat.format(lFreeMemory));
         sbToolTipText.append(" Byte</td></tr>"); //Szabad
         sbToolTipText.append("<tr><td>Total:</td><td align=right>");
         sbToolTipText.append(memoryFormat.format(lTotalMemory));
-        sbToolTipText.append(" Byte</td></tr>"); //÷sszes
+        sbToolTipText.append(" Byte</td></tr>"); //√ñsszes
         sbToolTipText.append("<tr><td>Maximum:</td><td align=right>");
         sbToolTipText.append(memoryFormat.format(lMaxMemory));
-        sbToolTipText.append(" Byte</td></tr>"); //Maxim·lis
+        sbToolTipText.append(" Byte</td></tr>"); //Maxim√°lis
         sbToolTipText.append("</table>");
         sbToolTipText.append("</html>");
         jLabelMemory.setToolTipText(sbToolTipText.toString());
@@ -2107,11 +2108,11 @@ public class SwingApp extends JFrame implements InternalFrameListener, ActionLis
         }
         SelectFromMagTableDialog sfmtd = new SelectFromMagTableDialog(this.getAppFrame(), this, true);
         sfmtd.setAlignedToTop(jLabelWindow);
-        MemoryTable mt = MemoryTable.createMemoryTable("#", "Ablak v·laszt·s");
+        MemoryTable mt = MemoryTable.createMemoryTable("#", "Ablak v√°laszt√°s");
         for (int i = 0; i < jDesktopPane.getAllFrames().length; i++) {
             mt.addRow(i + 1, jDesktopPane.getAllFrames()[i].getTitle());
         }
-        int iReturn = sfmtd.showDialog(this.getAppFrame(), "Ablak v·laszt·s", mt, "", "", StringUtils.createEmptyArray());
+        int iReturn = sfmtd.showDialog(this.getAppFrame(), "Ablak v√°laszt√°s", mt, "", "", StringUtils.createEmptyArray());
         if (iReturn != SelectFromMagTableDialog.OK) {
             return;
         }
@@ -2139,9 +2140,9 @@ public class SwingApp extends JFrame implements InternalFrameListener, ActionLis
                 jLabelIP.setText(inetAddress.getHostAddress());
                 sbToolTipText.append("<html><table border=0><tr><th colspan=2>Net</th></tr>");
                 //@todo task : localisation, translation
-                sbToolTipText.append("<tr><td>Host name:</td><td>").append(inetAddress.getHostName()).append("</td></tr>"); //Host nÈv
-                sbToolTipText.append("<tr><td>Host address:</td><td>").append(inetAddress.getHostAddress()).append("</td></tr>");//Host ip cÌm
-                sbToolTipText.append("<tr><td>Host full name:</td><td>").append(inetAddress.getCanonicalHostName()).append("</td></tr>");//Host teljes nÈv
+                sbToolTipText.append("<tr><td>Host name:</td><td>").append(inetAddress.getHostName()).append("</td></tr>"); //Host n√©v
+                sbToolTipText.append("<tr><td>Host address:</td><td>").append(inetAddress.getHostAddress()).append("</td></tr>");//Host ip c√≠m
+                sbToolTipText.append("<tr><td>Host full name:</td><td>").append(inetAddress.getCanonicalHostName()).append("</td></tr>");//Host teljes n√©v
                 sbToolTipText.append("</table></html>");
                 jLabelIP.setToolTipText(sbToolTipText.toString());
             }
@@ -2161,8 +2162,8 @@ public class SwingApp extends JFrame implements InternalFrameListener, ActionLis
 
             //            jProgressBarProgress.setValue(50);
             //            jProgressBarProgress.setString("50%");
-            //            jProgressBarProgress.setString("KÈrem, v·rjon...");
-            //            jProgressBarProgress.setToolTipText("KÈrem, v·rjon...");
+            //            jProgressBarProgress.setString("K√©rem, v√°rjon...");
+            //            jProgressBarProgress.setToolTipText("K√©rem, v√°rjon...");
             //            jProgressBarProgress.setIndeterminate(true);
             this.statusBar.addToCurrentRow(new JLabel("  "), 1, 1, 0.0, weightcolumn);
             this.statusBar.addToCurrentRow(jProgressBarProgress, 1, 1, 0.0, weightcolumn);
@@ -2187,7 +2188,7 @@ public class SwingApp extends JFrame implements InternalFrameListener, ActionLis
     @Override
     public void displayProgressWait(boolean bDisplay) {
         if (bDisplay) {
-            jProgressBarProgress.setString("KÈrem, v·rjon...");
+            jProgressBarProgress.setString("K√©rem, v√°rjon...");
 
             jProgressBarProgress.setBorder(BorderFactory.createLineBorder(Color.orange, 2));
             jProgressBarProgress.setBorderPainted(true);
@@ -2263,7 +2264,7 @@ public class SwingApp extends JFrame implements InternalFrameListener, ActionLis
     public void hideSplash() {
         appSplash.setVisible(false);
         appSplash.dispose();
-        imageSplash = null; //felszabadÌtja a helyet???
+        imageSplash = null; //felszabad√≠tja a helyet???
 
     }
 

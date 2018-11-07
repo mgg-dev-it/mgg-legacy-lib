@@ -100,7 +100,7 @@ public class DefaultXMLHandler implements XMLInterface {
     public Vector<XMLElement> getElementsByAttribute(String sXMLName, String sElementName, String sAttributeName, String sAttributeValue) {
         XMLElement xmlElementRoot = xmlElementRoots.get(sXMLName);
         if (xmlElementRoot == null) {
-            errorHandlerInterface.handleError(null, "XML nÈv (" + sXMLName + ") nem tal·lhatÛ.", 0);
+            errorHandlerInterface.handleError(null, "XML n√©v (" + sXMLName + ") nem tal√°lhat√≥.", 0);
             return (null);
         }
         return (getElements(xmlElementRoot, sElementName, sAttributeName, sAttributeValue));
@@ -109,7 +109,7 @@ public class DefaultXMLHandler implements XMLInterface {
     public XMLElement getFirstElementByAttribute(String sXMLName, String sElementName, String sAttributeName, String sAttributeValue) {
         XMLElement xmlElementRoot = xmlElementRoots.get(sXMLName);
         if (xmlElementRoot == null) {
-            errorHandlerInterface.handleError(null, "XML nÈv (" + sXMLName + ") nem tal·lhatÛ.", 0);
+            errorHandlerInterface.handleError(null, "XML n√©v (" + sXMLName + ") nem tal√°lhat√≥.", 0);
             return (null);
         }
         Vector<XMLElement> xmlElements = getElements(xmlElementRoot, sElementName, sAttributeName, sAttributeValue);
@@ -130,7 +130,7 @@ public class DefaultXMLHandler implements XMLInterface {
     public Vector<XMLElement> getElements(String sXMLName, String sElementName) {
         XMLElement xmlElementRoot = xmlElementRoots.get(sXMLName);
         if (xmlElementRoot == null) {
-            errorHandlerInterface.handleError(null, "XML nÈv (" + sXMLName + ") nem tal·lhatÛ.", 0);
+            errorHandlerInterface.handleError(null, "XML n√©v (" + sXMLName + ") nem tal√°lhat√≥.", 0);
             return (null);
         }
         return (getElements(xmlElementRoot, sElementName));
@@ -166,7 +166,7 @@ public class DefaultXMLHandler implements XMLInterface {
     public XMLElement getFirstElement(String sXMLName, String sElementName) {
         XMLElement xmlElementRoot = xmlElementRoots.get(sXMLName);
         if (xmlElementRoot == null) {
-            errorHandlerInterface.handleError(null, "XML nÈv (" + sXMLName + ") nem tal·lhatÛ.", 0);
+            errorHandlerInterface.handleError(null, "XML n√©v (" + sXMLName + ") nem tal√°lhat√≥.", 0);
             return (null);
         }
         Vector<XMLElement> xmlElements = getElements(xmlElementRoot, sElementName, null, null);
@@ -233,7 +233,7 @@ public class DefaultXMLHandler implements XMLInterface {
     public void debugListXML(String sXMLName) {
         XMLElement xmlElementRoot = xmlElementRoots.get(sXMLName);
         if (xmlElementRoot == null) {
-            errorHandlerInterface.handleError(null, "XML nÈv (" + sXMLName + ") nem tal·lhatÛ.", 0);
+            errorHandlerInterface.handleError(null, "XML n√©v (" + sXMLName + ") nem tal√°lhat√≥.", 0);
             return;
         }
         debugListElement(xmlElementRoot, 0);

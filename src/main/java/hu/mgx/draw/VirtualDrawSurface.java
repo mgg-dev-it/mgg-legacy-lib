@@ -9,10 +9,10 @@ import java.awt.geom.*;
 import java.util.*;
 
 /**
- * Virtuális rajzoló felület.
+ * VirtuÃ¡lis rajzolÃ³ felÃ¼let.
  * <p>
- * x koordináta: "jobbra"<p>
- * y koordináta: "lefele"<p>
+ * x koordinÃ¡ta: "jobbra"
+ * y koordinÃ¡ta: "lefele"
  */
 public class VirtualDrawSurface
 {
@@ -39,16 +39,20 @@ public class VirtualDrawSurface
     }
 
     /**
-     * Cellába ír!
+     * CellÃ¡ba Ã­r!
      *
-     * @param str A kiírandó szöveg
-     * @param font A használandó font
-     * @param x
-     * @param y
-     * @param width
-     * @param height
-     * @param align
-     * @param valign
+     * @param str A kiÃ­randÃ³ szÃ¶veg
+     * @param font A hasznÃ¡landÃ³ font
+     * @param x x
+     * @param y y
+     * @param width width
+     * @param height height
+     * @param align align
+     * @param valign valign
+     * @param bBorder bBorder
+     * @param bClip bClip
+     * @param bWrap bWrap
+     * @param bShrink bShrink
      */
     public void drawString(String str, Font font, int x, int y, int width, int height, int align, int valign, boolean bBorder, boolean bClip, boolean bWrap, boolean bShrink)
     {
@@ -168,8 +172,8 @@ public class VirtualDrawSurface
     }
 
     /**
-     * Lekérdezi a rajzterület szélességét.
-     * @return A terület szélessége
+     * LekÃ©rdezi a rajzterÃ¼let szÃ©lessÃ©gÃ©t.
+     * @return A terÃ¼let szÃ©lessÃ©ge
      */
     public int getWidth()
     {
@@ -177,8 +181,8 @@ public class VirtualDrawSurface
     }
 
     /**
-     * Lekérdezi a rajzterület magasságát.
-     * @return A terület magassága
+     * LekÃ©rdezi a rajzterÃ¼let magassÃ¡gÃ¡t.
+     * @return A terÃ¼let magassÃ¡ga
      */
     public int getHeight()
     {
@@ -186,8 +190,10 @@ public class VirtualDrawSurface
     }
 
     /**
-     * A megadott Graphics2D objektumra rajzolja a pageIndex által meghatározott oldalon lévõ elemeket.
-     * @return true, ha sikeres volt a rajzolás (van ilyen oldal, akkor is, ha üres), illetve false, ha sikertelen volt a rajzolás (nincs ilyen oldal)
+     * A megadott Graphics2D objektumra rajzolja a pageIndex Ã¡ltal meghatÃ¡rozott oldalon lÃ©vÅ‘ elemeket.
+     * @param pageIndex pageIndex
+     * @param g2d g2d
+     * @return true, ha sikeres volt a rajzolÃ¡s (van ilyen oldal, akkor is, ha Ã¼res), illetve false, ha sikertelen volt a rajzolÃ¡s (nincs ilyen oldal)
      */
     public boolean drawToGraphics(int pageIndex, Graphics2D g2d)
     {
@@ -331,8 +337,8 @@ public class VirtualDrawSurface
             if (si.isClipped())
             {
                 clipBounds = g2d.getClipBounds();
-                g2d.clipRect(si.getX(), si.getY(), si.getWidth(), si.getHeight()); //nem enged a cellán kívülre írni!
-            //g2d.setClip(si.getX(), si.getY(), si.getWidth(), si.getHeight()); //nem enged a cellán kívülre írni!
+                g2d.clipRect(si.getX(), si.getY(), si.getWidth(), si.getHeight()); //nem enged a cellï¿½n kï¿½vï¿½lre ï¿½rni!
+            //g2d.setClip(si.getX(), si.getY(), si.getWidth(), si.getHeight()); //nem enged a cellï¿½n kï¿½vï¿½lre ï¿½rni!
             }
             g2d.drawString(si.getString(), x, y);
             if (si.isClipped())

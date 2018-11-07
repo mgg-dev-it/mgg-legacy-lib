@@ -27,70 +27,70 @@ public class DefaultLanguageHandler implements LanguageHandlerInterface {
         setLanguageString(DefaultLanguageConstants.STRING_LANGUAGE_NAME, "Magyar");
         setLanguageString(DefaultLanguageConstants.STRING_YES, "&Igen");
         setLanguageString(DefaultLanguageConstants.STRING_NO, "&Nem");
-        setLanguageString(DefaultLanguageConstants.STRING_CANCEL, "&MÈgsem");
+        setLanguageString(DefaultLanguageConstants.STRING_CANCEL, "&M√©gsem");
         setLanguageString(DefaultLanguageConstants.STRING_OK, "&OK");
-        setLanguageString(DefaultLanguageConstants.STRING_LOGIN, "&BejelentkezÈs");
-        setLanguageString(DefaultLanguageConstants.STRING_USER_ID, "Felhaszn·lÛ azonosÌtÛ");
-        setLanguageString(DefaultLanguageConstants.STRING_PASSWORD, "JelszÛ");
-        setLanguageString(DefaultLanguageConstants.STRING_PASSWORD_CHANGE, "&JelszÛcsere");
-        setLanguageString(DefaultLanguageConstants.STRING_OLD_PASSWORD, "RÈgi jelszÛ");
-        setLanguageString(DefaultLanguageConstants.STRING_NEW_PASSWORD, "⁄j jelszÛ");
-        setLanguageString(DefaultLanguageConstants.STRING_NEW_PASSWORD_AGAIN, "⁄j jelszÛ mÈg egyszer");
+        setLanguageString(DefaultLanguageConstants.STRING_LOGIN, "&Bejelentkez√©s");
+        setLanguageString(DefaultLanguageConstants.STRING_USER_ID, "Felhaszn√°l√≥ azonos√≠t√≥");
+        setLanguageString(DefaultLanguageConstants.STRING_PASSWORD, "Jelsz√≥");
+        setLanguageString(DefaultLanguageConstants.STRING_PASSWORD_CHANGE, "&Jelsz√≥csere");
+        setLanguageString(DefaultLanguageConstants.STRING_OLD_PASSWORD, "R√©gi jelsz√≥");
+        setLanguageString(DefaultLanguageConstants.STRING_NEW_PASSWORD, "√öj jelsz√≥");
+        setLanguageString(DefaultLanguageConstants.STRING_NEW_PASSWORD_AGAIN, "√öj jelsz√≥ m√©g egyszer");
         setLanguageString(DefaultLanguageConstants.STRING_LANGUAGE, "Nyelv");
-        setLanguageString(DefaultLanguageConstants.STRING_LANGUAGE_SELECT, "Nyelv v·laszt·s");
-        setLanguageString(DefaultLanguageConstants.STRING_EXIT, "KilÈpÈs");
-        setLanguageString(DefaultLanguageConstants.STRING_APP_EXIT_QUESTION, "Bez·rja az alkalmaz·st?");
-        setLanguageString(DefaultLanguageConstants.STRING_MENU_FILE, "&F·jl");
-        setLanguageString(DefaultLanguageConstants.STRING_MENU_NEW, "⁄j@ctrl N");
-        setLanguageString(DefaultLanguageConstants.STRING_MENU_OPEN, "Megnyit·s");
-        setLanguageString(DefaultLanguageConstants.STRING_MENU_CLOSE, "Bez·r·s");
-        setLanguageString(DefaultLanguageConstants.STRING_MENU_SAVE, "MentÈs");
-        setLanguageString(DefaultLanguageConstants.STRING_MENU_SAVEAS, "MentÈs m·skÈnt");
-        setLanguageString(DefaultLanguageConstants.STRING_MENU_PAGESETUP, "Oldalbe·llÌt·s");
-        setLanguageString(DefaultLanguageConstants.STRING_MENU_PRINTPREVIEW, "Nyomtat·si kÈp");
-        setLanguageString(DefaultLanguageConstants.STRING_MENU_PRINT, "Nyomtat·s");
-        setLanguageString(DefaultLanguageConstants.STRING_MENU_LOGIN, "&BejelentkezÈs");
-        setLanguageString(DefaultLanguageConstants.STRING_MENU_PASSWORDCHANGE, "&JelszÛcsere");
-        setLanguageString(DefaultLanguageConstants.STRING_MENU_EDIT, "SzerkesztÈs");
-        setLanguageString(DefaultLanguageConstants.STRING_MENU_CUT, "Kiv·g·s");
-        setLanguageString(DefaultLanguageConstants.STRING_MENU_COPY, "M·sol·s");
-        setLanguageString(DefaultLanguageConstants.STRING_MENU_PASTE, "BeillesztÈs");
-        setLanguageString(DefaultLanguageConstants.STRING_MENU_OPTIONS, "&Be·lllÌt·sok");
+        setLanguageString(DefaultLanguageConstants.STRING_LANGUAGE_SELECT, "Nyelv v√°laszt√°s");
+        setLanguageString(DefaultLanguageConstants.STRING_EXIT, "Kil√©p√©s");
+        setLanguageString(DefaultLanguageConstants.STRING_APP_EXIT_QUESTION, "Bez√°rja az alkalmaz√°st?");
+        setLanguageString(DefaultLanguageConstants.STRING_MENU_FILE, "&F√°jl");
+        setLanguageString(DefaultLanguageConstants.STRING_MENU_NEW, "√öj@ctrl N");
+        setLanguageString(DefaultLanguageConstants.STRING_MENU_OPEN, "Megnyit√°s");
+        setLanguageString(DefaultLanguageConstants.STRING_MENU_CLOSE, "Bez√°r√°s");
+        setLanguageString(DefaultLanguageConstants.STRING_MENU_SAVE, "Ment√©s");
+        setLanguageString(DefaultLanguageConstants.STRING_MENU_SAVEAS, "Ment√©s m√°sk√©nt");
+        setLanguageString(DefaultLanguageConstants.STRING_MENU_PAGESETUP, "Oldalbe√°ll√≠t√°s");
+        setLanguageString(DefaultLanguageConstants.STRING_MENU_PRINTPREVIEW, "Nyomtat√°si k√©p");
+        setLanguageString(DefaultLanguageConstants.STRING_MENU_PRINT, "Nyomtat√°s");
+        setLanguageString(DefaultLanguageConstants.STRING_MENU_LOGIN, "&Bejelentkez√©s");
+        setLanguageString(DefaultLanguageConstants.STRING_MENU_PASSWORDCHANGE, "&Jelsz√≥csere");
+        setLanguageString(DefaultLanguageConstants.STRING_MENU_EDIT, "Szerkeszt√©s");
+        setLanguageString(DefaultLanguageConstants.STRING_MENU_CUT, "Kiv√°g√°s");
+        setLanguageString(DefaultLanguageConstants.STRING_MENU_COPY, "M√°sol√°s");
+        setLanguageString(DefaultLanguageConstants.STRING_MENU_PASTE, "Beilleszt√©s");
+        setLanguageString(DefaultLanguageConstants.STRING_MENU_OPTIONS, "&Be√°lll√≠t√°sok");
         setLanguageString(DefaultLanguageConstants.STRING_MENU_LANGUAGE, "&Nyelv");
         setLanguageString(DefaultLanguageConstants.STRING_MENU_WINDOW, "&Ablak");
-        setLanguageString(DefaultLanguageConstants.STRING_MENU_EXIT, "&KilÈpÈs@alt X");
-        setLanguageString(DefaultLanguageConstants.STRING_MENU_HELP, "&S˙gÛ@F1");
-        setLanguageString(DefaultLanguageConstants.STRING_MENU_ABOUT, "&NÈvjegy");
+        setLanguageString(DefaultLanguageConstants.STRING_MENU_EXIT, "&Kil√©p√©s@alt X");
+        setLanguageString(DefaultLanguageConstants.STRING_MENU_HELP, "&S√∫g√≥@F1");
+        setLanguageString(DefaultLanguageConstants.STRING_MENU_ABOUT, "&N√©vjegy");
 
-        setLanguageString(DefaultLanguageConstants.STRING_CAPTION_DETAILS, "RÈszletek");
+        setLanguageString(DefaultLanguageConstants.STRING_CAPTION_DETAILS, "R√©szletek");
         setLanguageString(DefaultLanguageConstants.STRING_CAPTION_LIST, "Lista");
-        setLanguageString(DefaultLanguageConstants.STRING_CAPTION_ADD_NEW_RECORD, "⁄j rekord hozz·ad·sa");
-        setLanguageString(DefaultLanguageConstants.STRING_CAPTION_MODIFY_RECORD, "Rekord mÛdosÌt·sa");
-        setLanguageString(DefaultLanguageConstants.STRING_CAPTION_ADD, "Hozz·ad·s");
-        setLanguageString(DefaultLanguageConstants.STRING_CAPTION_MODIFY, "MÛdosÌt·s");
-        setLanguageString(DefaultLanguageConstants.STRING_CAPTION_VIEW, "MegtekintÈs");
-        //setLanguageString(DefaultLanguageConstants.STRING_CAPTION_DELETE, "TˆrlÈs");
-        //setLanguageString(DefaultLanguageConstants.STRING_CAPTION_REFRESH, "FrissÌtÈs");
+        setLanguageString(DefaultLanguageConstants.STRING_CAPTION_ADD_NEW_RECORD, "√öj rekord hozz√°ad√°sa");
+        setLanguageString(DefaultLanguageConstants.STRING_CAPTION_MODIFY_RECORD, "Rekord m√≥dos√≠t√°sa");
+        setLanguageString(DefaultLanguageConstants.STRING_CAPTION_ADD, "Hozz√°ad√°s");
+        setLanguageString(DefaultLanguageConstants.STRING_CAPTION_MODIFY, "M√≥dos√≠t√°s");
+        setLanguageString(DefaultLanguageConstants.STRING_CAPTION_VIEW, "Megtekint√©s");
+        //setLanguageString(DefaultLanguageConstants.STRING_CAPTION_DELETE, "T√∂rl√©s");
+        //setLanguageString(DefaultLanguageConstants.STRING_CAPTION_REFRESH, "Friss√≠t√©s");
         setLanguageString(DefaultLanguageConstants.STRING_CAPTION_EXCEL, "Excel");
         setLanguageString(DefaultLanguageConstants.STRING_CAPTION_OK, "OK");
-        //setLanguageString(DefaultLanguageConstants.STRING_CAPTION_CANCEL, "MÈgsem");
-        //setLanguageString(DefaultLanguageConstants.STRING_CAPTION_SAVE, "MentÈs");
+        //setLanguageString(DefaultLanguageConstants.STRING_CAPTION_CANCEL, "M√©gsem");
+        //setLanguageString(DefaultLanguageConstants.STRING_CAPTION_SAVE, "Ment√©s");
 
         setLanguageString(DefaultLanguageConstants.STRING_MESSAGE_ERROR, "Hiba");
-        setLanguageString(DefaultLanguageConstants.STRING_MESSAGE_PASSWORD_CHANGE_SUCCESSFUL, "JelszÛcsere siker¸lt.");
-        setLanguageString(DefaultLanguageConstants.STRING_MESSAGE_PASSWORD_CHANGE_UNSUCCESSFUL, "JelszÛcsere nem siker¸lt.");
-        setLanguageString(DefaultLanguageConstants.STRING_MESSAGE_DELETE, "TˆrlÈs!");
-        setLanguageString(DefaultLanguageConstants.STRING_MESSAGE_DELETE_REALLY, "Biztos benne, hogy tˆrˆlni akarja a rekordot?");
+        setLanguageString(DefaultLanguageConstants.STRING_MESSAGE_PASSWORD_CHANGE_SUCCESSFUL, "Jelsz√≥csere siker√ºlt.");
+        setLanguageString(DefaultLanguageConstants.STRING_MESSAGE_PASSWORD_CHANGE_UNSUCCESSFUL, "Jelsz√≥csere nem siker√∫lt.");
+        setLanguageString(DefaultLanguageConstants.STRING_MESSAGE_DELETE, "T√∂rl√©s!");
+        setLanguageString(DefaultLanguageConstants.STRING_MESSAGE_DELETE_REALLY, "Biztos benne, hogy t√∂r√∂lni akarja a rekordot?");
 
-        setLanguageString(DefaultLanguageConstants.STRING_CAPTION_PRPN_PORTRAIT, "¡llÛ");
-        setLanguageString(DefaultLanguageConstants.STRING_CAPTION_PRPN_LANDSCAPE, "Fekvı");
-        setLanguageString(DefaultLanguageConstants.STRING_CAPTION_PRPN_MAGNIFY, " NagyÌt·s(%):");
+        setLanguageString(DefaultLanguageConstants.STRING_CAPTION_PRPN_PORTRAIT, "√Åll√≥");
+        setLanguageString(DefaultLanguageConstants.STRING_CAPTION_PRPN_LANDSCAPE, "Fekv≈ë");
+        setLanguageString(DefaultLanguageConstants.STRING_CAPTION_PRPN_MAGNIFY, " Nagy√≠t√°s(%):");
         setLanguageString(DefaultLanguageConstants.STRING_CAPTION_PRPN_PAGE, " Oldal:");
-        setLanguageString(DefaultLanguageConstants.STRING_CAPTION_PRPN_PRINT, "Nyomtat·s");
-        setLanguageString(DefaultLanguageConstants.STRING_CAPTION_PRPN_PAGE_SETUP, "Oldalbe·llÌt·s");
+        setLanguageString(DefaultLanguageConstants.STRING_CAPTION_PRPN_PRINT, "Nyomtat√°s");
+        setLanguageString(DefaultLanguageConstants.STRING_CAPTION_PRPN_PAGE_SETUP, "Oldalbe√°ll√≠t√°s");
 
         addLanguage("ro");
-        setLanguageString(DefaultLanguageConstants.STRING_LANGUAGE_NAME, "Rom·n");
+        setLanguageString(DefaultLanguageConstants.STRING_LANGUAGE_NAME, "Rom√°n");
         setLanguageString(DefaultLanguageConstants.STRING_YES, "&Da");
         setLanguageString(DefaultLanguageConstants.STRING_NO, "&Nu");
         setLanguageString(DefaultLanguageConstants.STRING_CANCEL, "Revocare");
@@ -134,7 +134,7 @@ public class DefaultLanguageHandler implements LanguageHandlerInterface {
         setLanguageString(DefaultLanguageConstants.STRING_CAPTION_MODIFY_RECORD, "Modificare record");
         setLanguageString(DefaultLanguageConstants.STRING_CAPTION_ADD, "AdauMogare");
         setLanguageString(DefaultLanguageConstants.STRING_CAPTION_MODIFY, "Modificane");
-        //setLanguageString(DefaultLanguageConstants.STRING_CAPTION_VIEW, "MegtekintÈs");
+        //setLanguageString(DefaultLanguageConstants.STRING_CAPTION_VIEW, "MegtekintÔøΩs");
         //setLanguageString(DefaultLanguageConstants.STRING_CAPTION_DELETE, "Stergere");
         //setLanguageString(DefaultLanguageConstants.STRING_CAPTION_REFRESH, "Aktualizare");
         setLanguageString(DefaultLanguageConstants.STRING_CAPTION_EXCEL, "Excel");
@@ -233,10 +233,10 @@ public class DefaultLanguageHandler implements LanguageHandlerInterface {
         setLanguageString(DefaultLanguageConstants.STRING_MENU_HELP, "&Hilfe@F1");
         setLanguageString(DefaultLanguageConstants.STRING_MENU_ABOUT, "&About");
 
-        setLanguageStringXML_HU_RO("MentÈs", "Salvare"); //OK
-        setLanguageStringXML_HU_RO("TˆrlÈs", "Stergere"); //OK
-        setLanguageStringXML_HU_RO("MÈgsem", "Revocare"); //OK
-        setLanguageStringXML_HU_RO("FrissÌtÈs", "Actualizare"); //OK
+        setLanguageStringXML_HU_RO("MentÔøΩs", "Salvare"); //OK
+        setLanguageStringXML_HU_RO("TÔøΩrlÔøΩs", "Stergere"); //OK
+        setLanguageStringXML_HU_RO("MÔøΩgsem", "Revocare"); //OK
+        setLanguageStringXML_HU_RO("FrissÔøΩtÔøΩs", "Actualizare"); //OK
     }
 
     @Override
@@ -365,7 +365,7 @@ public class DefaultLanguageHandler implements LanguageHandlerInterface {
 
     @Override
     public String getLanguageString(String sKey, String sDefaultValue) {
-        if (!bSubstitute) //nem helyettesÌti m·s nyelven, ha nem tal·lja ...
+        if (!bSubstitute) //nem helyettesÔøΩti mÔøΩs nyelven, ha nem talÔøΩlja ...
         {
             return (pLanguage.getProperty(sKey, sDefaultValue));
         }
@@ -418,17 +418,17 @@ public class DefaultLanguageHandler implements LanguageHandlerInterface {
 //        System.out.println(Integer.toString(iItemStartClose));
 //        System.out.println(Integer.toString(iItemEnd));
         if (iItemStart < 0) {
-            return (-1); //hibakezelÈs - nincs <item ...> elem
+            return (-1); //hibakezelÔøΩs - nincs <item ...> elem
         }
         if (iItemStartClose < 0) {
-            return (-1); //hibakezelÈs - nincs <item ...> lez·rÛ elem
+            return (-1); //hibakezelÔøΩs - nincs <item ...> lezÔøΩrÔøΩ elem
         }
         if (iItemEnd < 0) {
-            return (-1); //hibakezelÈs - nincs </item> elem
+            return (-1); //hibakezelÔøΩs - nincs </item> elem
         }
         iItemStart = iItemStartClose + 1;
         if (iItemEnd <= iItemStart) {
-            return (-1); //hibakezelÈs - itemEnd <= itemStart
+            return (-1); //hibakezelÔøΩs - itemEnd <= itemStart
         }
         sItem = sXML.substring(iItemStart, iItemEnd);
         sLang = sXML.substring(iItemStartClose - 2, iItemStartClose);
@@ -453,18 +453,18 @@ public class DefaultLanguageHandler implements LanguageHandlerInterface {
         iKeyStart = sXML.indexOf("<key>");
         iKeyEnd = sXML.indexOf("</key>");
         if (iKeyStart < 0) {
-            return; //hibakezelÈs - nincs <key> elem
+            return; //hibakezelÔøΩs - nincs <key> elem
         }
         if (iKeyEnd < 0) {
-            return; //hibakezelÈs - nincs </key> elem
+            return; //hibakezelÔøΩs - nincs </key> elem
         }
         iKeyStart += iKeyStart + "<key>".length();
         if (iKeyEnd <= iKeyStart) {
-            return; //hibakezelÈs - keyEnd <= keyStart
+            return; //hibakezelÔøΩs - keyEnd <= keyStart
         }
         sKey = sXML.substring(iKeyStart, iKeyEnd);
 //        System.out.println("Key=" + sKey);
-        //szˆvegek a k¸lˆnbˆzı nyelveken:
+        //szÔøΩvegek a kÔøΩlÔøΩnbÔøΩzÔøΩ nyelveken:
         iNextItem = setLanguageStringXMLItem(sKey, sXML);
 //        System.out.println(Integer.toString(iNextItem));
         while (iNextItem > -1) {

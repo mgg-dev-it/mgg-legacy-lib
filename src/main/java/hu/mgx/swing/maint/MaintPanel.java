@@ -61,7 +61,7 @@ public class MaintPanel extends CommonPanel implements ActionListener, KeyListen
     private MaintPanelExtensionInterface maintPanelExtensionInterface = null;
 
     /*
-     * régi, eredeti
+     * rÃ©gi, eredeti
      */
     public MaintPanel(DataBase db, String sTableName, AppInterface appInterface, MaintPanelListener maintPanelListener, int iUserId, boolean bButtons, boolean bInsert, boolean bUpdate, boolean bDelete, boolean bExcelExport, int iSortByColumn, MaintPanelExtensionInterface maintPanelExtensionInterface)
     {
@@ -85,7 +85,7 @@ public class MaintPanel extends CommonPanel implements ActionListener, KeyListen
     }
 
     /*
-     * új változat az általános karbantartóhoz 2009.01.28
+     *Ãºj vÃ¡ltozat az Ã¡ltalÃ¡nos karbantartÃ³hoz 2009.01.28
      */
     public MaintPanel(CONN Conn, TableDefinition td, AppInterface appInterface, MaintPanelListener maintPanelListener, int iUserId, boolean bButtons, boolean bInsert, boolean bUpdate, boolean bDelete, boolean bExcelExport, int iSortByColumn, MaintPanelExtensionInterface maintPanelExtensionInterface)
     {
@@ -155,7 +155,7 @@ public class MaintPanel extends CommonPanel implements ActionListener, KeyListen
         jTabbedPane.addTab(appInterface.getLanguageString(DefaultLanguageConstants.STRING_CAPTION_LIST), null, listPanel, appInterface.getLanguageString(DefaultLanguageConstants.STRING_CAPTION_LIST));
         jTabbedPane.setMnemonicAt(0, 'L');
         jScrollPane2 = new JScrollPane(detailPanel);
-        //jTabbedPane.addTab ("Részletek", null, jScrollPane2, "Részletek");
+        //jTabbedPane.addTab ("RÃ©szletek", null, jScrollPane2, "RÃ©szletek");
         jTabbedPane.addTab(appInterface.getLanguageString(DefaultLanguageConstants.STRING_CAPTION_DETAILS), null, jScrollPane2, appInterface.getLanguageString(DefaultLanguageConstants.STRING_CAPTION_DETAILS));
         jTabbedPane.setMnemonicAt(1, 'R');
         jTabbedPane.setFocusable(false);
@@ -224,8 +224,8 @@ public class MaintPanel extends CommonPanel implements ActionListener, KeyListen
         {
             jPanel.addToGrid(btnNew = AppUtils.createButton(appInterface.getLanguageString(DefaultLanguageConstants.STRING_CAPTION_ADD), "New", this, "Ctrl-N"), 1, 0, 1, 1, 0.0, 0.0, GridBagConstraints.BOTH);
             jPanel.addToGrid(btnEdit = AppUtils.createButton((bUpdate ? appInterface.getLanguageString(DefaultLanguageConstants.STRING_CAPTION_MODIFY) : appInterface.getLanguageString(DefaultLanguageConstants.STRING_CAPTION_VIEW)), "Edit", this, "Ctrl-E"), 1, 1, 1, 1, 0.0, 0.0, GridBagConstraints.BOTH);
-            jPanel.addToGrid(btnDelete = AppUtils.createButton(appInterface.getLanguageString("Törlés"), "Delete", this, "Ctrl-D"), 1, 2, 1, 1, 0.0, 0.0, GridBagConstraints.BOTH);
-            jPanel.addToGrid(AppUtils.createButton(appInterface.getLanguageString("Frissítés"), "Refresh", this, "Ctrl-R"), 1, 3, 1, 1, 0.0, 0.0, GridBagConstraints.BOTH);
+            jPanel.addToGrid(btnDelete = AppUtils.createButton(appInterface.getLanguageString("TÃ¶rlÃ©s"), "Delete", this, "Ctrl-D"), 1, 2, 1, 1, 0.0, 0.0, GridBagConstraints.BOTH);
+            jPanel.addToGrid(AppUtils.createButton(appInterface.getLanguageString("FrissÃ­tÃ©s"), "Refresh", this, "Ctrl-R"), 1, 3, 1, 1, 0.0, 0.0, GridBagConstraints.BOTH);
             jPanel.addToGrid(btnExcelExport = AppUtils.createButton(appInterface.getLanguageString(DefaultLanguageConstants.STRING_CAPTION_EXCEL), "Excel", this, "Ctrl-X"), 1, 4, 1, 1, 0.0, 0.0, GridBagConstraints.BOTH);
             jPanel.addToGrid(new JLabel(""), 1, 5, GridBagConstraints.REMAINDER, 1, 0.0, 1.0, GridBagConstraints.BOTH);
         }
@@ -343,7 +343,7 @@ public class MaintPanel extends CommonPanel implements ActionListener, KeyListen
             jPanel.addToGrid(new JLabel(""), ++iRow, iColumn = 0, 1, 1, 0.0, 0.0, GridBagConstraints.BOTH);
             jPanel.addToGrid(btnOK = AppUtils.createButton(appInterface.getLanguageString(DefaultLanguageConstants.STRING_CAPTION_OK), "OK", this, "Ctrl-S"), iRow, ++iColumn, 1, 1, 0.0, 0.0, GridBagConstraints.WEST, GridBagConstraints.WEST);
             btnOK.setEnabled((!bExistingRecord && bInsert) || (bExistingRecord && bUpdate));
-            jPanel.addToGrid(AppUtils.createButton(appInterface.getLanguageString("Mégsem"), "Escape", this, appInterface.getLanguageString("Mégsem")), iRow, ++iColumn, 1, 1, 0.0, 0.0, GridBagConstraints.WEST, GridBagConstraints.WEST);
+            jPanel.addToGrid(AppUtils.createButton(appInterface.getLanguageString("MÃ©gsem"), "Escape", this, appInterface.getLanguageString("Mï¿½gsem")), iRow, ++iColumn, 1, 1, 0.0, 0.0, GridBagConstraints.WEST, GridBagConstraints.WEST);
             jPanel.addToGrid(new JLabel(""), iRow, ++iColumn, GridBagConstraints.REMAINDER, 1, 0.0, 1.0, GridBagConstraints.BOTH);
         }
 
@@ -706,7 +706,7 @@ public class MaintPanel extends CommonPanel implements ActionListener, KeyListen
             {
                 if ((bExistingRecord && bUpdate) || (!bExistingRecord && bInsert))
                 {
-                    if (!AppUtils.yesNoQuestion(this, "Figyelem!", "<html><p align='center'>A nem mentett adatok elvesznek!</p><p align='center'>Folytatja mentés nélkül?</p></html>", appInterface))
+                    if (!AppUtils.yesNoQuestion(this, "Figyelem!", "<html><p align='center'>A nem mentett adatok elvesznek!</p><p align='center'>Folytatja mentÃ©s nÃ©lkÃ¼l?</p></html>", appInterface))
                     {
                         return;
                     }

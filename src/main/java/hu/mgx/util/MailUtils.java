@@ -28,11 +28,11 @@ public abstract class MailUtils {
         String sMailToDisplayArray[] = null;
 
         if (sMailFrom.equals("")) {
-            appInterface.logLine("Hiba: 'mailfrom' argumentum hi·nyzik!", LoggerInterface.LOG_ERROR);
+            appInterface.logLine("Hiba: 'mailfrom' argumentum hi√°nyzik!", LoggerInterface.LOG_ERROR);
             return;
         }
         if (sMailTo.equals("")) {
-            appInterface.logLine("Hiba: 'mailto' argumentum hi·nyzik!", LoggerInterface.LOG_ERROR);
+            appInterface.logLine("Hiba: 'mailto' argumentum hi√°nyzik!", LoggerInterface.LOG_ERROR);
             return;
         }
 
@@ -52,7 +52,7 @@ public abstract class MailUtils {
 
         if (!sMailTo.equals("") && !sMailToDisplay.equals("")) {
             if (sMailToArray.length != sMailToDisplayArray.length) {
-                appInterface.logLine("Hiba: 'mailto' argumentum Ès 'mailtodisplay' argumentumok eltÈrı sz·m˙ cÌmzettet tartalmaznak!", LoggerInterface.LOG_ERROR);
+                appInterface.logLine("Hiba: 'mailto' argumentum √©s 'mailtodisplay' argumentumok elt√©r≈ë sz√°m√∫ c√≠mzettet tartalmaznak!", LoggerInterface.LOG_ERROR);
                 return;
             }
         }
@@ -61,18 +61,18 @@ public abstract class MailUtils {
             sMailSubject = StringUtils.stringReplace(sMailSubject, sCrLfReplacement, StringUtils.sCrLf);
         }
         if (sMailSubject.equals("")) {
-            appInterface.logLine("Hiba: 'mailsubject' argumentum hi·nyzik!", LoggerInterface.LOG_ERROR);
+            appInterface.logLine("Hiba: 'mailsubject' argumentum hi√°nyzik!", LoggerInterface.LOG_ERROR);
             return;
         }
         if (!sCrLfReplacement.equals("")) {
             sMailText = StringUtils.stringReplace(sMailText, sCrLfReplacement, StringUtils.sCrLf);
         }
         if (sMailText.equals("")) {
-            appInterface.logLine("Hiba: 'mailtext' argumentum hi·nyzik!", LoggerInterface.LOG_ERROR);
+            appInterface.logLine("Hiba: 'mailtext' argumentum hi√°nyzik!", LoggerInterface.LOG_ERROR);
             return;
         }
         if (sSMTP.equals("")) {
-            appInterface.logLine("Hiba: 'smtp' argumentum hi·nyzik!", LoggerInterface.LOG_ERROR);
+            appInterface.logLine("Hiba: 'smtp' argumentum hi√°nyzik!", LoggerInterface.LOG_ERROR);
             return;
         }
 

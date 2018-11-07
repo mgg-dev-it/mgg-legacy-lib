@@ -15,14 +15,14 @@ import hu.mgx.swing.*;
 public class LoginDialog extends JDialog implements ActionListener, KeyListener {
 
     private CommonPanel mainPane;
-    private String sStringLogin = "&Bejelentkezés";
-    private String sStringCancel = "&Mégsem";
-    private String sStringUserID = "Felhasználó azonosító";
-    private String sStringPassword = "Jelszó";
-    private String sStringPasswordChange = "&Jelszócsere";
-    private String sStringOldPassword = "Régi jelszó";
-    private String sStringNewPassword = "Új jelszó";
-    private String sStringNewPasswordAgain = "Új jelszó még egyszer";
+    private String sStringLogin = "&BejelentkezÃ©s";
+    private String sStringCancel = "&MÃ©gsem";
+    private String sStringUserID = "FelhasznalÃ³ azonosÃ­tÃ³";
+    private String sStringPassword = "JelszÃ³";
+    private String sStringPasswordChange = "&JelszÃ³csere";
+    private String sStringOldPassword = "RÃ©gi jelszÃ³";
+    private String sStringNewPassword = "Ãšj jelszÃ³";
+    private String sStringNewPasswordAgain = "Ãšj jelszÃ³ mÃ©g egyszer";
     private JButton jButtonYes;
     private JButton jButtonNo;
     private JLabel jLabelPw;
@@ -174,7 +174,7 @@ public class LoginDialog extends JDialog implements ActionListener, KeyListener 
 
     private void setCapsLockLabel() {
         boolean bCapsLock = Toolkit.getDefaultToolkit().getLockingKeyState(KeyEvent.VK_CAPS_LOCK);
-        jLabelCapslock.setText((bCapsLock ? "A CapsLock be van kapcsolva!" : "")); //@todo task: nyelvesítés
+        jLabelCapslock.setText((bCapsLock ? "A CapsLock be van kapcsolva!" : "")); //@todo task: nyelvesï¿½tï¿½s
         pack();
     }
 

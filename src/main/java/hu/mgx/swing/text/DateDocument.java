@@ -15,7 +15,7 @@ public class DateDocument extends PlainDocument
     protected char cDateSeparator = ' ';
     protected String sDateSeparator = "";
     protected AppInterface appInterface;
-    protected int iPrecision = 8; //@todo ezt a form·tumbÛl ki lehet derÌteni???
+    protected int iPrecision = 8; //@todo ezt a form√°tumb√≥l ki lehet der√≠teni???
 
     public DateDocument(CommonTextField ctf, AppInterface appInterface) throws NullPointerException
     {
@@ -98,7 +98,7 @@ public class DateDocument extends PlainDocument
             sRetVal = sRetVal + sTmp.substring(i, i + 1);
             ++j;
             if ((j == 4 && l > 4) || (j == 6 && l > 6))
-            { //@todo ezek az ÈrtÈkek (4, 6) a form·tumbÛl kiderÌthetık???
+            { //@todo ezek az √©rt√©kek (4, 6) a form√°tumb√≥l kider√≠thet≈ëk???
                 sRetVal = sRetVal + sDateSeparator;
             }
         }

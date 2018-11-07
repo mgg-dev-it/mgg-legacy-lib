@@ -96,31 +96,6 @@ public class DataBaseUtils {
         return (true);
     }
 
-    //@todo le kell cserélni memorytable-t visszaadóra ...
-//    public ResultSet executeSQLQuery(String sConnectionName, String sSql) {
-//        Connection conn = appInterface.getTemporaryConnection(sConnectionName);
-//        PreparedStatement ps = null;
-//        ResultSet rs = null;
-//
-//        if (conn == null) {
-//            return (rs);
-//        }
-//        try {
-//            //rs = conn.prepareStatement(sSql).executeQuery();
-//            ps = conn.prepareStatement(sSql);
-//            rs = ps.executeQuery();
-//            rs.close();
-//            rs = null;
-//            ps.close();
-//            ps = null;
-//            conn.close();
-//            conn = null;
-//        } catch (SQLException sqle) {
-//            appInterface.handleError(sqle);
-//            return (rs);
-//        }
-//        return (rs);
-//    }
     public boolean next(ResultSet rs) {
         try {
             if (rs.next()) {

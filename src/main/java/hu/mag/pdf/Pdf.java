@@ -117,9 +117,9 @@ public class Pdf {
             //Font fontTitle = new Font(bf, 20, Font.BOLD, BaseColor.BLUE);
             Font fontTitle = new Font(bfTimes, 20, Font.NORMAL, BaseColor.BLUE);
             Font fontTitle2 = new Font(bfTimes, 14, Font.NORMAL, BaseColor.BLACK);
-            document.add(new Paragraph("a·eÈiÌoÛˆıu˙¸˚", fontTitle));
-            document.add(new Paragraph("A¡E…IÕO”÷’U⁄‹€", fontTitle));
-            document.add(new Paragraph("G…PJ¡RM€ B…RLETI SZERZ’D…S", fontTitle2));
+            document.add(new Paragraph("a√°e√©i√≠o√≥√∂≈ëu√∫√º≈±", fontTitle));
+            document.add(new Paragraph("A√ÅE√âI√çO√ì√ñ≈êU√ö√ú≈∞", fontTitle));
+            document.add(new Paragraph("B√âRLETI SZERZ≈êD√âS", fontTitle2));
         } catch (java.io.IOException ioe) {
             errorHandlerInterface.handleError(ioe);
         } catch (DocumentException de) {

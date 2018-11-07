@@ -16,10 +16,11 @@ public class MessageEvent {
     public static final int MSG_MESSAGE = 1;
 
     /**
-     * Constructs a <code>MagTableEvent</code> object.
+     * Constructs a <code>MessageEvent</code> object.
      * <p>
      * @param source The object that originated the event
      * @param iEventID An integer that identifies the event.
+     * @param sMessage The message.
      * @throws IllegalArgumentException if <code>source</code> is null
      * @see #getSource()
      * @see #getEventID()

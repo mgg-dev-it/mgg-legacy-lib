@@ -354,7 +354,7 @@ public class FieldInfo {
 // + Public sLookup As String
 // + Public sSQLForLookup As String
 //   Public sSQLForIDLookup As String
-//   Public iColumnWidth As Integer 'ha -1 az értéke, akkor nem jelenik meg. 0 esetén a fejléc miatt még megjelenhet a "setAutoColumnWidth" eljárás használatakor
+//   Public iColumnWidth As Integer
 //   Public iControl As Integer
 // + Public bUppercase As Boolean
 // + Public bMandatory As Boolean
@@ -370,9 +370,9 @@ public class FieldInfo {
 //   Public vMinValue As Variant
 // ?  Public bRememberPreviousValue As Boolean 'MAG 2011.04.04.
 //   Public sPreviousValue As String 'MAG 2011.04.04.
-// * Public bVirtual As Boolean 'virtuális mezõ, adatbázisban nem létezik, megjelenítéskor kell kiszámítani/lekérdezni
-// * Public sSQLForVirtual As String 'virtuális mezõ lekérdezéséhez szükséges SQL
-// * Public sSQLFilterForVirtual As String 'virtuális mezõ szûréséhez szükséges sql
+// * Public bVirtual As Boolean
+// * Public sSQLForVirtual As String
+// * Public sSQLFilterForVirtual As String
 //   Public bUgyfelLookup As Boolean
 //   Public bGkidLookup As Boolean
 //   Public bIDLookup As Boolean

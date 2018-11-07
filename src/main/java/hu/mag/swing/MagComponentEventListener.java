@@ -9,7 +9,7 @@ public interface MagComponentEventListener {
     /**
      * Invoked when an action occurs.
      *
-     * @param e
+     * @param e e
      */
     public void componentEventPerformed(MagComponentEvent e);
 }

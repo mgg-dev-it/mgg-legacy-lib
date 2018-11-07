@@ -345,7 +345,7 @@ public class CommonTextField extends JTextField implements DataField
     }
 
     private void checkDate()
-    { //@todo a form·tumbÛl lehetne vezÈrelni???
+    { //@todo a form√°tumb√≥l lehetne vez√©relni???
         //@todo checkdatetime nem kell???
         //String sNow = simpleDateTimeFormat.format(new java.util.Date());
         String sToday = simpleDateFormat.format(new java.util.Date());
@@ -404,7 +404,7 @@ public class CommonTextField extends JTextField implements DataField
         }
         catch (ParseException e)
         {
-            //@todo MsgBox "Hib·s d·tumot (" + sTmp + ") adott meg", vbExclamation
+            //@todo MsgBox "Hib√°s d√°tumot (" + sTmp + ") adott meg", vbExclamation
         }
     }
 
@@ -447,7 +447,7 @@ public class CommonTextField extends JTextField implements DataField
                 setText("");
                 return;
             }
-            setText(o.toString()); //DecimalDocument majd form·zza
+            setText(o.toString()); //DecimalDocument majd form√°zza
             return;
         }
         if (fieldDefinition.getType() == FieldType.DECIMAL)
@@ -457,7 +457,7 @@ public class CommonTextField extends JTextField implements DataField
                 setText("");
                 return;
             }
-            setText(o.toString()); //DecimalDocument majd form·zza
+            setText(o.toString()); //DecimalDocument majd form√°zza
             return;
         }
         if (fieldDefinition.getType() == FieldType.DATE)
@@ -496,7 +496,7 @@ public class CommonTextField extends JTextField implements DataField
             }
             try
             {
-                i = Integer.parseInt(hu.mgx.util.StringUtils.stringReplace(getText(), sGroupingSeparator, "")); //@todo filter funkciÛ kellene, amelyik csak a sz·mokat, elıjelet Ès a tizedespontot engedi ·t...
+                i = Integer.parseInt(hu.mgx.util.StringUtils.stringReplace(getText(), sGroupingSeparator, "")); //@todo filter funkci√≥ kellene, amelyik csak a sz√°mokat, el≈ëjelet √©s a tizedespontot engedi √°t...
             }
             catch (NumberFormatException e)
             {
@@ -512,7 +512,7 @@ public class CommonTextField extends JTextField implements DataField
             }
             try
             {
-                d = Double.parseDouble(hu.mgx.util.StringUtils.stringReplace(getText(), sGroupingSeparator, "")); //@todo filter funkciÛ kellene, amelyik csak a sz·mokat, elıjelet Ès a tizedespontot engedi ·t...
+                d = Double.parseDouble(hu.mgx.util.StringUtils.stringReplace(getText(), sGroupingSeparator, "")); //@todo filter funkci√≥ kellene, amelyik csak a sz√°mokat, el≈ëjelet √©s a tizedespontot engedi √°t...
             }
             catch (NumberFormatException e)
             {

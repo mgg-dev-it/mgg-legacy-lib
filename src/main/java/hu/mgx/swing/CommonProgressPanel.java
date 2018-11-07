@@ -50,8 +50,8 @@ public class CommonProgressPanel extends CommonPanel
         jProgressBarTotal = new JProgressBar(JProgressBar.HORIZONTAL, 0, 100);
         jProgressBarTotal.setStringPainted(true);
         jLabelSpeed = new JLabel(" ");
-        jLabelStart = new JLabel("Kezdés:");
-        jLabelFinish = new JLabel("Várható befejezés:");
+        jLabelStart = new JLabel("KezdÃ©s:");
+        jLabelFinish = new JLabel("VÃ¡rhatÃ³ befejezÃ©s:");
         dateStart = new Date();
         dateFinish = new Date();
         jLabelStartDate = new JLabel("");

@@ -70,12 +70,12 @@ public class MagButton extends JButton implements LanguageEventListener {
         sXMLConfig += "            <translation lang='de'>Ok</translation>";
         sXMLConfig += "        </languageitem>";
         sXMLConfig += "        <languageitem key='MagButton " + Integer.toString(BUTTON_CANCEL) + "'>";
-        sXMLConfig += "            <translation lang='hu'>Mégsem</translation>";
+        sXMLConfig += "            <translation lang='hu'>MÃ©gsem</translation>";
         sXMLConfig += "            <translation lang='en'>Cancel</translation>";
         sXMLConfig += "            <translation lang='de'>Abbrechen</translation>";
         sXMLConfig += "        </languageitem>";
         sXMLConfig += "        <languageitem key='MagButton " + Integer.toString(BUTTON_SAVE) + "'>";
-        sXMLConfig += "            <translation lang='hu'>Mentés</translation>";
+        sXMLConfig += "            <translation lang='hu'>MentÃ©s</translation>";
         sXMLConfig += "            <translation lang='en'>Save</translation>";
         sXMLConfig += "            <translation lang='de'>Speichern</translation>";
         sXMLConfig += "        </languageitem>";
@@ -90,24 +90,24 @@ public class MagButton extends JButton implements LanguageEventListener {
         sXMLConfig += "            <translation lang='de'>Nein</translation>";
         sXMLConfig += "        </languageitem>";
         sXMLConfig += "        <languageitem key='MagButton " + Integer.toString(BUTTON_REFRESH) + "'>";
-        sXMLConfig += "            <translation lang='hu'>Frissítés</translation>";
+        sXMLConfig += "            <translation lang='hu'>FrissÃ­tÃ©s</translation>";
         sXMLConfig += "            <translation lang='en'>Refresh</translation>";
         sXMLConfig += "            <translation lang='de'>Aktualisieren</translation>";
         sXMLConfig += "        </languageitem>";
         sXMLConfig += "        <languageitem key='MagButton " + Integer.toString(BUTTON_NEW) + "'>";
-        sXMLConfig += "            <translation lang='hu'>Új</translation>";
+        sXMLConfig += "            <translation lang='hu'>Ãšj</translation>";
         sXMLConfig += "            <translation lang='en'>New</translation>";
         sXMLConfig += "            <translation lang='de'>Neu</translation>";
         sXMLConfig += "        </languageitem>";
         sXMLConfig += "        <languageitem key='MagButton " + Integer.toString(BUTTON_EDIT) + "'>";
-        sXMLConfig += "            <translation lang='hu'>Szerkesztés</translation>";
+        sXMLConfig += "            <translation lang='hu'>SzerkesztÃ©s</translation>";
         sXMLConfig += "            <translation lang='en'>Edit</translation>";
         sXMLConfig += "            <translation lang='de'>Bearbeiten</translation>";
         sXMLConfig += "        </languageitem>";
         sXMLConfig += "        <languageitem key='MagButton " + Integer.toString(BUTTON_DELETE) + "'>";
-        sXMLConfig += "            <translation lang='hu'>Törlés</translation>";
+        sXMLConfig += "            <translation lang='hu'>TÃ¶rlÃ©s</translation>";
         sXMLConfig += "            <translation lang='en'>Delete</translation>";
-        sXMLConfig += "            <translation lang='de'>Löschen</translation>";
+        sXMLConfig += "            <translation lang='de'>Lï¿½schen</translation>";
         sXMLConfig += "        </languageitem>";
         sXMLConfig += "        <languageitem key='MagButton " + Integer.toString(BUTTON_EXCEL) + "'>";
         sXMLConfig += "            <translation lang='hu'>Excel export</translation>";
@@ -115,7 +115,7 @@ public class MagButton extends JButton implements LanguageEventListener {
         sXMLConfig += "            <translation lang='de'>Excel</translation>";
         sXMLConfig += "        </languageitem>";
         sXMLConfig += "        <languageitem key='MagButton " + Integer.toString(BUTTON_DETAILS) + "'>";
-        sXMLConfig += "            <translation lang='hu'>Részletek</translation>";
+        sXMLConfig += "            <translation lang='hu'>RÃ©szletek</translation>";
         sXMLConfig += "            <translation lang='en'>Details</translation>";
         sXMLConfig += "            <translation lang='de'>Detail</translation>";
         sXMLConfig += "        </languageitem>";
@@ -125,7 +125,7 @@ public class MagButton extends JButton implements LanguageEventListener {
         sXMLConfig += "            <translation lang='de'>Alle</translation>";
         sXMLConfig += "        </languageitem>";
         sXMLConfig += "        <languageitem key='MagButton " + Integer.toString(BUTTON_SELECT_REVERSE) + "'>";
-        sXMLConfig += "            <translation lang='hu'>Kijelölés megfordítása</translation>";
+        sXMLConfig += "            <translation lang='hu'>KijelÃ¶lÃ©s megfordÃ­tÃ¡sa</translation>";
         sXMLConfig += "            <translation lang='en'>Reverse</translation>";
         sXMLConfig += "            <translation lang='de'>Umkehren</translation>";
         sXMLConfig += "        </languageitem>";
@@ -135,18 +135,19 @@ public class MagButton extends JButton implements LanguageEventListener {
         sXMLConfig += "            <translation lang='de'>Keiner</translation>";
         sXMLConfig += "        </languageitem>";
         sXMLConfig += "        <languageitem key='MagButton " + Integer.toString(BUTTON_PDF_VIEW) + "'>";
-        sXMLConfig += "            <translation lang='hu'>PDF megtekintés</translation>";
+        sXMLConfig += "            <translation lang='hu'>PDF megtekintÃ©s</translation>";
         sXMLConfig += "            <translation lang='en'>PDF View</translation>";
         sXMLConfig += "            <translation lang='de'>PDF Ansicht</translation>";
         sXMLConfig += "        </languageitem>";
         sXMLConfig += "        <languageitem key='MagButton " + Integer.toString(BUTTON_PDF_PRINT) + "'>";
-        sXMLConfig += "            <translation lang='hu'>PDF nyomtatás</translation>";
+        sXMLConfig += "            <translation lang='hu'>PDF nyomtatÃ¡s</translation>";
         sXMLConfig += "            <translation lang='en'>PDF Print</translation>";
         sXMLConfig += "            <translation lang='de'>PDF Druck</translation>";
         sXMLConfig += "        </languageitem>";
         sXMLConfig += "    </language>";
         sXMLConfig += "</app>";
-        swingAppInterface.addLanguageXML(sXMLConfig, "ISO-8859-2");
+//        swingAppInterface.addLanguageXML(sXMLConfig, "ISO-8859-2");
+        swingAppInterface.addLanguageXML(sXMLConfig, "UTF-8");
     }
 
     public static MagButton createMagButton(SwingAppInterface swingAppInterface, String sText, String sActionCommand, ActionListener actionListener, int iMnemonic, String sTooltipText) {

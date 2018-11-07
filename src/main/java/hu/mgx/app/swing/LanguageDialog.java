@@ -13,10 +13,10 @@ import java.util.*;
 public class LanguageDialog extends JDialog implements ActionListener, KeyListener {
 
     private CommonPanel mainPane;
-    private String sStringLanguageSelect = "&Nyelv v·laszt·s";
+    private String sStringLanguageSelect = "&Nyelv v√°laszt√°s";
     private String sStringYes = "&Igen";
-    private String sStringCancel = "&MÈgsem";
-    private String sStringLanguage = "Felhaszn·lÛ azonosÌtÛ";
+    private String sStringCancel = "&M√©gsem";
+    private String sStringLanguage = "Felhaszn√°l√≥ azonos√≠t√≥";
     private JButton jButtonYes;
     private JButton jButtonNo;
     private CommonLookupField clf_languages;

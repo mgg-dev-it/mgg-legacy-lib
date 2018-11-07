@@ -1,6 +1,6 @@
 package hu.mgx.db;
 
-//--- Nincs kipróbálva!!!
+//--- Nincs kiprÃ³bÃ¡lva!!!
 import hu.mgx.app.common.AppInterface;
 import java.sql.*;
 import java.util.*;
@@ -151,11 +151,11 @@ public class RsMemoryTable extends MemoryTable
         {
             if (appInterface != null)
             {
-                JOptionPane.showMessageDialog(null, StringUtils.stringReplace(appInterface.getLanguageString("Több, mint XXX rekordot választott ki, de megjeleníteni csak ennyit lehet. Szûkítse a kiválasztandókat a szelekcióval!"), "XXX", Integer.toString(iMaxRecords)), appInterface.getLanguageString("Figyelem!"), JOptionPane.WARNING_MESSAGE);
+                JOptionPane.showMessageDialog(null, StringUtils.stringReplace(appInterface.getLanguageString("TÃ¶bb, mint XXX rekordot vÃ¡lasztott ki, de megjelenÃ­teni csak ennyit lehet. SzÅ±kÃ­tse a kivÃ¡lasztandÃ³kat a szelekciÃ³val!"), "XXX", Integer.toString(iMaxRecords)), appInterface.getLanguageString("Figyelem!"), JOptionPane.WARNING_MESSAGE);
             }
             else
             {
-                JOptionPane.showMessageDialog(null, "Több, mint " + Integer.toString(iMaxRecords) + " rekordot választott ki, de megjeleníteni csak ennyit lehet. Szûkítse a kiválasztandókat a szelekcióval!", "Figyelem!", JOptionPane.WARNING_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Tï¿½bb, mint " + Integer.toString(iMaxRecords) + " rekordot vÃ¡lasztott ki, de megjelenÃ­teni csak ennyit lehet. SzÅ±kÃ­tse a kivÃ¡lasztandÃ³kat a szelekciÃ³val!", "Figyelem!", JOptionPane.WARNING_MESSAGE);
             }
         }
     }

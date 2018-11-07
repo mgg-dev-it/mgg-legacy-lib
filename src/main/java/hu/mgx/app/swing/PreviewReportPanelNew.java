@@ -1,6 +1,5 @@
 package hu.mgx.app.swing;
 
-//@todo a "papír" méretét is lehessen változtatni (az ablakhoz, illetve a képernyõfelbontáshoz igazodva)
 import hu.mgx.swing.CommonPanel;
 import java.awt.*;
 import java.awt.event.*;
@@ -81,7 +80,6 @@ public class PreviewReportPanelNew extends CommonPanel implements ActionListener
         //init();
 
 
-        //- átemelve az eredetibõl:
         spinnerNumberModelRate = new SpinnerNumberModel(100, iMinMagnification, iMaxMagnification, 1);
         spinnerNumberModelRate.addChangeListener(new ChangeListener()
                                          {
@@ -262,7 +260,7 @@ public class PreviewReportPanelNew extends CommonPanel implements ActionListener
         }
         if (e.getActionCommand().equals("Print"))
         {
-            //régen ez volt: PrintUtilities.printComponent(printablePages, pageFormat,dPrintSizeRatio);
+            //rÃ©gen ez volt: PrintUtilities.printComponent(printablePages, pageFormat,dPrintSizeRatio);
             printReport();
         }
         if (e.getActionCommand().equals("PageSetup"))
@@ -283,7 +281,7 @@ public class PreviewReportPanelNew extends CommonPanel implements ActionListener
         //System.err.println("printReport");
         //PrinterDialog printerDialog = new PrinterDialog();
         ReportUtils reportUtils = new ReportUtils(app);
-        //System.err.println(printerDialog.showDialog(this, "Nyomtató kiválasztás", ""));
+        //System.err.println(printerDialog.showDialog(this, "NyomtatÃ³ kivÃ¡lasztÃ¡s", ""));
 
         PrinterJob printerJob = PrinterJob.getPrinterJob();
         //printerJob.pageDialog(createA4PageFormat());

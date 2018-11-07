@@ -181,14 +181,6 @@ public abstract class AppUtils {
         return (jButton);
     }
 
-//    public static CommonPanel createAllReverseNoneButtonPanel(ActionListener actionListener) {
-//        CommonPanel panel = CommonPanel.createCommonPanel(2, 2, 2, 2);
-//        panel.addToCurrentRow(AppUtils.createButton("Mindegyik", "checkAll", actionListener), 1, 1, 0, 0, GridBagConstraints.NONE, GridBagConstraints.WEST);
-//        panel.addToCurrentRow(AppUtils.createButton("Kijelölés megfordítása", "checkReverse", actionListener), 1, 1, 0, 0, GridBagConstraints.NONE, GridBagConstraints.WEST);
-//        panel.addToCurrentRow(AppUtils.createButton("Egyik sem", "checkNone", actionListener), 1, 1, 0, 0, GridBagConstraints.NONE, GridBagConstraints.WEST);
-//        panel.addToCurrentRow(new JLabel(), GridBagConstraints.REMAINDER, 1, 1, 1, GridBagConstraints.BOTH, GridBagConstraints.WEST);
-//        return (panel);
-//    }
     public static JRadioButton createRadioButton(String sText, String sActionCommand, ActionListener actionListener) {
         JRadioButton jRadioButton = new JRadioButton(sText);
         jRadioButton.setActionCommand(sActionCommand);
@@ -236,7 +228,7 @@ public abstract class AppUtils {
         jPanel.addToGrid(createLabel("empty panel", SwingConstants.LEFT), 0, 0, 1, 1, 0.0, 0.0, GridBagConstraints.BOTH);
         jPanel.addToGrid(new JLabel(""), 0, 1, GridBagConstraints.REMAINDER, 1, 0.0, 1.0, GridBagConstraints.BOTH);
 
-        //--- utolsó sor rugalmas...
+        //--- utolsï¿½ sor rugalmas...
         jPanel.addToGrid(new JLabel(""), 1, 0, GridBagConstraints.REMAINDER, 1, 1.0, 1.0, GridBagConstraints.BOTH);
         return (jPanel);
     }
@@ -556,13 +548,13 @@ public abstract class AppUtils {
                 }
             }
             if (!bExtensionOK) {
-                AppUtils.messageBox(parentComponent, "A fájlnév kiterjesztése csak " + sExtensionList + " lehet");
+                AppUtils.messageBox(parentComponent, "A fï¿½jlnï¿½v kiterjesztï¿½se csak " + sExtensionList + " lehet");
                 return (null);
             }
         }
         if (f.exists()) {
-            //@todo task : nyelvesítés
-            if (!AppUtils.yesNoQuestion(parentComponent, appInterface.getLanguageString(sDescription), appInterface.getLanguageString(f.getAbsolutePath() + " fájl létezik. Felülírjam?"), appInterface)) {
+            //@todo task : nyelvesï¿½tï¿½s
+            if (!AppUtils.yesNoQuestion(parentComponent, appInterface.getLanguageString(sDescription), appInterface.getLanguageString(f.getAbsolutePath() + " fï¿½jl lï¿½tezik. Felï¿½lï¿½rjam?"), appInterface)) {
                 return (null);
             }
         }
@@ -603,13 +595,13 @@ public abstract class AppUtils {
                 }
             }
             if (!bExtensionOK) {
-                AppUtils.messageBox(parentComponent, "A fájlnév kiterjesztése csak " + sExtensionList + " lehet");
+                AppUtils.messageBox(parentComponent, "A fï¿½jlnï¿½v kiterjesztï¿½se csak " + sExtensionList + " lehet");
                 return (null);
             }
         }
         if (!f.exists()) {
-            //@todo task : nyelvesítés
-            AppUtils.messageBox(parentComponent, appInterface.getLanguageString(f.getAbsolutePath() + " fájl nem létezik."), appInterface.getLanguageString(sDescription));
+            //@todo task : nyelvesï¿½tï¿½s
+            AppUtils.messageBox(parentComponent, appInterface.getLanguageString(f.getAbsolutePath() + " fï¿½jl nem lï¿½tezik."), appInterface.getLanguageString(sDescription));
             return (null);
         }
         return (f);
@@ -652,13 +644,13 @@ public abstract class AppUtils {
                     }
                 }
                 if (!bExtensionOK) {
-                    AppUtils.messageBox(parentComponent, "A fájlnév kiterjesztése csak " + sExtensionList + " lehet");
+                    AppUtils.messageBox(parentComponent, "A fï¿½jlnï¿½v kiterjesztï¿½se csak " + sExtensionList + " lehet");
                     return (null);
                 }
             }
             if (!f[i].exists()) {
-                //@todo task : nyelvesítés
-                AppUtils.messageBox(parentComponent, appInterface.getLanguageString(f[i].getAbsolutePath() + " fájl nem létezik."), appInterface.getLanguageString(sDescription));
+                //@todo task : nyelvesï¿½tï¿½s
+                AppUtils.messageBox(parentComponent, appInterface.getLanguageString(f[i].getAbsolutePath() + " fï¿½jl nem lï¿½tezik."), appInterface.getLanguageString(sDescription));
                 return (null);
             }
         }

@@ -66,10 +66,10 @@ public class ReportUtils implements Printable
         if (services.length > 1)
         {
 
-            // Virtuális rajzfelület létrehozása
+            // VirtuÃ¡lis rajzfelÃ¼let lÃ©trehozÃ¡sa
             vds = new VirtualDrawSurface((int) pageFormat.getImageableWidth(), (int) pageFormat.getImageableHeight(), new Font("Arial", Font.ITALIC, 10));
 
-            // Riport rajzolása a virtuális rajzfelületre:
+            // Riport rajzolÃ¡sa a virtuÃ¡lis rajzfelÃ¼letre:
             report.drawToVirtualSurface(vds);
 
             printt(services[2], flavor, aset);
@@ -118,10 +118,10 @@ public class ReportUtils implements Printable
         if (service != null)
         {
 
-            // Virtuális rajzfelület létrehozása
+            // VirtuÃ¡lis rajzfelÃ¼let lÃ©trehozÃ¡sa
             vds = new VirtualDrawSurface((int) pageFormat.getImageableWidth(), (int) pageFormat.getImageableHeight(), new Font("Arial", Font.ITALIC, 10));
 
-            // Riport rajzolása a virtuális rajzfelületre:
+            // Riport rajzolÃ¡sa a virtuÃ¡lis rajzfelÃ¼letre:
             report.drawToVirtualSurface(vds);
 
             printt(service, flavor, aset);
@@ -147,13 +147,13 @@ public class ReportUtils implements Printable
         }
         catch (PrintException e)
         {
-            System.err.println(e); //@todo apperrorhandler-t bekötni!!!
+            System.err.println(e); //@todo apperrorhandler-t bekÃ¶tni!!!
         }
     }
 
     /**
-     * A Printable interfész által meghatározott visszahívandó metódus, amelyik "kinyomtatja" a VirtualDrawSurface lapjainak tartalmát a megadott Grgaphics-ra.
-     * @return Printable.PAGE_EXISTS, ha VirtualDrawSurface true-val tért vissza (rajzolt a grafikus objektumra), illetve Printable.NO_SUCH_PAGE, ha nem
+     * A Printable interfÃ©sz Ã¡ltal meghatÃ¡rozott visszahÃ­vandÃ³ metÃ³dus, amelyik "kinyomtatja" a VirtualDrawSurface lapjainak tartalmÃ¡t a megadott Grgaphics-ra.
+     * @return Printable.PAGE_EXISTS, ha VirtualDrawSurface true-val tÃ©rt vissza (rajzolt a grafikus objektumra), illetve Printable.NO_SUCH_PAGE, ha nem
      */
     public int print(java.awt.Graphics graphics, PageFormat pageFormat, int pageIndex) throws PrinterException
     {
@@ -161,7 +161,7 @@ public class ReportUtils implements Printable
         //System.err.println(Double.toString(pageFormat.getWidth()) + "  " + Double.toString(pageFormat.getHeight()) + "  " + Double.toString(pageFormat.getImageableWidth()) + "  " + Double.toString(pageFormat.getImageableHeight()) + "  " + Double.toString(pageFormat.getImageableX()) + "  " + Double.toString(pageFormat.getImageableY()) + " " + (bFullPage ? "full page" :"no full page"));
         //if (1 == 1) return (Printable.NO_SUCH_PAGE);
 
-        // Virtuális rajzfelület létrehozása
+        // VirtuÃ¡lis rajzfelÃ¼let lÃ©trehozÃ¡sa
         if (!bFullPage)
         {
             vds = new VirtualDrawSurface((int) pageFormat.getImageableWidth(), (int) pageFormat.getImageableHeight(), new Font("Arial", Font.ITALIC, 10));
@@ -171,7 +171,7 @@ public class ReportUtils implements Printable
             vds = new VirtualDrawSurface((int) pageFormat.getWidth(), (int) pageFormat.getHeight(), new Font("Arial", Font.ITALIC, 10));
         }
 
-        // Riport rajzolása a virtuális rajzfelületre:
+        // Riport rajzolÃ¡sa a virtuÃ¡lis rajzfelÃ¼letre:
         report.drawToVirtualSurface(vds);
 
         Graphics2D g2d = (Graphics2D) graphics;
@@ -182,7 +182,7 @@ public class ReportUtils implements Printable
         }
         if (vds != null)
         {
-            // Virtuális rajzfelület tartalmának grafikus objektumra rajzolása
+            // VirtuÃ¡lis rajzfelÃ¼let tartalmÃ¡nak grafikus objektumra rajzolÃ¡sa
             if (vds.drawToGraphics(pageIndex, g2d))
             {
                 return (Printable.PAGE_EXISTS);
@@ -309,7 +309,7 @@ public class ReportUtils implements Printable
                                         }
                                         if (sValue.equals("1999/01/01"))
                                         {
-                                            sValue = "Nem aktuális";
+                                            sValue = "Nem aktuï¿½lis";
                                         }
                                         else if (sValue.equals("1999/01/02"))
                                         {
@@ -317,11 +317,11 @@ public class ReportUtils implements Printable
                                         }
                                         else if (sValue.equals("1999/01/03"))
                                         {
-                                            sValue = "Meglátogatni";
+                                            sValue = "Meglï¿½togatni";
                                         }
                                         else if (sValue.equals("1999/01/04"))
                                         {
-                                            sValue = "Beszállító";
+                                            sValue = "Beszï¿½llï¿½tï¿½";
                                         }
                                     }
                                     else

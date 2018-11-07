@@ -23,11 +23,11 @@ public abstract class Graphics2DUtils {
     /**
      * drawLine wrapper for double parameters
      *
-     * @param graphics
-     * @param x1
-     * @param y1
-     * @param x2
-     * @param y2
+     * @param graphics graphics
+     * @param x1 x1
+     * @param y1 y1
+     * @param x2 x2
+     * @param y2 y2
      */
     public static void drawLine(Graphics graphics, double x1, double y1, double x2, double y2) {
         graphics.drawLine(new Double(x1).intValue(), new Double(y1).intValue(), new Double(x2).intValue(), new Double(y2).intValue());
@@ -36,11 +36,11 @@ public abstract class Graphics2DUtils {
     /**
      * drawOval wrapper for double parameters
      *
-     * @param graphics
-     * @param x
-     * @param y
-     * @param width
-     * @param height
+     * @param graphics graphics
+     * @param x x
+     * @param y y
+     * @param width width
+     * @param height height
      */
     public static void drawOval(Graphics graphics, double x, double y, double width, double height) {
         graphics.drawOval(new Double(x).intValue(), new Double(y).intValue(), new Double(width).intValue(), new Double(height).intValue());
@@ -49,11 +49,11 @@ public abstract class Graphics2DUtils {
     /**
      * fillOval wrapper for double parameters
      *
-     * @param graphics
-     * @param x
-     * @param y
-     * @param width
-     * @param height
+     * @param graphics graphics
+     * @param x x
+     * @param y y
+     * @param width width
+     * @param height height
      */
     public static void fillOval(Graphics graphics, double x, double y, double width, double height) {
         graphics.fillOval(new Double(x).intValue(), new Double(y).intValue(), new Double(width).intValue(), new Double(height).intValue());
@@ -63,11 +63,11 @@ public abstract class Graphics2DUtils {
      * calculates the maximum Fontsize with which a string can draw into a given
      * wide area
      *
-     * @param graphics
-     * @param font
-     * @param sText
-     * @param iTextWidth
-     * @return
+     * @param graphics graphics
+     * @param font font 
+     * @param sText sText
+     * @param iTextWidth iTextWidth
+     * @return int
      */
     public static int getMaxFontSize(Graphics graphics, Font font, String sText, int iTextWidth) {
         String[] s = sText.split(StringUtils.sCrLf);
@@ -91,10 +91,10 @@ public abstract class Graphics2DUtils {
     /**
      * calculates the area of a string
      *
-     * @param graphics
-     * @param font
-     * @param sText
-     * @return
+     * @param graphics graphics
+     * @param font font
+     * @param sText sText
+     * @return Rectangle
      */
     public static Rectangle geTextArea(Graphics graphics, Font font, String sText) {
         int iWidth = 0;
@@ -119,14 +119,14 @@ public abstract class Graphics2DUtils {
 
     /**
      *
-     * @param graphics
-     * @param font
-     * @param color
-     * @param x
-     * @param y
-     * @param sText
-     * @param iHorizonatlAlignment
-     * @param iVerticalAlignment
+     * @param graphics graphics
+     * @param font font
+     * @param color color
+     * @param x x
+     * @param y y
+     * @param sText sText
+     * @param iHorizonatlAlignment iHorizonatlAlignment
+     * @param iVerticalAlignment iVerticalAlignment
      */
     public static void drawString(Graphics graphics, Font font, Color color, int x, int y, String sText, int iHorizonatlAlignment, int iVerticalAlignment) {
         Insets insets = new Insets(0, 0, 0, 0);
@@ -136,14 +136,15 @@ public abstract class Graphics2DUtils {
     /**
      * draws a string to a point
      *
-     * @param graphics
-     * @param x
-     * @param color
-     * @param y
-     * @param font
-     * @param sText
-     * @param iHorizonatlAlignment
-     * @param iVerticalAlignment
+     * @param graphics graphics
+     * @param x x
+     * @param color color
+     * @param y y
+     * @param font font
+     * @param sText sText
+     * @param iHorizonatlAlignment iHorizonatlAlignment
+     * @param iVerticalAlignment iVerticalAlignment
+     * @param insets insets
      */
     public static void drawString(Graphics graphics, Font font, Color color, int x, int y, String sText, int iHorizonatlAlignment, int iVerticalAlignment, Insets insets) {
         Rectangle rectangleTextArea = geTextArea(graphics, font, sText);
@@ -200,13 +201,13 @@ public abstract class Graphics2DUtils {
     /**
      * draws a string into a rectangle
      *
-     * @param graphics
-     * @param font
-     * @param color
-     * @param rectangle
-     * @param sText
-     * @param iHorizonatlAlignment
-     * @param iVerticalAlignment
+     * @param graphics graphics
+     * @param font font
+     * @param color color
+     * @param rectangle rectangle
+     * @param sText sText
+     * @param iHorizonatlAlignment iHorizonatlAlignment
+     * @param iVerticalAlignment iVerticalAlignment
      */
     public static void drawString(Graphics graphics, Font font, Color color, Rectangle rectangle, String sText, int iHorizonatlAlignment, int iVerticalAlignment) {
         Insets insets = new Insets(0, 0, 0, 0);
@@ -216,13 +217,14 @@ public abstract class Graphics2DUtils {
     /**
      * draws a string into a rectangle
      *
-     * @param graphics
-     * @param rectangle
-     * @param color
-     * @param font
-     * @param sText
-     * @param iHorizonatlAlignment
-     * @param iVerticalAlignment
+     * @param graphics graphics
+     * @param rectangle rectangle
+     * @param color color
+     * @param font font
+     * @param sText sText
+     * @param iHorizonatlAlignment iHorizonatlAlignment
+     * @param iVerticalAlignment iVerticalAlignment
+     * @param insets insets
      */
     public static void drawString(Graphics graphics, Font font, Color color, Rectangle rectangle, String sText, int iHorizonatlAlignment, int iVerticalAlignment, Insets insets) {
         //Rectangle rectangleTextBounds = geTextArea(graphics, font, sText);

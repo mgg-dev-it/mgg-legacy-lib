@@ -50,7 +50,7 @@ public class ColorManager
         //return(new Color(255, 128, 0));
         //return(new Color(255, 160, 0));
         //return(new Color(255, 255, 144));
-        return (new Color(255, 208, 0)); //~vil·gos narancs
+        return (new Color(255, 208, 0)); //~vil√°gos narancs
     //return(new Color(255, 208, 64));
     //return(new Color(255, 160, 64));
     }

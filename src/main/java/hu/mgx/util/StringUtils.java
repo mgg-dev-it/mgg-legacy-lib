@@ -31,9 +31,9 @@ public abstract class StringUtils {
     private static String sDigits = new String("0123456789");
     private static String sDigitsPeriodAndSign = new String("0123456789.,-");
     private static String sLowerChars = new String("abcdefghijklmnopqrstuxyvwz");
-    private static String sHungarianLowerChars = new String("aábcdeéfghiíjklmnoóöõpqrstuúüûxyvwz");
+    private static String sHungarianLowerChars = new String("aÃ¡bcdeÃ©fghiÃ­jklmnoÃ³Ã¶Å‘pqrstuÃºÃ¼Å±xyvwz");
     private static String sUpperChars = new String("ABCDEFGHIJKLMNOPQRSTUXYVWZ");
-    private static String sHungarianUpperChars = new String("AÁBCDEÉFGHIÍJKLMNOÓÖÕPQRSTUÚÜÛXYVWZ");
+    private static String sHungarianUpperChars = new String("AÃBCDEÃ‰FGHIÃJKLMNOÃ“Ã–ÅPQRSTUÃšÃœÅ°mXYVWZ");
     private static String sChars = new String(sLowerChars + sUpperChars);
     private static String sHungarianChars = new String(sHungarianLowerChars + sHungarianUpperChars);
 
@@ -90,11 +90,11 @@ public abstract class StringUtils {
             sMire = "";
         }
         if (sMit.equals("")) {
-            return (sMiben); //Üres stringet nem cserélünk!!!
+            return (sMiben); //ï¿½res stringet nem cserï¿½lï¿½nk!!!
 
         }
         if (sMiben.equals("")) {
-            return (sMiben); //Üres stringben nem cserélünk!!!
+            return (sMiben); //ï¿½res stringben nem cserï¿½lï¿½nk!!!
 
         }
         iNext = sMiben.indexOf(sMit);
@@ -140,11 +140,11 @@ public abstract class StringUtils {
             sMire = "";
         }
         if (sMit.equals("")) {
-            return (sMiben); //Üres stringet nem cserélünk!!!
+            return (sMiben); //ï¿½res stringet nem cserï¿½lï¿½nk!!!
 
         }
         if (sMiben.equals("")) {
-            return (sMiben); //Üres stringben nem cserélünk!!!
+            return (sMiben); //ï¿½res stringben nem cserï¿½lï¿½nk!!!
 
         }
         iNext = sMiben.indexOf(sMit);
@@ -279,7 +279,7 @@ public abstract class StringUtils {
 
     public static String getArticle(String s) {
         String sRetVal = "a";
-        String sVowels = "aáeéiíoóöõuúüûAÁEÉIÍOÓÖÕUÚÜÛ";
+        String sVowels = "aï¿½eï¿½iï¿½oï¿½ï¿½ï¿½uï¿½ï¿½ï¿½Aï¿½Eï¿½Iï¿½Oï¿½ï¿½ï¿½Uï¿½ï¿½ï¿½";
         if (s == null) {
             return ("a");
         }
@@ -293,7 +293,7 @@ public abstract class StringUtils {
     }
 
     public static String getUpperCaseArticle(String s) {
-        String sVowels = "aáeéiíoóöõuúüûAÁEÉIÍOÓÖÕUÚÜÛ";
+        String sVowels = "aï¿½eï¿½iï¿½oï¿½ï¿½ï¿½uï¿½ï¿½ï¿½Aï¿½Eï¿½Iï¿½Oï¿½ï¿½ï¿½Uï¿½ï¿½ï¿½";
         if (s == null) {
             return ("A");
         }
@@ -906,11 +906,12 @@ public abstract class StringUtils {
      * tables.
      *
      * @param sFilter the user input. Simple space means 'OR'. ' vagy ', ' or ',
-     * ' oder ' means 'OR' too. ' és ', ' and ', ' und ' means 'AND'.
-     * @param bFilterFromTheStart
+     * ' oder ' means 'OR' too. ' ï¿½s ', ' and ', ' und ' means 'AND'.
+     * @param bFilterFromTheStart bFilterFromTheStart
+     * @param bMultiWord bMultiWord
      * @return the regular expression
      */
-    //@todo task : több szó megadása esetén kitalálni, hogyan lehetne ÉS kapcsolatba hozni a megadott szavakra keresést, valamint eldönteni azt, hogy a keresést végzõ ÉS, vagy VAGY kapcsolatban szeretett volna a szavakra keresni
+    //@todo task : tï¿½bb szï¿½ megadï¿½sa esetï¿½n kitalï¿½lni, hogyan lehetne ï¿½S kapcsolatba hozni a megadott szavakra keresï¿½st, valamint eldï¿½nteni azt, hogy a keresï¿½st vï¿½gzï¿½ ï¿½S, vagy VAGY kapcsolatban szeretett volna a szavakra keresni
     public static String convertFilterStringToRegexString(String sFilter, boolean bFilterFromTheStart, boolean bMultiWord) {
         if (!sFilter.contains("[") && !sFilter.contains("]") && !sFilter.contains("|") && !sFilter.contains("&") && !sFilter.contains("\\")) {
 //            sFilter = stringReplace(sFilter, " or ", "|");
@@ -921,8 +922,8 @@ public abstract class StringUtils {
 //            sFilter = stringReplace(sFilter, " ODER ", "|");
 //            sFilter = stringReplace(sFilter, " and ", "&");
 //            sFilter = stringReplace(sFilter, " AND ", "&");
-//            sFilter = stringReplace(sFilter, " és ", "&");
-//            sFilter = stringReplace(sFilter, " ÉS ", "&");
+//            sFilter = stringReplace(sFilter, " ï¿½s ", "&");
+//            sFilter = stringReplace(sFilter, " ï¿½S ", "&");
 //            sFilter = stringReplace(sFilter, " und ", "&");
 //            sFilter = stringReplace(sFilter, " UND ", "&");
             String sTmp = "";
@@ -1148,8 +1149,8 @@ public abstract class StringUtils {
             return ("");
         }
         s = leftPad(s, '0', 12);
-        String sRetVal9 = getNumberTextually3(s.substring(0, 3), 9); //milliárdok
-        String sRetVal6 = getNumberTextually3(s.substring(3, 6), 6); //milliók
+        String sRetVal9 = getNumberTextually3(s.substring(0, 3), 9); //milliï¿½rdok
+        String sRetVal6 = getNumberTextually3(s.substring(3, 6), 6); //milliï¿½k
         String sRetVal3 = getNumberTextually3(s.substring(6, 9), 3); //ezresek
         String sRetVal0 = getNumberTextually3(s.substring(9, 12), 0); //ezer alatt
 
@@ -1176,37 +1177,37 @@ public abstract class StringUtils {
         String sRetVal = "";
         s = leftPad(s, '0', 3);
 
-        //százasok
+        //szï¿½zasok
         switch (s.charAt(0)) {
             case '0':
                 sRetVal += "";
                 break;
             case '1':
-                sRetVal += "száz"; //egyszáz?
+                sRetVal += "szï¿½z"; //egyszï¿½z?
                 break;
             case '2':
-                sRetVal += "kétszáz";
+                sRetVal += "kï¿½tszï¿½z";
                 break;
             case '3':
-                sRetVal += "háromszáz";
+                sRetVal += "hï¿½romszï¿½z";
                 break;
             case '4':
-                sRetVal += "négyszáz";
+                sRetVal += "nï¿½gyszï¿½z";
                 break;
             case '5':
-                sRetVal += "ötszáz";
+                sRetVal += "ï¿½tszï¿½z";
                 break;
             case '6':
-                sRetVal += "hatszáz";
+                sRetVal += "hatszï¿½z";
                 break;
             case '7':
-                sRetVal += "hétszáz";
+                sRetVal += "hï¿½tszï¿½z";
                 break;
             case '8':
-                sRetVal += "nyolcszáz";
+                sRetVal += "nyolcszï¿½z";
                 break;
             case '9':
-                sRetVal += "kilencszáz";
+                sRetVal += "kilencszï¿½z";
                 break;
             default:
         }
@@ -1218,14 +1219,14 @@ public abstract class StringUtils {
                 break;
             case '1':
                 if (s.charAt(2) == '0') {
-                    sRetVal += "tíz";
+                    sRetVal += "tï¿½z";
                 } else {
                     sRetVal += "tizen";
                 }
                 break;
             case '2':
                 if (s.charAt(2) == '0') {
-                    sRetVal += "húsz";
+                    sRetVal += "hï¿½sz";
                 } else {
                     sRetVal += "huszon";
                 }
@@ -1237,7 +1238,7 @@ public abstract class StringUtils {
                 sRetVal += "negyven";
                 break;
             case '5':
-                sRetVal += "ötven";
+                sRetVal += "ï¿½tven";
                 break;
             case '6':
                 sRetVal += "hatvan";
@@ -1264,25 +1265,25 @@ public abstract class StringUtils {
                 break;
             case '2':
                 if (iExponent == 0) {
-                    sRetVal += "kettõ";
+                    sRetVal += "kettï¿½";
                 } else {
-                    sRetVal += "két";
+                    sRetVal += "kï¿½t";
                 }
                 break;
             case '3':
-                sRetVal += "három";
+                sRetVal += "hï¿½rom";
                 break;
             case '4':
-                sRetVal += "négy";
+                sRetVal += "nï¿½gy";
                 break;
             case '5':
-                sRetVal += "öt";
+                sRetVal += "ï¿½t";
                 break;
             case '6':
                 sRetVal += "hat";
                 break;
             case '7':
-                sRetVal += "hét";
+                sRetVal += "hï¿½t";
                 break;
             case '8':
                 sRetVal += "nyolc";
@@ -1297,10 +1298,10 @@ public abstract class StringUtils {
             sRetVal += "ezer";
         }
         if (iExponent == 6 && sRetVal.length() > 0) {
-            sRetVal += "millió";
+            sRetVal += "milliï¿½";
         }
         if (iExponent == 9 && sRetVal.length() > 0) {
-            sRetVal += "milliárd";
+            sRetVal += "milliï¿½rd";
         }
         return (sRetVal);
     }

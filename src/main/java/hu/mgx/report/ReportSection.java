@@ -81,7 +81,7 @@ public class ReportSection
     {
         bAutoColumnWidth = b;
     }
-    //--- VirtualDrawSurface-bıl m·solva ---
+    //--- VirtualDrawSurface-b≈ël m√°solva ---
     private String fit(String s, int iCellWidth, Graphics g2d, Font f)
     {
         FontMetrics fm = g2d.getFontMetrics(f);
@@ -129,7 +129,7 @@ public class ReportSection
         }
         return (s);
     }
-    //--- VirtualDrawSurface-bıl m·solva ---
+    //--- VirtualDrawSurface-b≈ël m√°solva ---
     private Vector split(String s, int iCellWidth, Graphics g2d, Font f)
     {
         Vector v = new Vector();
@@ -149,12 +149,12 @@ public class ReportSection
     {
         String sRetVal = "";
         String sCellNames[];
-        //--- egyszer˚ cella tartalm·nak meghat·roz·sa ---
+        //--- egyszer≈± cella tartalm√°nak meghat√°roz√°sa ---
         if (cell.getCellType() != CellType.SPECIAL_COMPOUND)
         {
             sRetVal = (memoryTable != null ? (memoryTable.getValueAt(row, cell.getName()) != null ? memoryTable.getValueAt(row, cell.getName()).toString() : "") : cell.getValue());
         }
-        //--- ˆsszetett cella tartalm·nak meghat·roz·sa ---
+        //--- √∂sszetett cella tartalm√°nak meghat√°roz√°sa ---
         if (cell.getCellType() == CellType.SPECIAL_COMPOUND)
         {
             sCellNames = cell.getNames();
@@ -237,7 +237,7 @@ public class ReportSection
 //        }
 
         //---------------------------------
-        //--- vÈgigmegy¸nk a rekordokon ---
+        //--- v√©gigmegy√ºnk a rekordokon ---
         //---------------------------------
         for (int j = 0; j < iRowCount; j++)
         {
@@ -247,7 +247,7 @@ public class ReportSection
                 iCellFrom = 0;
                 iCellTo = vCells.size();
                 iCurrentBlock = 0;
-                //--- renderelÈs ---
+                //--- renderel√©s ---
                 iRenderedSectionHeight = iSectionHeight;
                 iHeightDifference = 0;
                 vRenderedCells = new Vector();
@@ -274,7 +274,7 @@ public class ReportSection
                         if ((((Cell) vRenderedCells.elementAt(i)).getY() + ((Cell) vRenderedCells.elementAt(i)).getHeight() + iHeightDifference) > iRenderedSectionHeight)
                         {
                             iRenderedSectionHeight = ((Cell) vRenderedCells.elementAt(i)).getY() + ((Cell) vRenderedCells.elementAt(i)).getHeight() + iHeightDifference;
-                        //--- a tˆbbi (h·tralÈvı) cell·kat el kell tolni a magass·gdifferenci·val Ès a szekciÛ magass·g·t is ehhez kell igazÌtani ---
+                        //--- a t√∂bbi (h√°tral√©v√∂) cell√°kat el kell tolni a magass√°gdifferenci√°val √©s a szekci√≥ magass√°g√°t is ehhez kell igaz√≠tani ---
                         }
                         for (int i2 = i + 1; i2 < iCellTo; i2++)
                         {
@@ -298,7 +298,7 @@ public class ReportSection
                 }
                 iCellFrom = iCurrentBlock * iBlockSize;
                 iCellTo = (iCurrentBlock + 1) * iBlockSize;
-                //--- renderelÈs ---
+                //--- renderel√©s ---
                 iRenderedSectionHeight = iSectionHeight;
                 vRenderedCells = new Vector();
                 for (int i = 0; i < vCells.size(); i++)
@@ -321,7 +321,7 @@ public class ReportSection
                 }
             }
             //-------------------------------
-            //--- vÈgigmegy¸nk a cell·kon ---
+            //--- v√©gigmegy√ºnk a cell√°kon ---
             //-------------------------------
             //for (int i=0; i<vCells.size(); i++) {
             for (int i = iCellFrom; i < iCellTo; i++)
@@ -331,14 +331,14 @@ public class ReportSection
                 s = "";
 
                 //------------------------------------------------
-                //--- egyszer˚ cella tartalm·nak meghat·roz·sa ---
+                //--- egyszer≈± cella tartalm√°nak meghat√°roz√°sa ---
                 //------------------------------------------------
                 if (cell.getCellType() != CellType.SPECIAL_COMPOUND)
                 {
                     s = (memoryTable != null ? (memoryTable.getValueAt(j, cell.getName()) != null ? memoryTable.getValueAt(j, cell.getName()).toString() : "") : cell.getValue());
                 }
                 //-------------------------------------------------
-                //--- ˆsszetett cella tartalm·nak meghat·roz·sa ---
+                //--- √∂sszetett cella tartalm√°nak meghat√°roz√°sa ---
                 //-------------------------------------------------
                 if (cell.getCellType() == CellType.SPECIAL_COMPOUND)
                 {
@@ -364,25 +364,25 @@ public class ReportSection
                     s = cell.getValue();
                 }
 
-                //--- oldalsz·m cella tartalma ---
+                //--- oldalsz√°m cella tartalma ---
                 if (cell.getCellType() == CellType.SPECIAL_PAGE)
                 {
                     s = Integer.toString(vds.getCurrentPage() + 1) + "/" + Integer.toString(vds.getPageCount());// + " oldal";
                 }
 
-                //--- d·tum/idı cella tartalma ---
+                //--- d√°tum/id√∂ cella tartalma ---
                 if (cell.getCellType() == CellType.SPECIAL_DATETIME)
                 {
                     s = simpleDateTimeFormat.format(new java.util.Date());
                 }
 
-                //--- cella pozÌciÛja Ès mÈrete ---
+                //--- cella poz√≠ci√≥ja √©s m√©rete ---
                 iCellX = (int) (cell.getX() * dRatio);
                 iCellY = iFreePosition + (int) (cell.getY() * dRatio);
                 iCellWidth = (int) (cell.getWidth() * dRatio);
                 iCellHeight = (int) (cell.getHeight() * dRatio);
 
-                //--- vonal rajzol·s ---
+                //--- vonal rajzol√°s ---
                 if ((cell.getCellType() == CellType.SPECIAL_LINE) || (cell.getCellType() == CellType.SPECIAL_DOTTED_LINE))
                 {
                     bDotted = (cell.getCellType() == CellType.SPECIAL_DOTTED_LINE);
@@ -421,7 +421,7 @@ public class ReportSection
                         vds.drawLine(iCellX + iCellWidth, iCellY, iCellX + iCellWidth, iCellY + iCellHeight, bDotted);
                     }
                 }
-                //--- szˆveg Ìr·s ---
+                //--- sz√∂veg √≠r√°s ---
                 else
                 {
                     vds.drawString(s, cell.getFont().deriveFont((float) (cell.getFont().getSize() * dRatio)), iCellX, iCellY, iCellWidth, iCellHeight, cell.getAlign(), cell.getValign(), cell.hasBorder(), cell.isClipped(), cell.isWrapped(), cell.isShrinked());

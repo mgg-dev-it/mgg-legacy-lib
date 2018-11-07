@@ -133,7 +133,7 @@ public class MagTableDetail extends JDialog implements ActionListener, KeyListen
         //cpButtonPanel.setInsets(0, 0, 0, 0);
 
 //        jButtonOK = AppUtils.createButton("OK", "action_ok", this);
-//        jButtonCancel = AppUtils.createButton("Mégsem", "action_cancel", this);
+//        jButtonCancel = AppUtils.createButton("MÃ©gsem", "action_cancel", this);
 //        cpButtonPanel.addToCurrentRow(jButtonOK, 1, 1, 0, 0, GridBagConstraints.NONE, GridBagConstraints.CENTER);
 //        cpButtonPanel.addToCurrentRow(jButtonCancel, 1, 1, 0, 0, GridBagConstraints.NONE, GridBagConstraints.CENTER);
         mbSave = MagButton.createMagButton(swingAppInterface, MagButton.BUTTON_SAVE, this);

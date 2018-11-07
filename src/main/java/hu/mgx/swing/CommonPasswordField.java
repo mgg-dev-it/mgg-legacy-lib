@@ -249,7 +249,7 @@ public class CommonPasswordField extends JPasswordField implements DataField
                 setText("");
                 return;
             }
-            setText(o.toString()); //DecimalDocument majd form·zza
+            setText(o.toString()); //DecimalDocument majd form√°zza
             return;
         }
         if (fieldDefinition.getType() == FieldType.DECIMAL)
@@ -259,7 +259,7 @@ public class CommonPasswordField extends JPasswordField implements DataField
                 setText("");
                 return;
             }
-            setText(o.toString()); //DecimalDocument majd form·zza
+            setText(o.toString()); //DecimalDocument majd form√°zza
             return;
         }
         if (fieldDefinition.getType() == FieldType.DATE)

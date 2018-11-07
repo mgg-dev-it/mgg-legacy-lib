@@ -9,7 +9,7 @@ public interface MessageEventListener {
     /**
      * Invoked when an action occurs.
      *
-     * @param e
+     * @param e e
      */
     public void messageEventPerformed(MessageEvent e);
 }

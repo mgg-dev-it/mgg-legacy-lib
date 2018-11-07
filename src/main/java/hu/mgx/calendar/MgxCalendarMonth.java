@@ -22,7 +22,7 @@ public class MgxCalendarMonth {
     }
     
     public void addDay(MgxCalendarDay mgxCalendarDay) throws MgxCalendarException {
-        if (mgxCalendarDay.getYear() != iYear || mgxCalendarDay.getMonth() != iMonth) throw new MgxCalendarException("Nem ebbe a hónapba tartozik a nap!" + Integer.toString(iYear) + "/" + Integer.toString(iMonth) + " <> " + Integer.toString(mgxCalendarDay.getYear()) + "/" + Integer.toString(mgxCalendarDay.getMonth()));
+        if (mgxCalendarDay.getYear() != iYear || mgxCalendarDay.getMonth() != iMonth) throw new MgxCalendarException("Nem ebbe a hÃ³napba tartozik a nap!" + Integer.toString(iYear) + "/" + Integer.toString(iMonth) + " <> " + Integer.toString(mgxCalendarDay.getYear()) + "/" + Integer.toString(mgxCalendarDay.getMonth()));
         vDays.add(mgxCalendarDay);
     }
     

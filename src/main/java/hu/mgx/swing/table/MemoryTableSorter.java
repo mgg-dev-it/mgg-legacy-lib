@@ -21,7 +21,7 @@ public class MemoryTableSorter implements Comparator<Integer> {
 
     /**
      *
-     * @param memoryTable
+     * @param memoryTable memoryTable
      * @param sOrderBy - "1, 2, 3" - "name, city, age" - "age desc, name" - "3,
      * 2 desc, 5"
      */

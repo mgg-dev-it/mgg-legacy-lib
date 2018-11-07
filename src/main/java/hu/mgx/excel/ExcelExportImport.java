@@ -54,7 +54,7 @@ public class ExcelExportImport
         }
         if (writeExcel (defaultTableModel, tableDefinition, mgxFormat, appInterface, f))
         {
-            JOptionPane.showMessageDialog (parentComponent, appInterface.getLanguageString("Excel export sikeresen befejezıdˆtt."));
+            JOptionPane.showMessageDialog (parentComponent, appInterface.getLanguageString("Excel export sikeresen befejez≈ëd√∂tt."));
         }
     }
     
@@ -234,7 +234,7 @@ public class ExcelExportImport
         JFileChooser jFileChooser = new JFileChooser (sDir);
         ExampleFileFilter filter = new ExampleFileFilter ();
         filter.addExtension ("xls");
-        filter.setDescription (appInterface.getLanguageString("Excel f·jlok"));
+        filter.setDescription (appInterface.getLanguageString("Excel f√°jlok"));
         jFileChooser.setFileFilter (filter);
         int iDialogResult = jFileChooser.showSaveDialog (parentComponent);
         if (iDialogResult != JFileChooser.APPROVE_OPTION)
@@ -252,7 +252,7 @@ public class ExcelExportImport
             {
                 if (f.getName ().indexOf ('.') < 0)
                 {
-                    //egy·ltal·n nics kiterjesztÈse
+                    //egy√°ltal√°n nincs kiterjeszt√©se
                     try
                     {
                         f = new File (f.getCanonicalPath () + ".xls");
@@ -264,13 +264,13 @@ public class ExcelExportImport
                 }
                 else
                 {
-                    //van kiterjesztÈse, de az nem ".xls"
+                    //van kiterjeszt√©se, de az nem ".xls"
                 }
             }
         }
         if (f.exists ())
         {
-            if (!AppUtils.yesNoQuestion (parentComponent, appInterface.getLanguageString("Excel export"), appInterface.getLanguageString("A f·jl lÈtezik. Fel¸lÌrjam?"), appInterface))
+            if (!AppUtils.yesNoQuestion (parentComponent, appInterface.getLanguageString("Excel export"), appInterface.getLanguageString("A f√°jl l√©tezik. Fel√ºl√≠rjam?"), appInterface))
             {
                 return (null);
             }
@@ -571,7 +571,7 @@ public class ExcelExportImport
         JFileChooser jFileChooser = new JFileChooser ();
         ExampleFileFilter filter = new ExampleFileFilter ();
         filter.addExtension ("xls");
-        filter.setDescription (appInterface.getLanguageString("Excel f·jlok"));
+        filter.setDescription (appInterface.getLanguageString("Excel f√°jlok"));
         jFileChooser.setFileFilter (filter);
         if (sInitialDir != null)
         {
@@ -585,7 +585,7 @@ public class ExcelExportImport
         File f = jFileChooser.getSelectedFile ();
         if (!f.exists ())
         {
-            JOptionPane.showMessageDialog (parentComponent, appInterface.getLanguageString("A f·jl nem tal·lhatÛ."));
+            JOptionPane.showMessageDialog (parentComponent, appInterface.getLanguageString("A f√°jl nem tal√°lhat√≥."));
             return (null);
         }
         return (f);

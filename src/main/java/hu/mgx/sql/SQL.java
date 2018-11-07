@@ -44,7 +44,7 @@ public class SQL {
                 if (td.getFieldDefinition(i).isFilter()) {
                     sWhere += (sWhere.equals("") ? " where " : " and ") + td.getFieldDefinition(i).getName() + "=";
                     sWhere +=
-                            td.getFieldDefinition(i).getFilter(); //@todo tÌpus szerint kellen esetleg aposztrÛf, de ezt most a filterbe kell tenni
+                            td.getFieldDefinition(i).getFilter(); //@todo t√≠pus szerint kellene esetleg aposztr√≥f, de ezt most a filterbe kell tenni
                 }
 
                 if ((td.getFieldDefinition(i).isKey()) && (td.getOrderBy().equals(""))) {
@@ -82,7 +82,7 @@ public class SQL {
 //                if (td.getFieldDefinition(i).isFilter())
 //                {
 //                    sWhere += (sWhere.equals("") ? " where " : " and ") + td.getFieldDefinition(i).getName() + "=";
-//                    sWhere += td.getFieldDefinition(i).getFilter(); //@todo tÌpus szerint kellen esetleg aposztrÛf, de ezt most a filterbe kell tenni
+//                    sWhere += td.getFieldDefinition(i).getFilter(); //@todo t√≠pus szerint kellen esetleg aposztr√≥f, de ezt most a filterbe kell tenni
 //                }
 //                if ((td.getFieldDefinition(i).isKey()) && (td.getOrderBy().equals("")))
 //                {
@@ -290,12 +290,12 @@ public class SQL {
                 if (td.getFieldDefinition(i).isID()) {
                     bHasID = true;
                 }
-                // Ha egy ID mezı kulcs is, akkor nem ellenırizhet¸nk duplik·lts·got, mert az ID definÌciÛj·bÛl kˆvetkezıen mindÌg ˙j ÈrtÈket kap.
+                // Ha egy ID mez√∂ kulcs is, akkor nem ellen√∂rizhet√ºnk duplik√°lts√°got, mert az ID defin√≠ci√≥j√°b√≥l k√∂vetkez≈ëen mindig √∫j √©rt√©ket kap.
                 if (td.getFieldDefinition(i).isID() && td.getFieldDefinition(i).isKey()) {
                     bIDKey = true;
                 }
-                // ID mezıt nem sz˙runk be ... b·r kÈsıbb lekÈrdezz¸k: l·sd getLastInsertedID() !!!
-                // Ha nem ID mezı, akkor hozz·adjuk a mezılist·hoz, az ÈrtÈk list·hoz, valamint ha kulcs, akkor a where-list·hoz is
+                // ID mez≈ët nem sz√∫runk be ... b√°r k√©s≈ëbb lek√©rdezz√ºk: l√°sd getLastInsertedID() !!!
+                // Ha nem ID mez≈ë, akkor hozz√°adjuk a mez≈ëlist√°hoz, az √©rt√©k list√°hoz, valamint ha kulcs, akkor a where-list√°hoz is
                 if (!td.getFieldDefinition(i).isID()) {
                     sFieldList += (!sFieldList.equals("") ? ", " : "") + td.getFieldDefinition(i).getName();
                     sValues +=
@@ -364,7 +364,7 @@ public class SQL {
                     rs.close();
                     bSuccess =
                             false;
-                    appInterface.handleError("LÈtezı rekord, nem lehet besz˙rni!");
+                    appInterface.handleError("L√©tez≈ë rekord, nem lehet besz√∫rni!");
                 } else {
                     appInterface.logLine(debugStringInsert.sDebugString, iLogLevel);
                     pstInsert.executeUpdate();
@@ -508,12 +508,12 @@ public class SQL {
             try {
                 if (td.getFieldDefinition(i).isID() && td.getFieldDefinition(i).isKey()) {
                     bIDKey = true;
-                } // Ha egy ID mezı kulcs is, akkor nem ellenırizhet¸nk duplik·lts·got, mert az ID definÌciÛj·bÛl kˆvetkezıen mindÌg ˙j ÈrtÈket kap.
+                } // Ha egy ID mez√∂ kulcs is, akkor nem ellen√∂rizhet√ºnk duplik√°lts√°got, mert az ID defin√≠ci√≥j√°b√≥l k√∂vetkez≈ëen mindig √∫j √©rt√©ket kap.
 
                 oOld = oldRecord.getFieldValue(i);
                 oNew =
                         newRecord.getFieldValue(i);
-                if (!equal(oOld, oNew, td.getFieldDefinition(i).getType())) { // Mezı ÈrtÈke megv·ltozott
+                if (!equal(oOld, oNew, td.getFieldDefinition(i).getType())) { // Mez≈ë √©rt√©ke megv√°ltozott
                     sOldClassName = "null";
                     sOldString = "";
                     sNewClassName = "null";
@@ -538,7 +538,7 @@ public class SQL {
                     if (!td.getFieldDefinition(i).isID()) {
                         if (td.getFieldDefinition(i).isKey()) {
                             bKeyChanged = true;
-                        } // Kulcs mezı v·ltozott: ellenırizni a leendı rekordot duplik·lts·gra
+                        } // Kulcs mez≈ë v√°ltozott: ellen≈ërizni a leend≈ë rekordot duplik√°lts√°gra
 
                         sSet += (!sSet.equals("") ? ", " : "") + td.getFieldDefinition(i).getName() + "=?";
                         ++iOffsetField;
@@ -597,7 +597,7 @@ public class SQL {
                     if (!td.getFieldDefinition(i).isID()) {
                         oOld = oldRecord.getFieldValue(i);
                         oNew = newRecord.getFieldValue(i);
-                        if ((oOld == null && oNew != null) || (oOld != null && oNew == null) || (oOld != null && oNew != null && !oOld.toString().equals(oNew.toString()))) { // Mezı ÈrtÈke megv·ltozott
+                        if ((oOld == null && oNew != null) || (oOld != null && oNew == null) || (oOld != null && oNew != null && !oOld.toString().equals(oNew.toString()))) { // Mez≈ë √©rt√©ke megv√°ltozott
                             ++iUpdateField;
                             setPreparedStatementValues("pstUpdate set", pstUpdate, newRecord, iFieldType, iUpdateField, i, debugStringUpdate);
                         }
@@ -621,13 +621,13 @@ public class SQL {
                         }
 
                         rs.close();
-                        appInterface.handleError("LÈtezı rekordra nem lehet mÛdosÌtani!");
+                        appInterface.handleError("L√©tez≈ë rekordra nem lehet m√≥dos√≠tani!");
                     } else {
                         //appInterface.logLine("sSQLOriginExists = " + debugStringOriginExists.sDebugString, iLogLevel);
                         rs = pstOriginExists.executeQuery();
                         if (rs.next()) {
                             while (rs.next()) {
-                                ; //csak vÈgigszaladunk a recordset-en ... m·r nem tudom, miÈrt kellett ...
+                                ; //csak v√©gigszaladunk a recordset-en ... m√°r nem tudom, mi√©rt kellett ...
                             }
 
                             rs.close();
@@ -635,7 +635,7 @@ public class SQL {
                             appInterface.logLine(debugStringUpdate.sDebugString, iLogLevel);
                             pstUpdate.execute();
                         } else {
-                            appInterface.handleError("Nem lÈtezı rekord, nem lehet mÛdosÌtani!");
+                            appInterface.handleError("Nem l√©tez≈ë rekord, nem lehet m√≥dos√≠tani!");
                         }
 
                     }
@@ -652,7 +652,7 @@ public class SQL {
                         appInterface.logLine(debugStringUpdate.sDebugString, iLogLevel);
                         pstUpdate.execute();
                     } else {
-                        appInterface.handleError("Nem lÈtezı rekord, nem lehet mÛdosÌtani!");
+                        appInterface.handleError("Nem l√©tez≈ë rekord, nem lehet m√≥dos√≠tani!");
                     }
 
                 }
@@ -740,11 +740,11 @@ public class SQL {
                     appInterface.logLine(debugStringDelete.sDebugString, iLogLevel);
                     pstDelete.execute();
                 } else {
-                    appInterface.handleError("Nem lÈtezı rekord, nem lehet tˆrˆlni!");
+                    appInterface.handleError("Nem l√©tez≈ë rekord, nem lehet t√∂r√∂lni!");
                 }
 
             } else {
-                appInterface.handleError("Nincsenek kulcsmezık, nem lehet tˆrˆlni!");
+                appInterface.handleError("Nincsenek kulcsmez√∂k, nem lehet t√∂r√∂lni!");
             }
 
         } catch (TableDefinitionException tde) {

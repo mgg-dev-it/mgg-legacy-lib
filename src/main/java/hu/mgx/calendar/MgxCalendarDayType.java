@@ -2,23 +2,23 @@ package hu.mgx.calendar;
 
 public abstract class MgxCalendarDayType {
 
-    public final static int UNKNOWN = 0; //meghatározatlan
-    public final static int WORK = 1; //munkanap: "hétfõ-péntek"
-    public final static int REST = 2; //munkaszüneti nap: "szombat-vasárnap"
-    public final static int HOLIDAY = 3; //ünnepnap: január 1., március 15., stb.
-    public final static int REST_BEFORE_WORK = 4; //munkanapot megelõzõ munkaszüneti nap: "vasárnap" MÉG NEM HASZNÁLOM!!!
-    public final static int WORK_BEFORE_REST = 5; //munkaszüneti napot megelõzõ munkanap: "péntek" MÉG NEM HASZNÁLOM!!!
+    public final static int UNKNOWN = 0; //meghatÃ¡rozatlan
+    public final static int WORK = 1; //munkanap: "hÃ©tfÅ‘-pÃ©ntek"
+    public final static int REST = 2; //munkaszÃ¼neti nap: "szombat-vasÃ¡rnap"
+    public final static int HOLIDAY = 3; //Ã¼nnepnap: januÃ¡r 1., mÃ¡rcius 15., stb.
+    public final static int REST_BEFORE_WORK = 4; //munkanapot megelÅ‘zÅ‘ munkaszÃ¼neti nap: "vasÃ¡rnap" MÃ‰G NEM HASZNÃLOM!!!
+    public final static int WORK_BEFORE_REST = 5; //munkaszÃ¼neti napot megelÅ‘zÃ¶ munkanap: "pÃ©ntek" MÃ‰G NEM HASZNÃLOM!!!
     
-    //--- Ünnepnapok:
-    //január 1.
-    //március 15.
-    //húsvét vasárnap
-    //húsvét hétfõ
-    //május 1.
-    //pünkösd vasárnap
-    //pünkösd hétfõ
+    //--- ï¿½nnepnapok:
+    //januÃ¡r 1.
+    //mÃ¡rcius 15.
+    //hÃºsvÃ©t vasÃ¡rnap
+    //hÃºsvÃ©t hÃ©tfÅ‘
+    //mÃ¡jus 1.
+    //pÃ¼nkÃ¶sd vasÃ¡rnap
+    //pÃ¼nkÃ¶sd hÃ©tfÅ‘
     //augusztus 20.
-    //október 23.
+    //oktÃ³ber 23.
     //november 1.
     //december 25.
     //december 26.

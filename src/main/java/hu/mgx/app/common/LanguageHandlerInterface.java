@@ -190,7 +190,7 @@ public interface LanguageHandlerInterface {
      * Sets a language item by xml string.
      *
      * @param sXML the xml string, eg.: &lt;key&gt;123&lt;/key&gt;&lt;item
-     * lang=hu&gt;Mentés&lt;/item&gt;&lt;item lang=en&gt;Save&lt;/item&gt;
+     * lang=hu&gt;MentÃ©s&lt;/item&gt;&lt;item lang=en&gt;Save&lt;/item&gt;
      *
      * @deprecated use <code>SwingApp.initXML</code> or
      * <code>SwingApp.addLanguageXML</code>

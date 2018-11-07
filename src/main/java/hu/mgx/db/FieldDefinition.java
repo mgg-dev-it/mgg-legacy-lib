@@ -9,8 +9,8 @@ public class FieldDefinition
     private String sDisplayName;
     private int iType;
     private int iLength;
-    private int iPrecision; // ˆsszes sz·mjegy sz·ma egy sz·mban
-    private int iScale; // sz·mjegyek sz·ma egy sz·mban a tizedesjeltıl jobbra
+    private int iPrecision; // √∂sszes sz√°mjegy sz√°ma egy sz√°mban
+    private int iScale; // sz√°mjegyek sz√°ma egy sz√°mban a tizedesjelt≈ël jobbra
     private boolean bAllowNulls = true;
     private boolean bMandatory = false;
     private boolean bKey = false;
@@ -250,11 +250,11 @@ public class FieldDefinition
     }
 
     /**
-     * Be·llÌtja a statikus  lookup value-display p·rokat.
-     * <p>Form·tuma: "value1|display1@...@value(n)|display(n)"
-     * <p>A felhaszn·lÛ sz·m·ra a "display..." ÈrtÈkek jelennek meg,
-     * az adatb·zisban pedig a "value..." ÈrtÈkek t·rolÛdnak.
-     * @param sLookup A lookup value-display p·rok.
+     * Be√°ll√≠tja a statikus  lookup value-display p√°rokat.
+     * <p>Form√°tuma: "value1|display1@...@value(n)|display(n)"
+     * <p>A felhaszn√°l√≥ sz√°m√°ra a "display..." √©rt√©kek jelennek meg,
+     * az adatb√°zisban pedig a "value..." √©rt√©kek t√°rol√≥dnak.
+     * @param sLookup A lookup value-display p√°rok.
      */
     public void setLookup(String sLookup)
     {
@@ -262,11 +262,11 @@ public class FieldDefinition
     }
 
     /**
-     * LekÈrdezi a statikus lookup value-display p·rokat.
-     * <p>Form·tuma: "value1|display1@...@value(n)|display(n)"
-     * <p>A felhaszn·lÛ sz·m·ra a "display..." ÈrtÈkek jelennek meg,
-     * az adatb·zisban pedig a "value..." ÈrtÈkek t·rolÛdnak.
-     * @return A lookup value-display p·rok.
+     * Lek√©rdezi a statikus lookup value-display p√°rokat.
+     * <p>Form√°tuma: "value1|display1@...@value(n)|display(n)"
+     * <p>A felhaszn√°l√≥ sz√°m√°ra a "display..." √©rt√©kek jelennek meg,
+     * az adatb√°zisban pedig a "value..." √©rt√©kek t√°rol√≥dnak.
+     * @return A lookup value-display p√°rok.
      */
     public String getLookup()
     {
@@ -274,8 +274,8 @@ public class FieldDefinition
     }
 
     /**
-     * LekÈrdezi a mezı lookup tulajdons·g·t.
-     * @return <p>true, ha lookup a mezı; <p>false, ha nem.
+     * Lek√©rdezi a mez≈ë lookup tulajdons√°g√°t.
+     * @return <p>true, ha lookup a mez≈ë; <p>false, ha nem.
      */
     public boolean isLookup()
     {

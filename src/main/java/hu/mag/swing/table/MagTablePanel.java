@@ -265,13 +265,14 @@ public class MagTablePanel extends CommonPanel implements MagTableInterface, Mag
         sXMLConfig += "<app name='app' major='0' minor='0' revision='0' width='800' height='600'>";
         sXMLConfig += "    <language>";
         sXMLConfig += "        <languageitem key='MagTablePanel Filter'>";
-        sXMLConfig += "            <translation lang='hu'>Sz˚rÈs</translation>";
+        sXMLConfig += "            <translation lang='hu'>Sz≈±r√©s</translation>";
         sXMLConfig += "            <translation lang='en'>Filter</translation>";
         sXMLConfig += "            <translation lang='de'>Filter</translation>";
         sXMLConfig += "        </languageitem>";
         sXMLConfig += "    </language>";
         sXMLConfig += "</app>";
-        swingAppInterface.addLanguageXML(sXMLConfig, "ISO-8859-2");
+//        swingAppInterface.addLanguageXML(sXMLConfig, "ISO-8859-2");
+        swingAppInterface.addLanguageXML(sXMLConfig, "UTF-8");
 
         lblStatus = AppUtils.createLabel(" ");
 
@@ -362,7 +363,7 @@ public class MagTablePanel extends CommonPanel implements MagTableInterface, Mag
         this.addToGrid(cpLower, 2, 0, 1, 1, 0, 0, GridBagConstraints.BOTH);
 
         popup = new JPopupMenu();
-        JMenuItem menuItem1 = new JMenuItem(swingAppInterface.getLanguageString("Vissza a t·bl·hoz"));
+        JMenuItem menuItem1 = new JMenuItem(swingAppInterface.getLanguageString("Vissza a t√°bl√°hoz"));
         menuItem1.setActionCommand("action_back");
         menuItem1.addActionListener(this);
         popup.add(menuItem1);
@@ -600,7 +601,7 @@ public class MagTablePanel extends CommonPanel implements MagTableInterface, Mag
         if (e.getActionCommand().equals("action_xml_export")) {
             StringSelection data = new StringSelection(magTable.saveTableContentToXML(magTable));
             this.getToolkit().getSystemClipboard().setContents(data, data);
-            AppUtils.messageBox(this, "Export vÈgrehajtva, eredmÈnye a v·gÛlapon tal·lhatÛ.");
+            AppUtils.messageBox(this, "Export v√©grehajtva, eredm√©nye a v√°g√≥lapon tal√°lhat√≥.");
         }
         if (e.getSource() != null) {
             if (e.getActionCommand().equals("action_new")) {
@@ -1067,7 +1068,7 @@ public class MagTablePanel extends CommonPanel implements MagTableInterface, Mag
             if (sRetVal.length() < 4) {
                 sRetVal = StringUtils.right("0000" + Long.toString(l), 4);
             }
-            sRetVal = "(Eltelt idı: " + StringUtils.left(sRetVal, sRetVal.length() - 3) + "." + StringUtils.right(sRetVal, 3) + " mp)";
+            sRetVal = "(Eltelt id≈ë: " + StringUtils.left(sRetVal, sRetVal.length() - 3) + "." + StringUtils.right(sRetVal, 3) + " mp)";
         }
         return (sRetVal);
     }

@@ -1,9 +1,3 @@
-/*
- * Connection kezelõ interfész.
- * Egyszerre több connection-t is tud kezelni, a hozzájuk rendelt logikai nevek alapján.
- *
- *
- */
 package hu.mgx.app.common;
 
 import hu.mag.db.DatabaseInfo;

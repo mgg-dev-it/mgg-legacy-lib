@@ -59,13 +59,14 @@ public class MagTreePanel extends CommonPanel implements KeyListener, TreeSelect
         sXMLConfig += "<app name='app' major='0' minor='0' revision='0' width='800' height='600'>";
         sXMLConfig += "    <language>";
         sXMLConfig += "        <languageitem key='MagTreePanel Filter'>";
-        sXMLConfig += "            <translation lang='hu'>Szûrés</translation>";
+        sXMLConfig += "            <translation lang='hu'>SzÅ±rÅ±s</translation>";
         sXMLConfig += "            <translation lang='en'>Filter</translation>";
         sXMLConfig += "            <translation lang='de'>Filter</translation>";
         sXMLConfig += "        </languageitem>";
         sXMLConfig += "    </language>";
         sXMLConfig += "</app>";
-        swingAppInterface.addLanguageXML(sXMLConfig, "ISO-8859-2");
+//        swingAppInterface.addLanguageXML(sXMLConfig, "ISO-8859-2");
+        swingAppInterface.addLanguageXML(sXMLConfig, "UTF-8");
 
         cpFilter = new CommonPanel();
         cpFilter.setBorder(new EmptyBorder(0, 0, 0, 0));

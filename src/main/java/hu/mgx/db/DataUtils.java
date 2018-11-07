@@ -241,7 +241,7 @@ public abstract class DataUtils
                 }
                 if (fieldDefinition.getType() == hu.mgx.db.FieldType.DATETIME)
                 {
-                    //@todo kidolgozni, a többi alap mezõtípusra is!!!
+                    //@todo kidolgozni, a tÃ¶bbi alap mezÅ‘tÃ­pusra is!!!
                 }
                 if (fieldDefinition.getType() == hu.mgx.db.FieldType.BIT)
                 {
@@ -262,11 +262,11 @@ public abstract class DataUtils
                         }
                         if (fieldDefinition.getType() == hu.mgx.db.FieldType.DATE)
                         {
-                            //@todo kidolgozni, a többi alap mezõtípusra is!!!
+                            //@todo kidolgozni, a tÃ¶bbi alap mezÅ‘tÃ­pusra is!!!
                         }
                         if (fieldDefinition.getType() == hu.mgx.db.FieldType.DATETIME)
                         {
-                            //@todo kidolgozni, a többi alap mezõtípusra is!!!
+                            //@todo kidolgozni, a tÃ¶bbi alap mezÅ‘tÃ­pusra is!!!
                         }
                     }
                 }
@@ -298,7 +298,7 @@ public abstract class DataUtils
             if (dataField.getValue() == null)
             {
                 dataField.setFocus();
-                JOptionPane.showMessageDialog(parentComponent, StringUtils.stringReplace(appInterface.getLanguageString("Kötelezõen kitöltendõ mezõ: XXX"), "XXX", fieldDefinition.getDisplayName()));
+                JOptionPane.showMessageDialog(parentComponent, StringUtils.stringReplace(appInterface.getLanguageString("KÃ¶telezÅ‘en kitÃ¶ltendÅ‘ mezÅ‘: XXX"), "XXX", fieldDefinition.getDisplayName()));
                 return (false);
             }
         }
@@ -307,7 +307,7 @@ public abstract class DataUtils
             if (dataField.getValue() == null || dataField.getValue().toString().equals(""))
             {
                 dataField.setFocus();
-                JOptionPane.showMessageDialog(parentComponent, StringUtils.stringReplace(appInterface.getLanguageString("Kötelezõen kitöltendõ mezõ: XXX"), "XXX", fieldDefinition.getDisplayName()));
+                JOptionPane.showMessageDialog(parentComponent, StringUtils.stringReplace(appInterface.getLanguageString("KÃ¶telezÅ‘en kitÃ¶ltendÅ‘ mezÅ‘: XXX"), "XXX", fieldDefinition.getDisplayName()));
                 return (false);
             }
         }

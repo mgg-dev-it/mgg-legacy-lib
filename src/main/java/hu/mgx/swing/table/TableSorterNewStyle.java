@@ -112,7 +112,7 @@ public class TableSorterNewStyle extends TableMap {
             } else {
                 return 0;
             }
-        } else if (type.getName().startsWith("[B")) //2008.11.24-tıl ExcelExportImport-bÛl
+        } else if (type.getName().startsWith("[B")) //2008.11.24-t≈ël ExcelExportImport-b≈ël
         {
             java.text.SimpleDateFormat sqlDateTimeFormat = new java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
             String sTmp = new String((byte[]) o1);

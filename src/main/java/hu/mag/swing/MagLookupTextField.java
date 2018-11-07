@@ -928,7 +928,7 @@ public class MagLookupTextField extends JTextField implements MagFieldInterface 
         if (bPopupIsShown && !bLiveData) {
             return;
         }
-        // feljebb került! iCalculatedVisibleRowcount = determinePopupPlaceAndVisibleRowCount();
+        // feljebb kerÃ¼lt! iCalculatedVisibleRowcount = determinePopupPlaceAndVisibleRowCount();
         //iPreviousCalculatedVisibleRowcount = iCalculatedVisibleRowcount;
         iCalculatedVisibleRowcount = determinePopupPlaceAndVisibleRowCount();
 
@@ -1477,7 +1477,7 @@ public class MagLookupTextField extends JTextField implements MagFieldInterface 
      *
      * @param swingAppInterface SwingAppInterface
      * @param d the preferred size (dimension) of the text field
-     * @return
+     * @return MagLookupTextField
      */
     public static MagLookupTextField createTableStyleMagLookupTextField(SwingAppInterface swingAppInterface, Dimension d) {
         MagLookupTextField mltf = new MagLookupTextField(swingAppInterface);
@@ -1497,7 +1497,7 @@ public class MagLookupTextField extends JTextField implements MagFieldInterface 
      * @param d the preferred size (dimension) of the text field
      * @param sLookup Lookup string of value-display pairs
      * (value1|display1@value2|display2)
-     * @return
+     * @return MagLookupTextField
      */
     public static MagLookupTextField createTableStyleMagLookupTextField(SwingAppInterface swingAppInterface, Dimension d, String sLookup) {
         MagLookupTextField mltf = new MagLookupTextField(swingAppInterface);
@@ -1514,9 +1514,11 @@ public class MagLookupTextField extends JTextField implements MagFieldInterface 
      *
      * @param swingAppInterface SwingAppInterface
      * @param d the preferred size (dimension) of the text field
-     * @param sLookup Lookup string of value-display pairs
+     * @param connection connection
+     * @param sLookupSQL Lookup sql for getting value-display pairs
      * (value1|display11|display12...@value2|display21|display22...)
-     * @return
+     * @param bColumnNames bColumnNames
+     * @return MagLookupTextField
      */
     public static MagLookupTextField createTableStyleMagLookupTextField(SwingAppInterface swingAppInterface, Dimension d, Connection connection, String sLookupSQL, boolean bColumnNames) {
         MagLookupTextField mltf = new MagLookupTextField(swingAppInterface);
@@ -1533,10 +1535,10 @@ public class MagLookupTextField extends JTextField implements MagFieldInterface 
      *
      * @param swingAppInterface SwingAppInterface
      * @param d the preferred size (dimension) of the text field
-     * @param sConnectionName
-     * @param sLookupSQL
-     * @param bColumnNames
-     * @return
+     * @param sConnectionName sConnectionName
+     * @param sLookupSQL sLookupSQL
+     * @param bColumnNames bColumnNames
+     * @return MagLookupTextField
      */
     public static MagLookupTextField createTableStyleMagLookupTextField(SwingAppInterface swingAppInterface, Dimension d, String sConnectionName, String sLookupSQL, boolean bColumnNames) {
         MagLookupTextField mltf = new MagLookupTextField(swingAppInterface);
@@ -1555,10 +1557,10 @@ public class MagLookupTextField extends JTextField implements MagFieldInterface 
      *
      * @param swingAppInterface SwingAppInterface
      * @param d the preferred size (dimension) of the text field
-     * @param sConnectionName
-     * @param sLookupSQL
-     * @param bColumnNames
-     * @return
+     * @param sConnectionName sConnectionName
+     * @param sLookupSQL sLookupSQL
+     * @param bColumnNames bColumnNames
+     * @return MagLookupTextField
      */
     public static MagLookupTextField createTableStyleMagLookupTextFieldLive(SwingAppInterface swingAppInterface, Dimension d, String sConnectionName, String sLookupSQL, boolean bColumnNames) {
         MagLookupTextField mltf = new MagLookupTextField(swingAppInterface);
@@ -1581,8 +1583,8 @@ public class MagLookupTextField extends JTextField implements MagFieldInterface 
      *
      * @param swingAppInterface SwingAppInterface
      * @param d the preferred size (dimension) of the text field
-     * @param memoryTable
-     * @return
+     * @param memoryTable memoryTable
+     * @return MagLookupTextField
      */
     public static MagLookupTextField createTableStyleMagLookupTextField(SwingAppInterface swingAppInterface, Dimension d, MemoryTable memoryTable) {
         MagLookupTextField mltf = new MagLookupTextField(swingAppInterface);
@@ -1623,7 +1625,7 @@ public class MagLookupTextField extends JTextField implements MagFieldInterface 
      * @param d the preferred size (dimension) of the text field
      * @param sItems Item list which serve for both the values and display
      * elements
-     * @return
+     * @return MagLookupTextField
      */
     public static MagLookupTextField createTableStyleMagLookupTextField(SwingAppInterface swingAppInterface, Dimension d, String... sItems) {
         MagLookupTextField mltf = new MagLookupTextField(swingAppInterface);
@@ -1656,7 +1658,7 @@ public class MagLookupTextField extends JTextField implements MagFieldInterface 
      * @param d the preferred size (dimension) of the text field
      * @param sLookup Lookup string of value-display pairs
      * (value1|display1@value2|display2)
-     * @return
+     * @return MagLookupTextField
      */
     public static MagLookupTextField createListStyleMagLookupTextField(SwingAppInterface swingAppInterface, Dimension d, String sLookup) {
         MagLookupTextField mltf = new MagLookupTextField(swingAppInterface);
@@ -1675,7 +1677,7 @@ public class MagLookupTextField extends JTextField implements MagFieldInterface 
      * @param d the preferred size (dimension) of the text field
      * @param vValue Vector of values
      * @param vDisplay Vector of display values
-     * @return
+     * @return MagLookupTextField
      */
     public static MagLookupTextField createListStyleMagLookupTextField(SwingAppInterface swingAppInterface, Dimension d, Vector<Object> vValue, Vector<Object> vDisplay) {
         MagLookupTextField mltf = new MagLookupTextField(swingAppInterface);

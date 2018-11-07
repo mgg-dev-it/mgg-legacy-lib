@@ -1,9 +1,3 @@
-/*
- *
- *
- * - MINIMIZED, NORMAL, MAXIMIZED indulás ?
- *
- */
 package hu.mgx.app.swing;
 
 import java.sql.*;

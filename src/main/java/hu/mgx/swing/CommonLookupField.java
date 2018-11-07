@@ -268,7 +268,7 @@ public class CommonLookupField extends JComboBox implements DataField
         return (valueComboBox.getItemAt(getSelectedIndex()));
     }
 
-    //2009.02.01 új
+    //2009.02.01 Ãºj
     public Object getDisplayValue()
     {
         if (getSelectedIndex() < 0 || getItemCount() == 0)

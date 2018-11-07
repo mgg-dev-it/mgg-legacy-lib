@@ -14,7 +14,7 @@ public class DefaultLogger implements LoggerInterface {
     private SimpleDateFormat fileDateFormat = new SimpleDateFormat("yyyyMMdd");
     private String sFilename = null;
     private String sFilenameEnd = null;
-    private int iDeleteFilesOlderThanDays = 0; // ??? régi log fájlok törlése (bizonyos napnál régebbi log fájlok törlõdnek - fájl dátum alapján, akkor is ha sorszámozott, akkor is ha dátumozott, és akkor is, ha egyik sem, de túl régi a korábbi futás!
+    private int iDeleteFilesOlderThanDays = 0; 
 
     public DefaultLogger(String sFilename) {
         this(sFilename, TYPE_NORMAL);

@@ -1,8 +1,6 @@
 /**
  * VersionLoader
  *
- * @author Magyar Gábor
- *
  * @version 1.0.0 2005.04.04.
  *
  */

@@ -1,6 +1,5 @@
 package hu.mgx.app.swing;
 
-//@todo a "papÌr" mÈretÈt is lehessen v·ltoztatni (az ablakhoz, illetve a kÈpernyıfelbont·shoz igazodva)
 import hu.mgx.swing.CommonPanel;
 import java.awt.*;
 import java.awt.event.*;
@@ -71,7 +70,7 @@ public class PreviewVirtualDrawSurface extends CommonPanel implements ActionList
         //init();
 
 
-        //- ·temelve az eredetibıl:
+        //- √°temelve az eredetib≈ël:
         spinnerNumberModelRate = new SpinnerNumberModel(100, 1, 200, 1);
         spinnerNumberModelRate.addChangeListener(new ChangeListener()
                                          {
@@ -96,15 +95,15 @@ public class PreviewVirtualDrawSurface extends CommonPanel implements ActionList
         spinnerNumberModelPage.addChangeListener(this);
         jSpinnerPage = new JSpinner(spinnerNumberModelPage);
 
-        addToGrid(jRadioButtonPortrait = AppUtils.createRadioButton("¡llÛ", "Portrait", this), 1, 0, 1, 1, 0.0, 0.0, GridBagConstraints.NONE);
-        addToGrid(jRadioButtonLandscape = AppUtils.createRadioButton("Fekvı", "Landscape", this), 1, 1, 1, 1, 0.0, 0.0, GridBagConstraints.NONE);
-        addToGrid(new JLabel(" NagyÌt·s(%):"), 1, 2, 1, 1, 0.0, 0.0, GridBagConstraints.NONE);
+        addToGrid(jRadioButtonPortrait = AppUtils.createRadioButton("√Åll√≥", "Portrait", this), 1, 0, 1, 1, 0.0, 0.0, GridBagConstraints.NONE);
+        addToGrid(jRadioButtonLandscape = AppUtils.createRadioButton("Fekv≈ë", "Landscape", this), 1, 1, 1, 1, 0.0, 0.0, GridBagConstraints.NONE);
+        addToGrid(new JLabel(" Nagy√≠t√°s(%):"), 1, 2, 1, 1, 0.0, 0.0, GridBagConstraints.NONE);
         addToGrid(jSpinnerRate, 1, 3, 1, 1, 0.0, 0.0, GridBagConstraints.NONE);
         addToGrid(new JLabel(" Oldal:"), 1, 4, 1, 1, 0.0, 0.0, GridBagConstraints.NONE);
         addToGrid(jSpinnerPage, 1, 5, 1, 1, 0.0, 0.0, GridBagConstraints.NONE);
         addToGrid(jLabelPageCount = new JLabel("/1   "), 1, 6, 1, 1, 0.0, 0.0, GridBagConstraints.NONE);
-        addToGrid(jButtonPrint = AppUtils.createButton("Nyomtat·s", "Print", this), 1, 7, 1, 1, 0.0, 0.0, GridBagConstraints.NONE);
-        addToGrid(jButtonPageSetup = AppUtils.createButton("Oldalbe·llÌt·s", "PageSetup", this), 1, 8, 1, 1, 0.0, 0.0, GridBagConstraints.NONE);
+        addToGrid(jButtonPrint = AppUtils.createButton("Nyomtat√°s", "Print", this), 1, 7, 1, 1, 0.0, 0.0, GridBagConstraints.NONE);
+        addToGrid(jButtonPageSetup = AppUtils.createButton("Oldalbe√°ll√≠t√°s", "PageSetup", this), 1, 8, 1, 1, 0.0, 0.0, GridBagConstraints.NONE);
         addToGrid(new JLabel(""), 1, 9, GridBagConstraints.REMAINDER, 1, 0.0, 1.0, GridBagConstraints.BOTH);
 
         ButtonGroup group = new ButtonGroup();
@@ -235,7 +234,7 @@ public class PreviewVirtualDrawSurface extends CommonPanel implements ActionList
         //previewPanel.repaint();
         }
         /*if (e.getActionCommand().equals("Print")) {
-        //rÈgen ez volt: PrintUtilities.printComponent(printablePages, pageFormat,dPrintSizeRatio);
+        //rÔøΩgen ez volt: PrintUtilities.printComponent(printablePages, pageFormat,dPrintSizeRatio);
         printReport();
         }*/
         if (e.getActionCommand().equals("PageSetup"))
@@ -250,12 +249,12 @@ public class PreviewVirtualDrawSurface extends CommonPanel implements ActionList
             draw();
         }
     }
-    //meg kell valÛsÌtani VDS-hez is!
+    //meg kell valÔøΩsÔøΩtani VDS-hez is!
     /*private void printReport(){
     //System.err.println("printReport");
     PrinterDialog printerDialog = new PrinterDialog();
     ReportUtils reportUtils = new ReportUtils(app);
-    //System.err.println(printerDialog.showDialog(this, "NyomtatÛ kiv·laszt·s", ""));
+    //System.err.println(printerDialog.showDialog(this, "NyomtatÔøΩ kivÔøΩlasztÔøΩs", ""));
     
     PrinterJob printerJob = PrinterJob.getPrinterJob();
     //printerJob.pageDialog(createA4PageFormat());

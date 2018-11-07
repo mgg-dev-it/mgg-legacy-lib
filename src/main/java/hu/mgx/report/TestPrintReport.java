@@ -23,7 +23,7 @@ public class TestPrintReport implements Printable
     }
 
     /**
-     * Printert v·laszt, vÈgrehajtja ("megrajzolja") a riportot Ès nyomtat.
+     * Printert v√°laszt, v√©grehajtja ("megrajzolja") a riportot √©s nyomtat.
      */
     private void init(Report report, PageFormat pageFormat)
     {
@@ -42,10 +42,10 @@ public class TestPrintReport implements Printable
         if (services.length > 1)
         {
 
-            // Virtu·lis rajzfel¸let lÈtrehoz·sa
+            // Virtu√°lis rajzfel√ºlet l√©trehoz√°sa
             vds = new VirtualDrawSurface((int) pageFormat.getImageableWidth(), (int) pageFormat.getImageableHeight(), new Font("Arial", Font.ITALIC, 10));
 
-            // Riport rajzol·sa a virtu·lis rajzfel¸letre:
+            // Riport rajzol√°sa a virtu√°lis rajzfel√ºletre:
             report.drawToVirtualSurface(vds);
 
             printt(services[0], flavor, aset);
@@ -71,13 +71,13 @@ public class TestPrintReport implements Printable
         }
         catch (PrintException e)
         {
-            System.err.println(e); //@todo apperrorhandler-t bekˆtni!!!
+            System.err.println(e); //@todo apperrorhandler-t bek√∂tni!!!
         }
     }
 
     /**
-     * A Printable interfÈsz ·ltal meghat·rozott visszahÌvandÛ metÛdus, amelyik "kinyomtatja" a VirtualDrawSurface lapjainak tartalm·t a megadott Grgaphics-ra.
-     * @return Printable.PAGE_EXISTS, ha VirtualDrawSurface true-val tÈrt vissza (rajzolt a grafikus objektumra), illetve Printable.NO_SUCH_PAGE, ha nem
+     * A Printable interf√©sz √°ltal meghat√°rozott visszah√≠vand√≥ met√≥dus, amelyik "kinyomtatja" a VirtualDrawSurface lapjainak tartalm√°t a megadott Grgaphics-ra.
+     * @return Printable.PAGE_EXISTS, ha VirtualDrawSurface true-val t√©rt vissza (rajzolt a grafikus objektumra), illetve Printable.NO_SUCH_PAGE, ha nem
      */
     public int print(java.awt.Graphics graphics, PageFormat pageFormat, int pageIndex) throws PrinterException
     {
@@ -85,7 +85,7 @@ public class TestPrintReport implements Printable
         g2d.translate(pageFormat.getImageableX(), pageFormat.getImageableY());
         if (vds != null)
         {
-            // Virtu·lis rajzfel¸let tartalm·nak grafikus objektumra rajzol·sa
+            // Virtu√°lis rajzfel√ºlet tartalm√°nak grafikus objektumra rajzol√°sa
             if (vds.drawToGraphics(pageIndex, g2d))
             {
                 return (Printable.PAGE_EXISTS);

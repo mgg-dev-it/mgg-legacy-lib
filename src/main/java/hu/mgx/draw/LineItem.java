@@ -20,10 +20,10 @@ public class LineItem {
     /**
      * Creates a new instance of LineItem
      *
-     * @param x1
-     * @param y1
-     * @param x2
-     * @param y2
+     * @param x1 x1
+     * @param y1 y1
+     * @param x2 x2
+     * @param y2 y2
      */
     public LineItem(int x1, int y1, int x2, int y2) {
         this(x1, y1, x2, y2, false);

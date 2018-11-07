@@ -179,11 +179,11 @@ public abstract class FileUtils {
         return ("");
     }
 
-    // <root path="c:\windows" name="akármi">
-    //     <file name="fájlnév1" size=123></file>
-    //     <file name="fájlnév2" size=456></file>
+    // <root path="c:\windows" name="akÃ¡rmi">
+    //     <file name="fÃ¡jlnÃ©v1" size=123></file>
+    //     <file name="fÃ¡jlnÃ©v2" size=456></file>
     //     <dir name="dir1">
-    //         <file name="fájlnév11" size=789></file>
+    //         <file name="fÃ¡jlnÃ©v11" size=789></file>
     //         <dir name="dir11">
     //         </dir>
     //     </dir>

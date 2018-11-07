@@ -142,7 +142,7 @@ public class DateTimeDocument extends PlainDocument {
         //int iSeparator1 = 0;
         //int iSeparator2 = 0;
         Vector<Integer> vDateSeparatorPositions = new Vector<Integer>();
-        // yyyy/MM/dd (l-2 Ès l-4)   dd/MM/yyyy (2 Ès 4)
+        // yyyy/MM/dd (l-2 √©s l-4)   dd/MM/yyyy (2 √©s 4)
         if (sDatePattern.startsWith("yyyy")) {
             for (int i = sDatePattern.length() - 1; i > -1; i--) {
                 if (sDatePattern.charAt(i) == cDateSeparator) {
@@ -162,7 +162,7 @@ public class DateTimeDocument extends PlainDocument {
             ++j;
 
             if (c.equals(java.sql.Date.class) || c.equals(java.util.Date.class)) {
-                //@todo ezek az ÈrtÈkek (8-4, 8-6) a form·tumbÛl kiderÌthetık???
+                //@todo ezek az √©rt√©kek (8-4, 8-6) a form√°tumb√≥l kider√≠thet≈ëk???
 //                if (j == l - 2 || j == l - 4) {
 //                    sRetVal = sRetVal + sDateSeparator;
 //                }

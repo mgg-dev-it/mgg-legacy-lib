@@ -254,7 +254,7 @@ public class MemoryTable extends DefaultTableModel {
             Boolean b = hmEditableColumns.get(new Integer(column));
             return (b.booleanValue());
         }
-        return (false); //alapÈrtelmezÈsben egyik cella sem szerkeszthetı
+        return (false); //alap√©rtelmez√©sben egyik cella sem szerkeszthet≈ë
     }
 
     public boolean isColumnSortable(int column) {
@@ -262,7 +262,7 @@ public class MemoryTable extends DefaultTableModel {
             Boolean b = hmSortableColumns.get(new Integer(column));
             return (b.booleanValue());
         }
-        return (true); //alapÈrtelmezÈsben minden oszlop szerint rendezhetı
+        return (true); //alap√©rtelmez√©sben minden oszlop szerint rendezhet≈ë
     }
 
     public Class getColumnClass(int columnIndex) {
@@ -517,7 +517,7 @@ public class MemoryTable extends DefaultTableModel {
         Vector<String> vColumnNames = new Vector<>();
         Vector<Vector<Object>> vData = new Vector<>();
         Vector<Object> vRow = new Vector<>();
-        //@todo vektorok feltˆltÈse
+        //@todo vektorok felt√∂lt√©se
         String[] sNamesArray = hm.keySet().toArray(new String[0]);
         for (int i = 0; i < sNamesArray.length; i++) {
             vColumnNames.add(sNamesArray[i]);

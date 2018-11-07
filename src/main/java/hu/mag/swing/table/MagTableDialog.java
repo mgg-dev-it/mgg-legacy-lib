@@ -14,7 +14,7 @@ public class MagTableDialog extends JDialog implements ActionListener, KeyListen
 
     private CommonPanel mainPane;
 //    private String sStringOK = "&OK";
-//    private String sStringCancel = "&Mégsem";
+//    private String sStringCancel = "&MÃ©gsem";
 //    private JButton jButtonOK;
 //    private JButton jButtonCancel;
     private MagButton mbSave;

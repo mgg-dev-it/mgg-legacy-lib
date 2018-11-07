@@ -30,25 +30,25 @@ public class MgxCalendar extends GregorianCalendar
             switch (iMonth)
             {
                 case Calendar.JANUARY:
-                    return ("Janu·r");
+                    return ("Janu√°r");
                 case Calendar.FEBRUARY:
-                    return ("Febru·r");
+                    return ("Febru√°r");
                 case Calendar.MARCH:
-                    return ("M·rcius");
+                    return ("M√°rcius");
                 case Calendar.APRIL:
-                    return ("¡prilis");
+                    return ("√Åprilis");
                 case Calendar.MAY:
-                    return ("M·jus");
+                    return ("M√°jus");
                 case Calendar.JUNE:
-                    return ("J˙nius");
+                    return ("J√∫nius");
                 case Calendar.JULY:
-                    return ("J˙lius");
+                    return ("J√∫lius");
                 case Calendar.AUGUST:
                     return ("Augusztus");
                 case Calendar.SEPTEMBER:
                     return ("Szeptember");
                 case Calendar.OCTOBER:
-                    return ("OktÛber");
+                    return ("Okt√≥ber");
                 case Calendar.NOVEMBER:
                     return ("November");
                 case Calendar.DECEMBER:
@@ -95,19 +95,19 @@ public class MgxCalendar extends GregorianCalendar
             switch (iDay)
             {
                 case Calendar.MONDAY:
-                    return ("HÈtfı");
+                    return ("H√©tf≈ë");
                 case Calendar.TUESDAY:
                     return ("Kedd");
                 case Calendar.WEDNESDAY:
                     return ("Szerda");
                 case Calendar.THURSDAY:
-                    return ("Cs¸tˆrtˆk");
+                    return ("Cs√ºt√∂rt√∂k");
                 case Calendar.FRIDAY:
-                    return ("PÈntek");
+                    return ("P√©ntek");
                 case Calendar.SATURDAY:
                     return ("Szombat");
                 case Calendar.SUNDAY:
-                    return ("Vas·rnap");
+                    return ("Vas√°rnap");
             }
         }
         else
@@ -207,7 +207,7 @@ public class MgxCalendar extends GregorianCalendar
         localCalendar.setFirstDayOfWeek(iFirstDayOfWeek);
         localCalendar.setMinimalDaysInFirstWeek(super.getMinimalDaysInFirstWeek());
         Vector vDays = new Vector();
-        vDays.add("HÈt");
+        vDays.add("H√©t");
         int iDay = iFirstDayOfWeek;
         for (int i = 0; i < 7; i++)
         {

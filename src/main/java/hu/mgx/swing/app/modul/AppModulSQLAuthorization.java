@@ -101,7 +101,7 @@ public class AppModulSQLAuthorization implements AppModulAuthorizationInterface
                     iUserID = 0;
                 }
                 if (sStoredUserName.equals(sUserName))
-                { //az SQL nem különbözteti meg a kis- és nagybetûket, itt viszont csak a pontosan egyezõt engedjük át
+                { //az SQL nem kÃ¼lÃ¶nbÃ¶zteti meg a kis- Ã©s nagybetÅ±ket, itt viszont csak a pontosan egyezÃ¶t engedjÃ¼k Ã¡t
                     if (sStoredPassword.equals(""))
                     {
                         this.sUserName = sUserName;

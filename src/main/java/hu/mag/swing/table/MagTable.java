@@ -291,28 +291,28 @@ public class MagTable extends JTable implements ActionListener, LanguageEventLis
         sXMLConfig += "<!-- Comment -->";
         sXMLConfig += "<app name='MagTable' major='0' minor='0' revision='0' width='800' height='600'>";
         sXMLConfig += "    <language>";
-        sXMLConfig += "        <languageitem key='MagTable Új rekord'>";
-        sXMLConfig += "            <translation lang='hu'>Új</translation>";
+        sXMLConfig += "        <languageitem key='MagTable Ãºj rekord'>";
+        sXMLConfig += "            <translation lang='hu'>Ãšj</translation>";
         sXMLConfig += "            <translation lang='en'>New</translation>";
         sXMLConfig += "            <translation lang='de'>Neu</translation>";
         sXMLConfig += "        </languageitem>";
-        sXMLConfig += "        <languageitem key='MagTable Részletek'>";
-        sXMLConfig += "            <translation lang='hu'>Részletek</translation>";
+        sXMLConfig += "        <languageitem key='MagTable RÃ©szletek'>";
+        sXMLConfig += "            <translation lang='hu'>RÃ©szletek</translation>";
         sXMLConfig += "            <translation lang='en'>Details</translation>";
         sXMLConfig += "            <translation lang='de'>Detail</translation>";
         sXMLConfig += "        </languageitem>";
-        sXMLConfig += "        <languageitem key='MagTable Rekord törlése'>";
-        sXMLConfig += "            <translation lang='hu'>Törlés</translation>";
+        sXMLConfig += "        <languageitem key='MagTable Rekord tÃ¶rlÃ©se'>";
+        sXMLConfig += "            <translation lang='hu'>TÃ¶rlÃ©s</translation>";
         sXMLConfig += "            <translation lang='en'>Delete</translation>";
-        sXMLConfig += "            <translation lang='de'>Löschen</translation>";
+        sXMLConfig += "            <translation lang='de'>Lï¿½schen</translation>";
         sXMLConfig += "        </languageitem>";
-        sXMLConfig += "        <languageitem key='MagTable Fejlesztõi információ'>";
-        sXMLConfig += "            <translation lang='hu'>Fejlesztõi információ</translation>";
+        sXMLConfig += "        <languageitem key='MagTable FejlesztÅ‘i informÃ¡ciÃ³'>";
+        sXMLConfig += "            <translation lang='hu'>FejlesztÅ‘i informÃ¡ciÃ³</translation>";
         sXMLConfig += "            <translation lang='en'>Developer info</translation>";
         sXMLConfig += "            <translation lang='de'>Entwickler Info</translation>";
         sXMLConfig += "        </languageitem>";
         sXMLConfig += "        <languageitem key='MagTable Filter'>";
-        sXMLConfig += "            <translation lang='hu'>Szûrés</translation>";
+        sXMLConfig += "            <translation lang='hu'>SzÅ±rÃ©s</translation>";
         sXMLConfig += "            <translation lang='en'>Filter</translation>";
         sXMLConfig += "            <translation lang='de'>Filter</translation>";
         sXMLConfig += "        </languageitem>";
@@ -323,34 +323,35 @@ public class MagTable extends JTable implements ActionListener, LanguageEventLis
         sXMLConfig += "        </languageitem>";
         sXMLConfig += "    </language>";
         sXMLConfig += "</app>";
-        swingAppInterface.addLanguageXML(sXMLConfig, "ISO-8859-2");
+//        swingAppInterface.addLanguageXML(sXMLConfig, "ISO-8859-2");
+        swingAppInterface.addLanguageXML(sXMLConfig, "UTF-8");
 
         //@todo task: not only append but insert new row
         //@todo task: "cancel" menuitem in case of new row (and modified rows?)
         popup = new JPopupMenu();
         //if (magTableModel.isUpdateableTable()) {
         if (magTableModel.isUpdateableTable() && !magTableModel.isReadOnlyTable()) {
-            miNewRecord = new JMenuItem(swingAppInterface.getLanguageString("MagTable Új rekord"));
+            miNewRecord = new JMenuItem(swingAppInterface.getLanguageString("MagTable Ãºj rekord"));
             miNewRecord.setActionCommand("action_new");
             miNewRecord.addActionListener(this);
             popup.add(miNewRecord);
         }
 
-        miDetail = new JMenuItem(swingAppInterface.getLanguageString("MagTable Részletek"));
+        miDetail = new JMenuItem(swingAppInterface.getLanguageString("MagTable RÃ©szletek"));
         miDetail.setActionCommand("action_details");
         miDetail.addActionListener(this);
         popup.add(miDetail);
 
         //if (magTableModel.isUpdateableTable()) {
         if (magTableModel.isUpdateableTable() && !magTableModel.isReadOnlyTable()) {
-            miDeleteRecord = new JMenuItem(swingAppInterface.getLanguageString("MagTable Rekord törlése"));
+            miDeleteRecord = new JMenuItem(swingAppInterface.getLanguageString("MagTable Rekord tÃ¶rlÃ©se"));
             miDeleteRecord.setActionCommand("action_delete");
             miDeleteRecord.addActionListener(this);
             popup.add(miDeleteRecord);
         }
 
         if (swingAppInterface.getDateTimeVersion().equals(DEVELOPER_VERSION)) {
-            miDeveloperInfo = new JMenuItem(swingAppInterface.getLanguageString("MagTable Fejlesztõi információ"));
+            miDeveloperInfo = new JMenuItem(swingAppInterface.getLanguageString("MagTable FejlesztÅ‘i informÃ¡ciÃ³"));
             miDeveloperInfo.setActionCommand("action_developer_info");
             miDeveloperInfo.addActionListener(this);
             popup.add(miDeveloperInfo);
@@ -502,7 +503,7 @@ public class MagTable extends JTable implements ActionListener, LanguageEventLis
         int iColumn = this.columnAtPoint(new Point(e.getX(), e.getY()));
         int iRow = this.rowAtPoint(new Point(e.getX(), e.getY()));
         if (e.getClickCount() == 1) {
-            //MaG 2016.10.12. bõvítve jobb egérgombbal és pontos oszlop információval fireMagTableEventClick(this.getSelectedRow());
+            //MaG 2016.10.12. bï¿½vï¿½tve jobb egï¿½rgombbal ï¿½s pontos oszlop informï¿½ciï¿½val fireMagTableEventClick(this.getSelectedRow());
             if (SwingUtilities.isRightMouseButton(e)) {
                 this.setRowSelectionInterval(iRow, iRow);
                 fireMagTableEventRightClick(iRow, iColumn);
@@ -1299,9 +1300,9 @@ public class MagTable extends JTable implements ActionListener, LanguageEventLis
                     }
                     rs = ps.executeQuery();
                     if (rs.next()) {
-                        //@todo task: azonosítókat beletenni az üzenetbe
-                        //@todo wish: az elsõ érintett mezõre helyezni a fókuszt
-                        AppUtils.messageBox(parentFrame, "Ilyen azonosítójú rekord már létezik!");
+                        //@todo task: azonosï¿½tï¿½kat beletenni az ï¿½zenetbe
+                        //@todo wish: az elsï¿½ ï¿½rintett mezï¿½re helyezni a fï¿½kuszt
+                        AppUtils.messageBox(parentFrame, "Ilyen azonosï¿½tï¿½jï¿½ rekord mï¿½r lï¿½tezik!");
                         return (false);
                     }
                 }
@@ -1327,7 +1328,7 @@ public class MagTable extends JTable implements ActionListener, LanguageEventLis
                     //if (!magTableModel.isIdentityColumn(i)) {
                     if (!magTableModel.isIdentityColumn(i) && !magTableModel.isVirtualColumn(i)) {
                         if (this.getValueAt(iRow, i) == null) {
-                            AppUtils.messageBox(parentFrame, magTableModel.getColumnName(i) + " mezõ nem lehet üres!");
+                            AppUtils.messageBox(parentFrame, magTableModel.getColumnName(i) + " mezï¿½ nem lehet ï¿½res!");
                             setColumnSelectionInterval(i, i); //MaG 2018.10.13.
                             return (false);
                         }
@@ -1335,14 +1336,14 @@ public class MagTable extends JTable implements ActionListener, LanguageEventLis
                 }
                 if (magTableModel.isMandatoryColumn(i)) {
                     if (StringUtils.isNull(this.getValueAt(iRow, i), "").equalsIgnoreCase("")) {
-                        AppUtils.messageBox(parentFrame, magTableModel.getColumnName(i) + " mezõt kötelezõ kitölteni!");
+                        AppUtils.messageBox(parentFrame, magTableModel.getColumnName(i) + " mezï¿½t kï¿½telezï¿½ kitï¿½lteni!");
                         setColumnSelectionInterval(i, i); //MaG 2018.10.12.
                         return (false);
                     }
                 }
                 if (!magTableModel.getAllowedCharacters(i).equalsIgnoreCase("")) {
                     if (!StringUtils.containsAllowedCharactersOrEmpty(StringUtils.isNull(this.getValueAt(iRow, i), ""), magTableModel.getAllowedCharacters(i))) {
-                        AppUtils.messageBox(parentFrame, magTableModel.getColumnName(i) + " mezõ nem megengedett karaktert tartalmaz! (Megengedett karakterek: " + magTableModel.getAllowedCharacters(i) + ")");
+                        AppUtils.messageBox(parentFrame, magTableModel.getColumnName(i) + " mezï¿½ nem megengedett karaktert tartalmaz! (Megengedett karakterek: " + magTableModel.getAllowedCharacters(i) + ")");
                         setColumnSelectionInterval(i, i); //MaG 2018.10.13.
                         return (false);
                     }
@@ -1355,7 +1356,7 @@ public class MagTable extends JTable implements ActionListener, LanguageEventLis
 //                }
                 //check field length
                 if (magTableModel.getResultSetMetaData().getPrecision(i + 1) > 0 && magTableModel.getResultSetMetaData().getColumnClassName(i + 1).equals("java.lang.String") && StringUtils.isNull(this.getValueAt(iRow, i), "").length() > magTableModel.getResultSetMetaData().getPrecision(i + 1)) {
-                    AppUtils.messageBox(parentFrame, magTableModel.getColumnName(i) + " mezõ tartalma legfeljebb " + magTableModel.getResultSetMetaData().getPrecision(i + 1) + " karakter hosszú lehet");
+                    AppUtils.messageBox(parentFrame, magTableModel.getColumnName(i) + " mezï¿½ tartalma legfeljebb " + magTableModel.getResultSetMetaData().getPrecision(i + 1) + " karakter hosszï¿½ lehet");
                     setColumnSelectionInterval(i, i); //MaG 2018.10.13.
                     return (false);
                 }
@@ -1378,14 +1379,14 @@ public class MagTable extends JTable implements ActionListener, LanguageEventLis
         return (true);
     }
 
-    //@todo translation: Figyelem! Törli a rekordot? / azonosítójú rekord nem létezik / rekord törlésre került / rekord törlésre nem sikerült
+    //@todo translation: Figyelem! Tï¿½rli a rekordot? / azonosï¿½tï¿½jï¿½ rekord nem lï¿½tezik / rekord tï¿½rlï¿½sre kerï¿½lt / rekord tï¿½rlï¿½sre nem sikerï¿½lt
     private boolean deleteRecord(int iRow) {
         if (iRow < 0) {
             return (false);
         }
 
         if (magTableModel.getRowStatus(convertRowIndexToModel(iRow)) == MagTableModel.ROW_STATUS_NEW_MODIFIED) {
-            if (!AppUtils.yesNoQuestion(parentFrame, "Figyelem!", "Törli az új rekordot?", swingAppInterface)) {
+            if (!AppUtils.yesNoQuestion(parentFrame, "Figyelem!", "Tï¿½rli az ï¿½j rekordot?", swingAppInterface)) {
                 return (false);
             }
             this.getMagTableModel().removeRow(convertRowIndexToModel(iRow));
@@ -1433,7 +1434,7 @@ public class MagTable extends JTable implements ActionListener, LanguageEventLis
             return (true);
         }
 
-        if (!AppUtils.yesNoQuestion(parentFrame, "Figyelem!", "Törli (" + sRecordIdentifier + ") rekordot?", swingAppInterface)) {
+        if (!AppUtils.yesNoQuestion(parentFrame, "Figyelem!", "Tï¿½rli (" + sRecordIdentifier + ") rekordot?", swingAppInterface)) {
             return (false);
         }
         try {
@@ -1460,7 +1461,7 @@ public class MagTable extends JTable implements ActionListener, LanguageEventLis
             }
             rs = ps.executeQuery();
             if (!rs.next()) {
-                AppUtils.messageBox(parentFrame, "(" + sRecordIdentifier + ") azonosítójú rekord nem létezik!");
+                AppUtils.messageBox(parentFrame, "(" + sRecordIdentifier + ") azonosï¿½tï¿½jï¿½ rekord nem lï¿½tezik!");
                 return (false);
             }
             rs.close();
@@ -1496,11 +1497,11 @@ public class MagTable extends JTable implements ActionListener, LanguageEventLis
                 }
                 showRowcountStatus();
                 fireMagTableEventRowDeleted(iRow); //MaG 2018.05.07.
-                AppUtils.messageBox(parentFrame, "(" + sRecordIdentifier + ") rekord törlésre került.");
+                AppUtils.messageBox(parentFrame, "(" + sRecordIdentifier + ") rekord tï¿½rlï¿½sre kerï¿½lt.");
                 //MaG 2018.05.07. fireMagTableEventRowDeleted(iRow);
                 return (true);
             } else {
-                AppUtils.messageBox(parentFrame, "(" + sRecordIdentifier + ") rekord törlése nem sikerült (" + Integer.toString(iResult) + ")");
+                AppUtils.messageBox(parentFrame, "(" + sRecordIdentifier + ") rekord tï¿½rlï¿½se nem sikerï¿½lt (" + Integer.toString(iResult) + ")");
                 this.requestFocus();
                 return (false);
             }

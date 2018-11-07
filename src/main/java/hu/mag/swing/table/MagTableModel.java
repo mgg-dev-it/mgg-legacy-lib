@@ -1,7 +1,5 @@
 package hu.mag.swing.table;
 
-//@todo task : database info-ban a mezõknél a default, defaultsql illetve lookup, lookupsql értékek kaphatnának egy "címkét" is, amit a program fejtene ki. Például "current_year", "user_list", stb. Igy nem kellene mindenhová beírni a hosszú sql parancsot, és nem kellene mindenhol módosítani, ha szükséges.
-//@todo task: MemoryTable alapú modell esetén nem tölti fel a mezõ információkat, míg ResultSet alapúnál igen
 import hu.mag.db.DatabaseInfo;
 import hu.mag.db.FieldInfo;
 import hu.mag.db.TableInfo;

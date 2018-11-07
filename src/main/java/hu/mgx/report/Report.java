@@ -323,7 +323,7 @@ public class Report
                                         }
                                         if (sValue.equals("1999/01/01"))
                                         {
-                                            sValue = "Nem aktu·lis";
+                                            sValue = "Nem aktu√°lis";
                                         }
                                         else if (sValue.equals("1999/01/02"))
                                         {
@@ -331,11 +331,11 @@ public class Report
                                         }
                                         else if (sValue.equals("1999/01/03"))
                                         {
-                                            sValue = "Megl·togatni";
+                                            sValue = "Megl√°togatni";
                                         }
                                         else if (sValue.equals("1999/01/04"))
                                         {
-                                            sValue = "Besz·llÌtÛ";
+                                            sValue = "Besz√°ll√≠t√≥";
                                         }
                                     }
                                     else

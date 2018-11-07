@@ -258,27 +258,6 @@ public class MagDateChooserPanel extends CommonPanel implements ActionListener, 
         //jLabelDate.setText(" " + swingAppInterface.getDateFormat().format(DateTimeUtils.convertToUtilDate(date)));
     }
 
-//    private int getWeek(LocalDate date) {
-//        //@todo nem jó még ...
-//        //int iWeek = date.get(ChronoField.ALIGNED_WEEK_OF_YEAR);
-//
-//        int iDayOfYear = date.getDayOfYear();
-//        int iStartingDayOfYear = date.minusDays(date.getDayOfYear() - 1).getDayOfWeek().getValue();
-//        iDayOfYear -= iStartingDayOfYear;
-//        if (iStartingDayOfYear > 4) {
-//            iDayOfYear -= 7;
-//        }
-//        int iWeek = ((iDayOfYear) / 7) + 1;
-//        //iStartingDayOfYear==1 1-7 8-14 1,2
-//        //iStartingDayOfYear==2 1-6 7-13 1,2
-//        //iStartingDayOfYear==3 1-5 6-12 1,2
-//        //iStartingDayOfYear==4 1-4 5-11 1,2
-//        //iStartingDayOfYear==5 1-3 4-10 53,1
-//        //iStartingDayOfYear==6 1-2 3-9  53,1
-//        //iStartingDayOfYear==7 1-1 2-8  53,1
-//        //52*7=364
-//        return (iWeek);
-//    }
     private JLabel createHeaderLabel(String sCaption) {
         JLabel jLabel = new JLabel(sCaption, SwingConstants.CENTER);
         jLabel.setBorder(emptytBorder);

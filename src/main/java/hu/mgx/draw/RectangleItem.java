@@ -19,10 +19,10 @@ public class RectangleItem {
     /**
      * Creates a new instance of RectangleItem
      *
-     * @param x
-     * @param y
-     * @param width
-     * @param height
+     * @param x x
+     * @param y y
+     * @param width width
+     * @param height height
      */
     public RectangleItem(int x, int y, int width, int height) {
         this.x = x;

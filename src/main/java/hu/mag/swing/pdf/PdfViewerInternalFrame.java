@@ -58,7 +58,7 @@ public class PdfViewerInternalFrame extends CommonInternalFrame {
 
         //http://www.icesoft.org/JForum/posts/list/23268.page#sthash.PsInw3Vr.wdhl6MnC.dpbs
         //org.icepdf.core.pobjects.acroform.SignatureHandler Security.insertProviderAt((Provider) provider, 2); ==> Security.addProvider((Provider) provider);
-        setTitle("PDF megtekintõ" + (sTitle.length() > 0 ? " - " + sTitle : ""));
+        setTitle("PDF megtekintÅ‘" + (sTitle.length() > 0 ? " - " + sTitle : ""));
         mainPane = new CommonPanel();
         setContentPane(mainPane);
         mainPane.setPreferredSize(new Dimension(new Double(swingApp.getSize().width * 0.7).intValue(), new Double(swingApp.getSize().height * 0.7).intValue()));

@@ -28,7 +28,6 @@ public class MagCheckBoxIcon implements Icon {
         g.setColor(Color.black);
         g.drawRect(x, y, iWidth, iHeight);
         if (bSelected) {
-            //@todo task : megoldani általános méretre, szépen!
             //x: upper left corner, horizontal axis
             //y: upper left corner, vertical axis
             g.drawLine(x + iWidth / 2, y + iHeight - 3, x + iWidth - 3, y + 3);

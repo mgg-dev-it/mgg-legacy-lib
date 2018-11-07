@@ -9,7 +9,7 @@ public interface MagTreeEventListener {
     /**
      * Invoked when an action occurs.
      *
-     * @param e
+     * @param e e
      */
     public void treeEventPerformed(MagTreeEvent e);
 

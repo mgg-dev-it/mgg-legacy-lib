@@ -18,10 +18,10 @@ public class DrawAlign
     public static int TOP = 10;
     public static int MIDDLE = 11;
     public static int BOTTOM = 12;
-    public static int NONE = 20; // cella keret rajzol·s·hoz
-    public static int BOTH = 21; // cella keret rajzol·s·hoz
+    public static int NONE = 20; // cella keret rajzol√°s√°hoz
+    public static int BOTH = 21; // cella keret rajzol√°s√°hoz
 
-    /** Nem lehet lÈtrehozni! */
+    /** Nem lehet l√©trehozni! */
     private DrawAlign()
     {
     }

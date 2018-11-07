@@ -51,7 +51,7 @@ public class MagPopupDialog extends JDialog implements KeyListener, MagComponent
     }
 
     private void init() {
-        //@todo na, ezt lenne jó megoldani!!! content.addMagComponentListener(this);
+        //@todo na, ezt lenne jÃ³ megoldani!!! content.addMagComponentListener(this);
         setModal(true);
         //setType(Window.Type.NORMAL);
         //setType(Window.Type.UTILITY);

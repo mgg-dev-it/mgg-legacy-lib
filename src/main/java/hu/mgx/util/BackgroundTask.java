@@ -7,9 +7,6 @@ import java.beans.PropertyChangeListener;
 /**
  * Utility class for doing background processes in Swing.
  *
- * @todo: example!
- *
- * @author MaG
  */
 public class BackgroundTask extends javax.swing.SwingWorker<Boolean, Void> implements PropertyChangeListener {
 
@@ -54,12 +51,12 @@ public class BackgroundTask extends javax.swing.SwingWorker<Boolean, Void> imple
         }
     }
 
-    /**
-     * Call-back procedure. The running task should call it in order to give
-     * information about progress change. The real progress is calculated and
-     * displayed in the {@link #progressChanged} method, which should be
-     * overwritten.
-     */
+//    /**
+//     * Call-back procedure. The running task should call it in order to give
+//     * information about progress change. The real progress is calculated and
+//     * displayed in the {@link #progressChanged} method, which should be
+//     * overwritten.
+//     */
 //    public void setProgressValue() {
 //        setProgress(iProgressValue);
 //        iProgressValue = 21 - iProgressValue;
@@ -93,7 +90,7 @@ public class BackgroundTask extends javax.swing.SwingWorker<Boolean, Void> imple
      * This method should be overwritten in order to call the main method of the
      * process.
      *
-     * @return
+     * @return boolean
      */
     public boolean startTask() {
         return (true);

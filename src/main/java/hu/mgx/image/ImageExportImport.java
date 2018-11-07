@@ -87,7 +87,7 @@ public class ImageExportImport
         ExampleFileFilter filter = new ExampleFileFilter();
         filter.addExtension("gif");
         filter.addExtension("jpg");
-        filter.setDescription("KÈpf·jlok");
+        filter.setDescription("K√©pf√°jlok");
         jFileChooser.setFileFilter(filter);
         //v47 int iDialogResult = jFileChooser.showSaveDialog(parentComponent);
         int iDialogResult = jFileChooser.showOpenDialog(parentComponent);
@@ -98,7 +98,7 @@ public class ImageExportImport
         File f = jFileChooser.getSelectedFile();
         if (!f.exists())
         {
-            JOptionPane.showMessageDialog(parentComponent, "A f·jl nem tal·lhatÛ.");
+            JOptionPane.showMessageDialog(parentComponent, "A f√°jl nem tal√°lhat√≥.");
             return (null);
         }
         return (f);

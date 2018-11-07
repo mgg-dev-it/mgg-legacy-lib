@@ -1,8 +1,6 @@
 /**
  * FileSynchronizer
  *
- * @author Magyar Gábor
- *
  * @version 1.0.1 2005.05.06.
  * -copybatch and -deletebatch parameter added
  *

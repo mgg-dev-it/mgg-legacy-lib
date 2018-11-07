@@ -14,33 +14,33 @@ public abstract class PropertiesUtils {
         String sValueOld;
         String sValueNew;
 
-        //végigmegyünk a régieken - törlendõket vagy módosítandókat keresünk
+        //vÃ©gigmegyÃ¼nk a rÃ©gieken - tÃ¶rlendÅ‘ket vagy mÃ³dosÃ­tandÃ³kat keresÃ¼nk
         elements = propOld.propertyNames();
         while (elements.hasMoreElements()) {
             elements.nextElement();
             sName = elements.nextElement().toString();
             sValueOld = propOld.getProperty(sName, "");
             if (!propNew.containsKey(sName)) {
-                //új nem tartalmazza -> törlendõ
+                //Ãºj nem tartalmazza -> tÃ¶rlendÅ‘
             } else {
-                //új tartalmazza -> ellenõrzendõ
+                //Ãºj tartalmazza -> ellenÅ‘rzendÅ‘
                 sValueNew = propNew.getProperty(sName, "");
                 if (sValueNew.equals(sValueOld)) {
-                    //nem változott az értéke
+                    //nem vÃ¡ltozott az Ã©rtÃ©ke
                 } else {
-                    //változott az értéke
+                    //vÃ¡ltozott az Ã©rtÃ©ke
                 }
             }
             //++iElements;
         }
 
-        //végigmegyünk az újakon - beszúrandókat keresünk
+        //vÃ©gigmegyÃ¼nk az Ãºjakon - beszÃºrandÃ³kat keresÃ¼nk
         elements = propNew.propertyNames();
         while (elements.hasMoreElements()) {
             elements.nextElement();
             sName = elements.nextElement().toString();
             if (!propOld.containsKey(sName)) {
-                //régi nem tartalmazza -> beszúrandó
+                //rÃ©gi nem tartalmazza -> beszÃºrandÃ³
             }
         }
         return ("");

@@ -15,7 +15,7 @@ public class MagEditorFieldDialog extends JDialog implements ActionListener, Key
 
     private CommonPanel mainPane;
 //    private String sStringOK = "&OK";
-//    private String sStringCancel = "&Mégsem";
+//    private String sStringCancel = "&MÃ©gsem";
 //    private JButton jButtonOK;
 //    private JButton jButtonCancel;
     private MagButton mbSave;

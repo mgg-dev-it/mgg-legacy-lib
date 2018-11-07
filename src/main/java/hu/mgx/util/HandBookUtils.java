@@ -23,7 +23,7 @@ import java.util.Vector;
  */
 public class HandBookUtils {
 
-    //@todo task: appInterface.logLine legyen LOG_DEBUG szintû
+    //@todo task: appInterface.logLine legyen LOG_DEBUG szintÅ±
     private AppInterface appInterface = null;
 //    private String sXMLInputFile = "";
     private String sOutputTextFile = "";
@@ -60,7 +60,7 @@ public class HandBookUtils {
         appInterface.logLine("htmloutput = " + sOutputHtmlFile);
 
 //        if (sXMLInputFile.equals("")) {
-//            appInterface.logLine("Hiba: file argumentum hiányzik!");
+//            appInterface.logLine("Hiba: file argumentum hiÃ¡nyzik!");
 //            return;
 //        }
         defaultXMLHandler = new DefaultXMLHandler(appInterface);
@@ -72,7 +72,7 @@ public class HandBookUtils {
         paragraph = new Paragraph();
         paragraph.setAlignment(Paragraph.ALIGN_JUSTIFIED);
         paragraph.setFirstLineIndent(18);
-        paragraph.setSpacingAfter(10); //@todo lehetne paraméter!
+        paragraph.setSpacingAfter(10); //@todo lehetne paramÃ©ter!
         return (paragraph);
     }
 
@@ -99,9 +99,9 @@ public class HandBookUtils {
         try {
             image = Image.getInstance(sFileName);
             if (image.getHeight() > 520 || image.getWidth() > 520) {
-                image.scaleToFit(520, 520); //@todo: lekérdezni a lehetséges maximumot a lap adataiból...
+                image.scaleToFit(520, 520); //@todo: lekÃ©rdezni a lehetsÃ©ges maximumot a lap adataibÃ³l...
             }
-            //image.scaleToFit(520, 520); //@todo: lekérdezni a lehetséges maximumot a lap adataiból...
+            //image.scaleToFit(520, 520); //@todo: lekÃ©rdezni a lehetsÃ©ges maximumot a lap adataibÃ³l...
             image.setAlignment(Image.ALIGN_CENTER);
         } catch (IOException | DocumentException e) {
             appInterface.handleError(e);
@@ -130,11 +130,11 @@ public class HandBookUtils {
 
         if (bTopLevel) {
             if (baosPdf != null) {
-                p2 = new Paragraph("Tartalomjegyzék", new Font(BaseFont.createFont(BaseFont.TIMES_ROMAN, "ISO-8859-2", BaseFont.EMBEDDED), 20 - iLevel * 2));
+                p2 = new Paragraph("TartalomjegyzÃ©k", new Font(BaseFont.createFont(BaseFont.TIMES_ROMAN, "UTF-8", BaseFont.EMBEDDED), 20 - iLevel * 2));
                 document.add(p2);
             }
             if (fosOutHtml != null) {
-                fosOutHtml.write(new String("<h1>Tartalomjegyzék</h1>").getBytes());
+                fosOutHtml.write(new String("<h1>TartalomjegyzÃ©k</h1>").getBytes());
                 fosOutHtml.write(StringUtils.sCrLf.getBytes());
             }
             for (int i = 0; i < mtChapters.getRowCount(); i++) {
@@ -289,7 +289,7 @@ public class HandBookUtils {
 //                    sID = currentElement.getAttribute("id");
 //                    if (sID.equals("")) {
 //                        sID = "chapter_" + StringUtils.stringReplace(sPrefix, ".", "_") + Integer.toString(iSerial);
-//                        //felesleges, nem mûködik ... currentElement.setAttribute("id", sID);
+//                        //felesleges, nem mÅ±kÃ¶dik ... currentElement.setAttribute("id", sID);
 //                    }
 //                    vRow.add(sID);
                     vRow.add(currentElement.getAttribute("id"));
@@ -369,8 +369,8 @@ public class HandBookUtils {
                 document.open();
                 BaseFont bf = BaseFont.createFont(BaseFont.TIMES_ROMAN, "ISO-8859-2", BaseFont.EMBEDDED);
                 fontTitle = new Font(bf, 20, Font.BOLD, BaseColor.BLUE);
-                //document.add(new Paragraph("aáeéiíoóöõuúüû", font));
-                //document.add(new Paragraph("AÁEÉIÍOÓÖÕUÚÜÛ", font));
+                //document.add(new Paragraph("aÃ¡eÃ©iÃ­oÃ³Ã¶Å‘uÃºÃ¼Å±", font));
+                //document.add(new Paragraph("AÃEÃ‰IÃOÃ“Ã–ÅUÃšÃœÅ°", font));
             }
 
             //if (!defaultXMLHandler.readXMLFile("handbook", new File(sXMLInputFile))) { //, "ISO-8859-2"
@@ -379,7 +379,7 @@ public class HandBookUtils {
                 return;
             }
 
-            //2014.10.06. automatikus fejezet azonosítók:
+            //2014.10.06. automatikus fejezet azonosÃ­tÃ³k:
             XMLElement xmlElementHandbookRoot = defaultXMLHandler.getRootElementByName("handbook");
             if (xmlElementHandbookRoot != null) {
                 createChapterIDs(xmlElementHandbookRoot, 0);
@@ -422,7 +422,7 @@ public class HandBookUtils {
                 fosOutText.close();
             }
             if (fosOutWiki != null) {
-                fosOutWiki.write(new String("[[Category:SQLSzla]]").getBytes()); //@todo paraméterbe tenni!!!
+                fosOutWiki.write(new String("[[Category:SQLSzla]]").getBytes()); //@todo paramÃ©terbe tenni!!!
                 fosOutWiki.write(StringUtils.sCrLf.getBytes());
                 fosOutWiki.flush();
                 fosOutWiki.close();

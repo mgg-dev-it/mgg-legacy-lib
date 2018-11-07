@@ -15,8 +15,8 @@ import java.util.GregorianCalendar;
 
 public abstract class DateTimeUtils {
 
-    private static String[] saMonthNames = {"janu·r", "febru·r", "m·rcius", "·prilis", "m·jus", "j˙nius", "j˙lius", "augusztus", "szeptember", "oktÛber", "november", "december"};
-    private static String[] saMonthAbbreviatedNames = {"jan", "feb", "m·r", "·pr", "m·j", "j˙n", "j˙l", "aug", "szep", "okt", "nov", "dec"};
+    private static String[] saMonthNames = {"janu√°r", "febru√°r", "m√°rcius", "√°prilis", "m√°jus", "j√∫nius", "j√∫lius", "augusztus", "szeptember", "okt√≥ber", "november", "december"};
+    private static String[] saMonthAbbreviatedNames = {"jan", "feb", "m√°r", "√°pr", "m√°j", "j√∫n", "j√∫l", "aug", "szep", "okt", "nov", "dec"};
 
     private DateTimeUtils() {
     }
@@ -54,7 +54,7 @@ public abstract class DateTimeUtils {
         try {
             java.util.Date utilDate = mgxFormat.getDateFormat().parse(sRetVal);
         } catch (ParseException e) {
-            //@todo MsgBox "Hib·s d·tumot (" + sTmp + ") adott meg", vbExclamation
+            //@todo MsgBox "Hib√°s d√°tumot (" + sTmp + ") adott meg", vbExclamation
             sRetVal = sText;
         }
         return (sRetVal);
@@ -372,19 +372,19 @@ public abstract class DateTimeUtils {
         int iDayOfWeek = getDayOfWeek(date);
         switch (iDayOfWeek) {
             case Calendar.MONDAY:
-                return ("HÈtfı");
+                return ("H√©tf≈ë");
             case Calendar.TUESDAY:
                 return ("Kedd");
             case Calendar.WEDNESDAY:
                 return ("Szerda");
             case Calendar.THURSDAY:
-                return ("Cs¸tˆrtˆk");
+                return ("Cs√ºt√∂rt√∂k");
             case Calendar.FRIDAY:
-                return ("PÈntek");
+                return ("P√©ntek");
             case Calendar.SATURDAY:
                 return ("Szombat");
             case Calendar.SUNDAY:
-                return ("Vas·rnap");
+                return ("Vas√°rnap");
             default:
                 return ("");
         }
@@ -459,17 +459,17 @@ public abstract class DateTimeUtils {
     }
 
     public static int getWeek(LocalDate date) {
-        //@todo nem jÛ mÈg ...
+        //@todo nem j√≥ m√©g ...
         //int iWeek = date.get(ChronoField.ALIGNED_WEEK_OF_YEAR);
 
         int iDayOfYear = date.getDayOfYear();
         int iStartingDayOfYear = date.minusDays(date.getDayOfYear() - 1).getDayOfWeek().getValue();
         if (1 <= iStartingDayOfYear && iStartingDayOfYear <= 4) {
-            //hÈtfı, kedd, szerda vagy cs¸tˆrtˆk az Èv elsı napja
+            //h√©tf≈ë, kedd, szerda vagy cs√ºt√∂rt√∂k az √©v els≈ë napja
             iDayOfYear += (iStartingDayOfYear - 1);
             return (((iDayOfYear - 1) / 7) + 1);
         } else {
-            //pÈntek, szombat vagy vas·rnap az Èv elsı napja
+            //p√©ntek, szombat vagy vas√°rnap az √©v els≈ë napja
             iDayOfYear += (iStartingDayOfYear - 1);
             int iWeek = (iDayOfYear - 1) / 7;
             if (iWeek == 0) {

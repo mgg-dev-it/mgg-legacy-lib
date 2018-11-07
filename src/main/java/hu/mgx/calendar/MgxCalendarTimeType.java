@@ -2,9 +2,9 @@ package hu.mgx.calendar;
 
 public abstract class MgxCalendarTimeType {
 
-    public final static int UNKNOWN = 0; //meghat·rozatlan
-    public final static int WORK = 1; //munkaidı
-    public final static int REST = 2; //pihenıidı
+    public final static int UNKNOWN = 0; //meghat√°rozatlan
+    public final static int WORK = 1; //munkaid≈ë
+    public final static int REST = 2; //pihen≈ëid≈ë
     
     //public MgxCalendarTimeType() {
     //}
